@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { 
   X, ChevronLeft, ChevronRight, List, 
-  ArrowLeft, BookOpen, Sun, Moon, Type
+  ArrowLeft, Sliders
 } from 'lucide-react';
 
 export default function ReaderModal({ book, onClose, isDarkMode }) {
   const [fontSize, setFontSize] = useState(19);
+  const [lineHeight, setLineHeight] = useState(2.1); // 1.7 | 2.1 | 2.5
+  const [paddingX, setPaddingX] = useState('normal'); // 'compact' | 'normal' | 'wide'
   const [fontFamily, setFontFamily] = useState('bookerly'); // 'bookerly' | 'libron'
   const [readerTheme, setReaderTheme] = useState('dark');
   const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
   const [showChapterDrawer, setShowChapterDrawer] = useState(false);
+  const [showSettingsDrawer, setShowSettingsDrawer] = useState(false);
 
   useEffect(() => {
     setReaderTheme(isDarkMode ? 'dark' : 'paper');
@@ -73,29 +76,40 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
             </button>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-4">
-            
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Nút cài đặt hiển thị (Lề, Giãn dòng, Cỡ chữ, Font) */}
+            <button
+              onClick={() => setShowSettingsDrawer(!showSettingsDrawer)}
+              className={`p-1.5 rounded-lg border transition-colors flex items-center gap-1 text-xs font-mono ${
+                showSettingsDrawer ? 'bg-[#E5B54F] text-black border-[#E5B54F] font-bold' : 'border-current/20 hover:bg-black/10 dark:hover:bg-white/10'
+              }`}
+              title="Tùy chỉnh định dạng trang (Lề, Giãn dòng, Phông)"
+            >
+              <Sliders className="w-4 h-4" />
+              <span className="hidden sm:inline">Tùy biến</span>
+            </button>
+
             {/* FONT SELECTOR TOGGLE: Bookerly vs Libron */}
-            <div className="flex items-center border border-current/20 rounded-lg p-0.5 text-xs font-mono">
+            <div className="hidden sm:flex items-center border border-current/20 rounded-lg p-0.5 text-xs font-mono">
               <button
                 onClick={() => setFontFamily('bookerly')}
-                className={`px-2.5 py-1 rounded transition-colors text-xs ${
+                className={`px-2 py-1 rounded transition-colors text-xs ${
                   fontFamily === 'bookerly'
                     ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
                     : 'opacity-70 hover:opacity-100'
                 }`}
-                title="Font Bookerly (Chuẩn máy đọc sách Kindle)"
+                title="Font Bookerly"
               >
                 Bookerly
               </button>
               <button
                 onClick={() => setFontFamily('libron')}
-                className={`px-2.5 py-1 rounded transition-colors text-xs ${
+                className={`px-2 py-1 rounded transition-colors text-xs ${
                   fontFamily === 'libron'
                     ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
                     : 'opacity-70 hover:opacity-100'
                 }`}
-                title="Font Libron (Tối ưu đọc số & e-readers)"
+                title="Font Libron"
               >
                 Libron
               </button>
@@ -104,13 +118,13 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
             {/* Font scale */}
             <div className="flex items-center border border-current/20 rounded-lg p-0.5 text-xs font-mono">
               <button 
-                onClick={() => setFontSize(Math.max(15, fontSize - 1))} 
+                onClick={() => setFontSize(Math.max(14, fontSize - 1))} 
                 className="px-2 py-1 hover:bg-black/10 dark:hover:bg-white/10 rounded transition-colors"
                 title="Giảm cỡ chữ"
               >
                 A-
               </button>
-              <span className="px-1.5 opacity-70 text-[11px]">{fontSize}px</span>
+              <span className="px-1 opacity-70 text-[11px] min-w-[20px] text-center">{fontSize}</span>
               <button 
                 onClick={() => setFontSize(Math.min(28, fontSize + 1))} 
                 className="px-2 py-1 hover:bg-black/10 dark:hover:bg-white/10 rounded transition-colors font-bold"
@@ -148,6 +162,88 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
           </div>
         </header>
 
+        {/* Cửa sổ Tùy chỉnh (Đổi lề, khoảng cách hàng, phông chữ) */}
+        {showSettingsDrawer && (
+          <div className="absolute top-14 right-4 sm:right-6 w-72 bg-inherit border border-current/20 shadow-2xl rounded-xl z-30 p-4 space-y-4 backdrop-blur-xl animate-in zoom-in-95 duration-150">
+            <div className="flex items-center justify-between pb-2 border-b border-current/10">
+              <span className="font-bold text-xs font-mono uppercase tracking-wider">Cài đặt hiển thị</span>
+              <button onClick={() => setShowSettingsDrawer(false)} className="p-1 hover:opacity-75">
+                <X className="w-3.5 h-3.5" />
+              </button>
+            </div>
+
+            {/* Khoảng cách hàng */}
+            <div>
+              <span className="block text-[11px] font-mono opacity-70 mb-1.5">Khoảng cách hàng (Line Height)</span>
+              <div className="grid grid-cols-3 gap-1.5 text-xs font-mono">
+                <button
+                  onClick={() => setLineHeight(1.7)}
+                  className={`py-1.5 rounded border transition-all ${lineHeight === 1.7 ? 'bg-[#E5B54F] text-black font-bold border-[#E5B54F]' : 'border-current/15 hover:bg-black/5 dark:hover:bg-white/5'}`}
+                >
+                  Hẹp
+                </button>
+                <button
+                  onClick={() => setLineHeight(2.1)}
+                  className={`py-1.5 rounded border transition-all ${lineHeight === 2.1 ? 'bg-[#E5B54F] text-black font-bold border-[#E5B54F]' : 'border-current/15 hover:bg-black/5 dark:hover:bg-white/5'}`}
+                >
+                  Vừa
+                </button>
+                <button
+                  onClick={() => setLineHeight(2.5)}
+                  className={`py-1.5 rounded border transition-all ${lineHeight === 2.5 ? 'bg-[#E5B54F] text-black font-bold border-[#E5B54F]' : 'border-current/15 hover:bg-black/5 dark:hover:bg-white/5'}`}
+                >
+                  Rộng
+                </button>
+              </div>
+            </div>
+
+            {/* Căn lề hai bên */}
+            <div>
+              <span className="block text-[11px] font-mono opacity-70 mb-1.5">Căn lề trang (Margins)</span>
+              <div className="grid grid-cols-3 gap-1.5 text-xs font-mono">
+                <button
+                  onClick={() => setPaddingX('compact')}
+                  className={`py-1.5 rounded border transition-all ${paddingX === 'compact' ? 'bg-[#E5B54F] text-black font-bold border-[#E5B54F]' : 'border-current/15 hover:bg-black/5 dark:hover:bg-white/5'}`}
+                >
+                  Hẹp
+                </button>
+                <button
+                  onClick={() => setPaddingX('normal')}
+                  className={`py-1.5 rounded border transition-all ${paddingX === 'normal' ? 'bg-[#E5B54F] text-black font-bold border-[#E5B54F]' : 'border-current/15 hover:bg-black/5 dark:hover:bg-white/5'}`}
+                >
+                  Tiêu chuẩn
+                </button>
+                <button
+                  onClick={() => setPaddingX('wide')}
+                  className={`py-1.5 rounded border transition-all ${paddingX === 'wide' ? 'bg-[#E5B54F] text-black font-bold border-[#E5B54F]' : 'border-current/15 hover:bg-black/5 dark:hover:bg-white/5'}`}
+                >
+                  Rộng
+                </button>
+              </div>
+            </div>
+
+            {/* Phông chữ cho mobile */}
+            <div className="sm:hidden pt-2 border-t border-current/10">
+              <span className="block text-[11px] font-mono opacity-70 mb-1.5">Phông chữ</span>
+              <div className="grid grid-cols-2 gap-1.5 text-xs font-mono">
+                <button
+                  onClick={() => setFontFamily('bookerly')}
+                  className={`py-1.5 rounded border ${fontFamily === 'bookerly' ? 'bg-[#E5B54F] text-black font-bold border-[#E5B54F]' : 'border-current/15'}`}
+                >
+                  Bookerly
+                </button>
+                <button
+                  onClick={() => setFontFamily('libron')}
+                  className={`py-1.5 rounded border ${fontFamily === 'libron' ? 'bg-[#E5B54F] text-black font-bold border-[#E5B54F]' : 'border-current/15'}`}
+                >
+                  Libron
+                </button>
+              </div>
+            </div>
+
+          </div>
+        )}
+
         {/* Chapter Selection Drawer (Mục lục trượt) */}
         {showChapterDrawer && (
           <div className="absolute inset-y-12 left-0 w-72 sm:w-80 bg-inherit border-r border-current/15 shadow-2xl z-30 flex flex-col backdrop-blur-xl animate-in slide-in-from-left duration-200">
@@ -180,64 +276,76 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
         )}
 
         {/* Reading Body */}
-        <div 
-          className={`flex-1 overflow-y-auto px-6 sm:px-16 py-10 leading-relaxed selection:bg-[#E5B54F] selection:text-black ${
-            fontFamily === 'bookerly' ? 'font-bookerly' : 'font-libron'
-          }`}
-          style={{ fontSize: `${fontSize}px` }}
-        >
-          <div className="max-w-2xl mx-auto space-y-6">
-            <div className="text-center pb-8 border-b border-current/15 mb-8">
-              <span className="font-sans text-xs tracking-widest uppercase opacity-60">
-                {book.title}
-              </span>
-              <h1 className="text-2xl sm:text-3xl font-bold mt-2">
-                {currentChapter.title}
-              </h1>
-              <div className="flex items-center justify-center gap-3 font-sans text-xs opacity-60 mt-2 font-mono">
-                <span>Tác giả: {book.author}</span>
-                <span>•</span>
-                <span className="text-[#E5B54F]">Phông: {fontFamily === 'bookerly' ? 'Bookerly' : 'Libron'}</span>
-                <span>•</span>
-                <span>Chương {currentChapterIndex + 1}/{book.chapters.length}</span>
+        {(() => {
+          const paddingClass = 
+            paddingX === 'compact' ? 'px-3 sm:px-8' :
+            paddingX === 'wide' ? 'px-8 sm:px-24' : 'px-5 sm:px-16';
+
+          return (
+            <div 
+              className={`flex-1 overflow-y-auto py-10 selection:bg-[#E5B54F] selection:text-black ${paddingClass} ${
+                fontFamily === 'bookerly' ? 'font-bookerly' : 'font-libron'
+              }`}
+              style={{ fontSize: `${fontSize}px` }}
+            >
+              <div className="max-w-2xl mx-auto space-y-6">
+                <div className="text-center pb-8 border-b border-current/15 mb-8">
+                  <span className="font-sans text-xs tracking-widest uppercase opacity-60">
+                    {book.title}
+                  </span>
+                  <h1 className="text-2xl sm:text-3xl font-bold mt-2">
+                    {currentChapter.title}
+                  </h1>
+                  <div className="flex items-center justify-center gap-3 font-sans text-xs opacity-60 mt-2 font-mono flex-wrap">
+                    <span>Tác giả: {book.author}</span>
+                    <span>•</span>
+                    <span className="text-[#E5B54F]">Phông: {fontFamily === 'bookerly' ? 'Bookerly' : 'Libron'}</span>
+                    <span>•</span>
+                    <span>Chương {currentChapterIndex + 1}/{book.chapters.length}</span>
+                  </div>
+                </div>
+
+                {currentChapter.content.map((paragraph, index) => (
+                  <p 
+                    key={index} 
+                    className="text-justify indent-8 tracking-normal"
+                    style={{ lineHeight: lineHeight }}
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+
+                {/* Bottom Chapter Switcher Navigation */}
+                <div className="pt-12 border-t border-current/10 flex items-center justify-between font-sans text-xs mt-12">
+                  <button
+                    disabled={currentChapterIndex === 0}
+                    onClick={() => setCurrentChapterIndex(prev => Math.max(0, prev - 1))}
+                    className="px-4 py-2.5 rounded-xl border border-current/20 flex items-center gap-1.5 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                    <span>Chương trước</span>
+                  </button>
+
+                  <button
+                    onClick={() => setShowChapterDrawer(true)}
+                    className="font-mono text-[#E5B54F] hover:underline"
+                  >
+                    Mục lục chương
+                  </button>
+
+                  <button
+                    disabled={currentChapterIndex >= book.chapters.length - 1}
+                    onClick={() => setCurrentChapterIndex(prev => Math.min(book.chapters.length - 1, prev + 1))}
+                    className="px-4 py-2.5 rounded-xl border border-current/20 flex items-center gap-1.5 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
+                  >
+                    <span>Chương sau</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
-
-            {currentChapter.content.map((paragraph, index) => (
-              <p key={index} className="text-justify indent-8 leading-[2.1] tracking-normal">
-                {paragraph}
-              </p>
-            ))}
-
-            {/* Bottom Chapter Switcher Navigation */}
-            <div className="pt-12 border-t border-current/10 flex items-center justify-between font-sans text-xs mt-12">
-              <button
-                disabled={currentChapterIndex === 0}
-                onClick={() => setCurrentChapterIndex(prev => Math.max(0, prev - 1))}
-                className="px-4 py-2.5 rounded-xl border border-current/20 flex items-center gap-1.5 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-              >
-                <ChevronLeft className="w-4 h-4" />
-                <span>Chương trước</span>
-              </button>
-
-              <button
-                onClick={() => setShowChapterDrawer(true)}
-                className="font-mono text-[#E5B54F] hover:underline"
-              >
-                Mục lục chương
-              </button>
-
-              <button
-                disabled={currentChapterIndex >= book.chapters.length - 1}
-                onClick={() => setCurrentChapterIndex(prev => Math.min(book.chapters.length - 1, prev + 1))}
-                className="px-4 py-2.5 rounded-xl border border-current/20 flex items-center gap-1.5 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-              >
-                <span>Chương sau</span>
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
-        </div>
+          );
+        })()}
 
       </div>
     </div>

@@ -3,15 +3,14 @@ export const banTronChiMang = {
   title: 'Bàn Tròn Chí Mạng',
   originalTitle: '致命圆桌 (Zhi Ming Yuan Zhuo)',
   author: 'Tiêu Thanh Thành (Xiao Qing Cheng)',
+  updatedAt: '03/11/2026',
   // Hỗ trợ cả 1 thể loại (chuỗi) hoặc NHIỀU THỂ LOẠI (mảng array):
   categories: ['trinh-tham', 'huyen-bi'],
-  category: 'trinh-tham', // Giữ tương thích ngược
-  status: 'Đang dịch',
+  category: 'trinh-tham',
   totalChapters: '110 chương (Đọc thử 20 chương)',
   cover: './covers/ban-tron-chi-mang.jpg',
   description: 'Một trò chơi sinh tồn tàn khốc xoay quanh chiếc bàn tròn bí ẩn. Những phán quyết chí mạng, trò chơi suy luận cân não và màn đấu trí nghẹt thở giữa các người chơi để tìm ra sự thật.',
   tags: ['Vô hạn lưu', 'Trinh thám', 'Sinh tồn', 'Cân não'],
-  downloadUrl: './covers/ban-tron-chi-mang.jpg',
   chapters: [
     {
       id: 1,

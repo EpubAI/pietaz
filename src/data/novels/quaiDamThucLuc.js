@@ -3,13 +3,12 @@ export const quaiDamThucLuc = {
   title: 'Quái Đàm Thực Lục: Bách Quỷ Dạ Hành',
   originalTitle: '怪谈实录：百鬼夜行',
   author: 'Nam Sơn Cố Nhân',
+  updatedAt: '01/11/2026',
   category: 'huyen-bi',
-  status: 'Hoàn thành',
   totalChapters: '32 chương',
   cover: './covers/book1.jpg',
   description: 'Tuyển tập những câu chuyện kỳ dị chốn thâm sơn cùng cốc. Giữa ngôi chùa cổ hoang phế trăm năm trong đêm mưa xối xả, vị lão tăng lần chuỗi hạt và bí mật kinh hoàng rình rập dưới bóng nến.',
   tags: ['Liêu trai', 'Dị ký', 'Kỳ ảo cổ phong'],
-  downloadUrl: './covers/book1.jpg',
   chapters: [
     {
       id: 1,

@@ -3,13 +3,12 @@ export const sauTramNamNuocTan = {
   title: 'Sáu Trăm Năm Nước Tấn',
   originalTitle: '晋国六百年',
   author: 'Lý Thạc',
+  updatedAt: '31/10/2026',
   category: 'lich-su',
-  status: 'Đang dịch',
   totalChapters: '120/450 chương',
   cover: './covers/book2.jpg',
   description: 'Biên niên sử hào hùng về 600 năm thăng trầm của bá chủ Trung Nguyên thời Xuân Thu. Tái hiện trọn vẹn hào khí tranh bá của Tấn Văn Công cùng sự hưng suy của các thế gia khanh đại phu.',
   tags: ['Sử ký', 'Xuân Thu Liệt Quốc', 'Mưu lược'],
-  downloadUrl: './covers/book2.jpg',
   chapters: [
     {
       id: 1,

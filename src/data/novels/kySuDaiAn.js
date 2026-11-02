@@ -3,13 +3,12 @@ export const kySuDaiAn = {
   title: 'Ký Sự Đại Án: Hồ Sơ Trọng Án Bất Hủ',
   originalTitle: '重案实录',
   author: 'Chu Hạo',
+  updatedAt: '02/11/2026',
   category: 'trinh-tham',
-  status: 'Hoàn thành',
   totalChapters: 'Trọn bộ 3 tập',
   cover: './covers/book3.jpg',
   description: 'Hồi ức phá án nghẹt thở của các cảnh sát hình sự kỳ cựu. Bút pháp chân thực, dồn dập, bóc tách từng lớp tâm lý tội phạm và hiện trường pháp y chuẩn xác.',
   tags: ['Hình sự', 'Tâm lý tội phạm', 'Chân thực'],
-  downloadUrl: './covers/book3.jpg',
   chapters: [
     {
       id: 1,

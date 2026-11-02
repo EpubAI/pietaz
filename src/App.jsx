@@ -127,27 +127,36 @@ export default function App() {
           )}
         </div>
 
-        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
-          {CATEGORIES.map((cat) => {
-            const active = selectedCategory === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`px-3 py-1 rounded text-xs whitespace-nowrap transition-all font-mono ${
-                  active 
-                    ? isDarkMode 
-                      ? 'bg-[#E5B54F] text-black font-semibold' 
-                      : 'bg-amber-600 text-white font-semibold'
-                    : isDarkMode 
-                      ? 'bg-white/[0.03] text-zinc-400 border border-white/5' 
-                      : 'bg-black/[0.03] text-zinc-600 border border-black/5'
-                }`}
-              >
-                {cat.label}
-              </button>
-            );
-          })}
+        {/* Dropdown chọn thể loại trên Mobile */}
+        <div className="relative">
+          <label className="block text-[10px] font-mono text-zinc-400 mb-1 uppercase tracking-wider">
+            Thể loại:
+          </label>
+          <div className="relative">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className={`w-full px-3 py-2 text-xs rounded-lg border outline-none font-mono appearance-none transition-colors pr-8 ${
+                isDarkMode 
+                  ? 'bg-[#121620] border-white/15 text-zinc-100 focus:border-[#E5B54F]' 
+                  : 'bg-white border-black/15 text-zinc-800 focus:border-amber-600'
+              }`}
+            >
+              {CATEGORIES.map((cat) => {
+                const count = cat.id === 'all' 
+                  ? BOOKS.length 
+                  : BOOKS.filter(b => getBookCategories(b).includes(cat.id)).length;
+                return (
+                  <option key={cat.id} value={cat.id} className={isDarkMode ? 'bg-[#121620] text-zinc-100' : 'bg-white text-zinc-900'}>
+                    {cat.label} ({count})
+                  </option>
+                );
+              })}
+            </select>
+            <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 opacity-60">
+              ▼
+            </div>
+          </div>
         </div>
       </div>
 
