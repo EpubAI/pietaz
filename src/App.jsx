@@ -69,9 +69,6 @@ export default function App() {
               <div className="font-bold tracking-[0.2em] text-xs sm:text-sm font-mono uppercase">
                 PIETAZ PRIVATE DEN
               </div>
-              <div className={`text-[10px] tracking-wider uppercase font-mono ${isDarkMode ? 'text-zinc-500' : 'text-zinc-400'}`}>
-                Archival Translation Portfolio
-              </div>
             </div>
           </div>
 
@@ -199,11 +196,6 @@ export default function App() {
                   );
                 })}
               </nav>
-
-              <div className="mt-6 pt-4 border-t border-current/10 font-mono text-[10px] text-zinc-500 space-y-1.5 leading-relaxed">
-                <div>• Thẻ tương tác 3D Tilt & Cursor Spotlight</div>
-                <div>• Đóng gói EPUB chuẩn cho máy đọc sách</div>
-              </div>
             </div>
           </aside>
 
@@ -215,9 +207,6 @@ export default function App() {
                 <span>{CATEGORIES.find(c => c.id === selectedCategory)?.label || 'Tất cả tác phẩm'}</span>
                 <Sparkles className="w-4 h-4 text-[#E5B54F]" />
               </h1>
-              <span className="font-mono text-xs text-zinc-400">
-                [Di chuột để nghiêng 3D • Bấm để mở đọc trực tiếp]
-              </span>
             </div>
 
             {filteredBooks.length === 0 ? (
@@ -262,22 +251,22 @@ export default function App() {
 
           <div className="flex items-center gap-3">
             <a 
-              href="https://t.me/" 
+              href="https://t.me/Pietaz" 
               target="_blank" 
               rel="noreferrer"
               className={`px-4 py-2 rounded font-semibold text-xs flex items-center gap-1.5 transition-colors ${
                 isDarkMode ? 'bg-[#E5B54F] text-black hover:bg-[#D9A336]' : 'bg-amber-600 text-white hover:bg-amber-700'
               }`}
             >
-              <span>Telegram Dispatch</span>
+              <span>Telegram (@Pietaz)</span>
             </a>
             <a 
-              href="https://zalo.me/" 
+              href="https://www.facebook.com/heywazzup2024" 
               target="_blank" 
               rel="noreferrer"
               className={`px-4 py-2 rounded border text-xs transition-colors ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-zinc-300' : 'border-black/10 hover:bg-black/5 text-zinc-700'}`}
             >
-              Zalo
+              Facebook
             </a>
           </div>
         </div>
