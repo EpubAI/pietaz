@@ -130,8 +130,8 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                   {book.originalTitle && <span className="font-serif italic text-right">{book.originalTitle}</span>}
                 </div>
 
-                {/* Vietnamese Master Title */}
-                <h2 className="font-serif text-2xl sm:text-2xl font-bold leading-tight group-hover:text-[#E5B54F] transition-colors">
+                {/* Vietnamese Master Title (Hỗ trợ chuẩn 100% tiếng Việt, không lỗi dấu) */}
+                <h2 className="font-title-book text-2xl sm:text-[26px] font-bold leading-tight group-hover:text-[#E5B54F] transition-colors">
                   {book.title}
                 </h2>
 
@@ -231,7 +231,7 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                 
                 <div className="flex-1 min-w-0 text-center sm:text-left">
                   <div className="text-xs font-mono opacity-60 uppercase tracking-widest">{book.author}</div>
-                  <h2 className="text-2xl font-serif font-bold text-[#E5B54F] mt-0.5">{book.title}</h2>
+                  <h2 className="text-2xl font-title-book font-bold text-[#E5B54F] mt-0.5">{book.title}</h2>
                   {book.originalTitle && (
                     <div className="text-sm font-serif italic opacity-75 mt-0.5">{book.originalTitle}</div>
                   )}

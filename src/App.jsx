@@ -277,13 +277,19 @@ export default function App() {
 
       {/* Footer */}
       <footer id="contact" className={`border-t py-12 px-4 sm:px-6 mt-20 transition-colors font-mono ${isDarkMode ? 'bg-[#050608] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
-          <div>
-            <div className="font-bold text-sm tracking-wider text-current">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-xs text-zinc-400">
+          <div className="max-w-2xl space-y-2">
+            <div className="font-bold text-sm tracking-wider text-current text-[#E5B54F]">
               PIETAZ PRIVATE DEN
             </div>
-            <p className="text-[11px] mt-1 text-zinc-400 max-w-md">
-              Thư phòng lưu trữ và trưng bày bản dịch văn học chọn lọc. Tối ưu hóa 100% cho màn hình điện thoại và thiết bị đọc sách chuyên dụng.
+            <p className="text-[12px] text-zinc-300 font-sans leading-relaxed">
+              Website giới thiệu và demo bản dịch AI chất lượng cao.
+            </p>
+            <p className="text-[12px] text-zinc-400 font-sans leading-relaxed">
+              Nhận convert epub; dịch truyện, tài liệu sang tiếng Việt; bản dịch epub song ngữ.
+            </p>
+            <p className="text-[12px] text-zinc-400 font-sans leading-relaxed">
+              Liên hệ telegram/facebook để trao đổi dịch vụ và báo giá bản dịch.
             </p>
           </div>
 
@@ -292,25 +298,27 @@ export default function App() {
               href="https://t.me/Pietaz" 
               target="_blank" 
               rel="noreferrer"
-              className={`px-4 py-2 rounded font-semibold text-xs flex items-center gap-1.5 transition-colors ${
-                isDarkMode ? 'bg-[#E5B54F] text-black hover:bg-[#D9A336]' : 'bg-amber-600 text-white hover:bg-amber-700'
+              className={`px-4 py-2.5 rounded-lg font-semibold text-xs flex items-center gap-2 transition-all shadow-md ${
+                isDarkMode ? 'bg-[#E5B54F] text-black hover:bg-[#F2C76A]' : 'bg-amber-600 text-white hover:bg-amber-700'
               }`}
             >
+              <Send className="w-4 h-4" />
               <span>Telegram (@Pietaz)</span>
             </a>
             <a 
               href="https://www.facebook.com/heywazzup2024" 
               target="_blank" 
               rel="noreferrer"
-              className={`px-4 py-2 rounded border text-xs transition-colors ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-zinc-300' : 'border-black/10 hover:bg-black/5 text-zinc-700'}`}
+              className={`px-4 py-2.5 rounded-lg border text-xs transition-colors flex items-center gap-2 ${isDarkMode ? 'border-white/15 hover:bg-white/5 text-zinc-200' : 'border-black/15 hover:bg-black/5 text-zinc-800'}`}
             >
-              Facebook
+              <MessageCircle className="w-4 h-4 text-blue-400" />
+              <span>Facebook</span>
             </a>
           </div>
         </div>
 
         <div className={`mt-8 pt-4 border-t text-center text-[10px] ${isDarkMode ? 'border-white/[0.05] text-zinc-500' : 'border-black/[0.05] text-zinc-400'}`}>
-          PIETAZ PRIVATE DEN © 2026 • ARCHIVAL TRANSLATION STANDARD
+          PIETAZ PRIVATE DEN © 2026 • AI TRANSLATION ARCHIVE & DEMO SHOWCASE
         </div>
       </footer>
 

@@ -66,6 +66,10 @@
   }
 }
 
+.font-title-book {
+  font-family: 'Playfair Display', 'Noto Serif', 'Be Vietnam Pro', Georgia, serif;
+}
+
 .font-bookerly {
   font-family: 'Bookerly', 'Noto Serif', Georgia, serif;
 }
