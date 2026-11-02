@@ -1,8 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { 
   Sun, Moon, Search, BookOpen, Download, 
-  Feather, Send, MessageCircle, Library, Ghost, Castle, Compass, Sword, Rocket,
-  X, Filter
+  Compass, ArrowUpRight, Check, X, Shield, Sparkles
 } from 'lucide-react';
 import { BOOKS } from './data/books';
 import { CATEGORIES } from './data/categories';
@@ -13,18 +12,6 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [readingBook, setReadingBook] = useState(null);
-
-  // Icon mapping
-  const getCategoryIcon = (iconName) => {
-    switch(iconName) {
-      case 'Ghost': return <Ghost className="w-3.5 h-3.5" />;
-      case 'Castle': return <Castle className="w-3.5 h-3.5" />;
-      case 'Compass': return <Compass className="w-3.5 h-3.5" />;
-      case 'Sword': return <Sword className="w-3.5 h-3.5" />;
-      case 'Rocket': return <Rocket className="w-3.5 h-3.5" />;
-      default: return <Library className="w-3.5 h-3.5" />;
-    }
-  };
 
   // Filter books
   const filteredBooks = useMemo(() => {
@@ -39,77 +26,86 @@ export default function App() {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <div className={isDarkMode ? 'dark bg-[#0A0D14] text-slate-100 min-h-screen' : 'bg-[#F8F9FA] text-slate-800 min-h-screen'}>
+    <div className={isDarkMode ? 'dark bg-[#08090C] text-[#ECEFF4] min-h-screen selection:bg-[#E5B54F] selection:text-black font-sans' : 'bg-[#F9FAFB] text-[#1A1F2C] min-h-screen selection:bg-[#D97706] selection:text-white font-sans'}>
       
-      {/* Top Navbar */}
-      <header className={`sticky top-0 z-40 border-b backdrop-blur-md transition-colors ${isDarkMode ? 'bg-[#0A0D14]/95 border-white/10' : 'bg-white/95 border-slate-200'}`}>
-        <div className="max-w-7xl mx-auto px-4 h-15 flex items-center justify-between">
+      {/* Editorial Top Border Rule */}
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-[#E5B54F] to-transparent opacity-60"></div>
+
+      {/* Masthead Header */}
+      <header className={`border-b transition-colors sticky top-0 z-40 backdrop-blur-md ${isDarkMode ? 'bg-[#08090C]/90 border-white/[0.08]' : 'bg-[#F9FAFB]/90 border-black/[0.08]'}`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           
-          {/* Logo */}
-          <div className="flex items-center gap-2.5">
-            <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs shadow-sm ${isDarkMode ? 'bg-amber-500/10 text-amber-400 border border-amber-500/30' : 'bg-amber-500 text-white'}`}>
-              <Feather className="w-4 h-4" />
+          {/* Logo / Monogram */}
+          <div className="flex items-center gap-3">
+            <div className={`w-8 h-8 rounded border flex items-center justify-center font-mono font-bold text-xs tracking-wider ${isDarkMode ? 'border-[#E5B54F]/40 bg-[#E5B54F]/10 text-[#E5B54F]' : 'border-amber-600/40 bg-amber-500/10 text-amber-700'}`}>
+              P
             </div>
             <div>
-              <span className="font-bold tracking-tight text-sm sm:text-base block leading-tight">
+              <div className="font-bold tracking-[0.2em] text-xs sm:text-sm font-mono uppercase">
                 PIETAZ PRIVATE DEN
-              </span>
-              <span className={`text-[9px] font-mono uppercase tracking-wider block ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                Tủ Sách Dịch Thuật
-              </span>
+              </div>
+              <div className={`text-[10px] tracking-wider uppercase font-mono ${isDarkMode ? 'text-zinc-500' : 'text-zinc-400'}`}>
+                Archival Translation Portfolio
+              </div>
             </div>
           </div>
 
           {/* Desktop Search Bar */}
           <div className="hidden md:flex relative w-80">
-            <Search className={`w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 ${isDarkMode ? 'text-slate-400' : 'text-slate-400'}`} />
+            <Search className={`w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 ${isDarkMode ? 'text-zinc-500' : 'text-zinc-400'}`} />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Tìm tên truyện, tác giả..."
-              className={`w-full pl-9 pr-4 py-2 text-xs rounded-xl border transition-colors outline-none ${
+              placeholder="Tìm theo tên tác phẩm, tác giả..."
+              className={`w-full pl-9 pr-4 py-1.5 text-xs rounded border transition-colors outline-none font-mono ${
                 isDarkMode 
-                  ? 'bg-white/5 border-white/10 text-slate-100 placeholder-slate-500 focus:border-amber-500' 
-                  : 'bg-white border-slate-200 text-slate-800 placeholder-slate-400 focus:border-amber-500'
+                  ? 'bg-white/[0.03] border-white/10 text-zinc-200 placeholder-zinc-500 focus:border-[#E5B54F]/50' 
+                  : 'bg-black/[0.02] border-black/10 text-zinc-800 placeholder-zinc-400 focus:border-amber-600/50'
               }`}
             />
           </div>
 
-          {/* Theme Toggle */}
-          <button
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className={`p-2 rounded-xl border transition-all ${isDarkMode ? 'bg-white/5 border-white/10 text-amber-400 hover:bg-white/10' : 'bg-slate-100 border-slate-200 text-slate-600 hover:bg-slate-200'}`}
-            title={isDarkMode ? 'Giao diện Sáng' : 'Giao diện Tối'}
-          >
-            {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </button>
+          {/* Theme Switcher & Status */}
+          <div className="flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded border border-emerald-500/20 bg-emerald-500/5 text-[10px] font-mono text-emerald-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>EPUB ARCHIVE ONLINE</span>
+            </div>
+
+            <button
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className={`p-1.5 rounded border transition-colors ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-[#E5B54F]' : 'border-black/10 hover:bg-black/5 text-amber-700'}`}
+              title={isDarkMode ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối'}
+            >
+              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+          </div>
 
         </div>
       </header>
 
-      {/* Mobile Search & Category Pills (Tối ưu vuốt ngang cực tiện cho điện thoại) */}
-      <div className={`lg:hidden border-b px-4 py-3 sticky top-15 z-30 backdrop-blur-md ${isDarkMode ? 'bg-[#0D1018]/95 border-white/10' : 'bg-white/95 border-slate-200'}`}>
-        {/* Search input mobile */}
+      {/* Mobile Search & Categories Filter (Horizontal swipeable track) */}
+      <div className={`lg:hidden border-b px-4 py-3 sticky top-16 z-30 backdrop-blur-md ${isDarkMode ? 'bg-[#0B0D12]/95 border-white/[0.08]' : 'bg-white/95 border-black/[0.08]'}`}>
         <div className="relative mb-2.5">
-          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Tìm tên truyện, tác giả..."
-            className={`w-full pl-8 pr-8 py-1.5 text-xs rounded-lg border outline-none ${
-              isDarkMode ? 'bg-white/5 border-white/10 text-slate-100' : 'bg-slate-50 border-slate-200 text-slate-800'
+            placeholder="Tìm tác phẩm, tác giả..."
+            className={`w-full pl-8 pr-8 py-1.5 text-xs rounded border outline-none font-mono ${
+              isDarkMode ? 'bg-white/[0.03] border-white/10 text-zinc-100' : 'bg-black/[0.03] border-black/10 text-zinc-900'
             }`}
           />
           {searchQuery && (
-            <button onClick={() => setSearchQuery('')} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400">
+            <button onClick={() => setSearchQuery('')} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-500">
               <X className="w-3.5 h-3.5" />
             </button>
           )}
         </div>
 
-        {/* Horizontal Category Slider for Mobile */}
+        {/* Categories Bar */}
         <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
           {CATEGORIES.map((cat) => {
             const active = selectedCategory === cat.id;
@@ -117,33 +113,35 @@ export default function App() {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs whitespace-nowrap transition-all ${
+                className={`px-3 py-1 rounded text-xs whitespace-nowrap transition-all font-mono ${
                   active 
-                    ? 'bg-amber-500 text-black font-semibold shadow-sm' 
+                    ? isDarkMode 
+                      ? 'bg-[#E5B54F] text-black font-semibold' 
+                      : 'bg-amber-600 text-white font-semibold'
                     : isDarkMode 
-                      ? 'bg-white/5 text-slate-300 border border-white/5' 
-                      : 'bg-slate-100 text-slate-700 border border-slate-200'
+                      ? 'bg-white/[0.03] text-zinc-400 border border-white/5' 
+                      : 'bg-black/[0.03] text-zinc-600 border border-black/5'
                 }`}
               >
-                <span>{cat.label}</span>
+                {cat.label}
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      {/* Main Grid Layout */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* DESKTOP SIDEBAR: Chỉ hiển thị trên Desktop (Ẩn hoàn toàn trên Mobile) */}
+          {/* DESKTOP SIDEBAR: Archival Taxonomy */}
           <aside className="hidden lg:block lg:col-span-3 sticky top-24">
-            <div className={`p-4 rounded-2xl border ${isDarkMode ? 'bg-[#11141E] border-white/10' : 'bg-white border-slate-200 shadow-sm'}`}>
-              <div className="flex items-center justify-between pb-3 mb-2 border-b border-current/10">
-                <span className="text-xs font-bold font-mono uppercase tracking-wider opacity-70">
-                  Thể Loại Truyện
+            <div className={`p-4 rounded border ${isDarkMode ? 'bg-[#0E1118] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
+              <div className="flex items-center justify-between pb-3 mb-2 border-b border-current/10 font-mono text-[11px]">
+                <span className="uppercase tracking-widest text-zinc-400 font-semibold">
+                  Mục Lục Thể Loại
                 </span>
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-500 font-semibold">
+                <span className="text-[#E5B54F]">
                   {filteredBooks.length} Tác phẩm
                 </span>
               </div>
@@ -159,124 +157,145 @@ export default function App() {
                     <button
                       key={cat.id}
                       onClick={() => setSelectedCategory(cat.id)}
-                      className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all ${
+                      className={`w-full flex items-center justify-between px-3 py-2 rounded text-xs font-mono transition-all ${
                         active 
-                          ? 'bg-amber-500 text-black font-semibold shadow-sm' 
+                          ? isDarkMode 
+                            ? 'bg-[#E5B54F] text-black font-semibold shadow-sm' 
+                            : 'bg-amber-600 text-white font-semibold shadow-sm'
                           : isDarkMode 
-                            ? 'text-slate-300 hover:bg-white/5' 
-                            : 'text-slate-600 hover:bg-slate-100'
+                            ? 'text-zinc-400 hover:text-white hover:bg-white/[0.03]' 
+                            : 'text-zinc-600 hover:text-black hover:bg-black/[0.03]'
                       }`}
                     >
-                      <div className="flex items-center gap-2.5">
-                        <span className={active ? 'text-black' : 'text-amber-500'}>
-                          {getCategoryIcon(cat.icon)}
-                        </span>
-                        <span>{cat.label}</span>
-                      </div>
-                      <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${active ? 'bg-black/20 text-black' : 'opacity-60'}`}>
+                      <span>{cat.label}</span>
+                      <span className={`text-[10px] px-1.5 py-0.2 rounded font-mono ${active ? 'bg-black/20 text-current' : 'opacity-50'}`}>
                         {count}
                       </span>
                     </button>
                   );
                 })}
               </nav>
+
+              <div className="mt-6 pt-4 border-t border-current/10 font-mono text-[10px] text-zinc-500 space-y-1.5 leading-relaxed">
+                <div>• Bản dịch hoàn thiện đối soát song ngữ</div>
+                <div>• Đóng gói EPUB 3.0 cho Kindle/Kobo</div>
+              </div>
             </div>
           </aside>
 
-          {/* MAIN CONTENT: Books Shelf */}
+          {/* MAIN CONTENT: Sách dạng Tạp Chí / Thẻ Thư Viện Chuyên Nghiệp */}
           <main className="lg:col-span-9">
             
-            <div className="hidden lg:flex mb-6 items-center justify-between">
-              <div>
-                <h1 className="text-2xl font-bold tracking-tight">
-                  {CATEGORIES.find(c => c.id === selectedCategory)?.label || 'Tất cả tác phẩm'}
-                </h1>
-                <p className={`text-xs mt-1 ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Bấm "Đọc thử" để đọc trực tiếp các chương mẫu kèm điều hướng chương.
-                </p>
-              </div>
+            <div className="hidden lg:flex mb-6 items-baseline justify-between border-b border-current/10 pb-3">
+              <h1 className="text-lg font-bold font-mono uppercase tracking-widest">
+                {CATEGORIES.find(c => c.id === selectedCategory)?.label || 'Tất cả tác phẩm'}
+              </h1>
+              <span className="font-mono text-xs text-zinc-400">
+                [Lưu hành độc quyền • Bấm để đọc trực tiếp]
+              </span>
             </div>
 
             {filteredBooks.length === 0 ? (
-              <div className="text-center py-20 border border-dashed rounded-2xl border-current/20">
-                <p className="text-sm opacity-60">Không tìm thấy truyện nào.</p>
+              <div className="text-center py-20 border border-dashed rounded border-current/20 font-mono text-xs text-zinc-400">
+                <p>Không có tác phẩm nào thuộc thể loại này.</p>
                 <button
                   onClick={() => { setSelectedCategory('all'); setSearchQuery(''); }}
-                  className="mt-4 px-4 py-2 rounded-lg bg-amber-500 text-black text-xs font-semibold"
+                  className="mt-4 px-4 py-2 rounded bg-[#E5B54F] text-black font-semibold"
                 >
-                  Xem tất cả truyện
+                  Xem toàn bộ thư khố
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+              /* Gallery of Architectural Book Cards */
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {filteredBooks.map((book) => (
-                  <div 
+                  <article 
                     key={book.id}
-                    className={`rounded-2xl border flex flex-col justify-between overflow-hidden transition-all duration-300 ${
+                    className={`rounded border overflow-hidden flex flex-col justify-between transition-all duration-300 group hover:border-[#E5B54F]/50 ${
                       isDarkMode 
-                        ? 'bg-[#12151E] border-white/10 shadow-sm' 
-                        : 'bg-white border-slate-200 shadow-sm'
+                        ? 'bg-[#0E1118] border-white/[0.08]' 
+                        : 'bg-white border-black/[0.08] shadow-sm'
                     }`}
                   >
                     <div>
-                      {/* Book Cover Container with 3:4 aspect ratio */}
-                      <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-900 border-b border-current/10">
-                        <img 
-                          src={book.cover} 
-                          alt={book.title} 
-                          loading="lazy"
-                          className="w-full h-full object-cover object-center"
-                          onError={(e) => {
-                            e.target.onerror = null;
-                            e.target.src = './covers/ban-tron-chi-mang.jpg';
-                          }}
-                        />
-                        
-                        {/* Status Badge */}
-                        <div className="absolute top-2.5 right-2.5 flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium backdrop-blur-md shadow bg-black/75 text-white border border-white/15">
-                          <span className={`w-1.5 h-1.5 rounded-full ${book.status === 'Hoàn thành' ? 'bg-emerald-400' : 'bg-amber-400'}`}></span>
-                          <span>{book.status}</span>
-                        </div>
-
-                        {/* Chapter count pill */}
-                        <div className="absolute bottom-2.5 left-2.5 px-2 py-0.5 rounded text-[10px] font-mono backdrop-blur-md bg-black/75 text-slate-300 border border-white/10">
-                          {book.chapters.length} chương đọc thử
-                        </div>
+                      {/* Top Meta Bar */}
+                      <div className="px-4 py-2.5 border-b border-current/10 flex items-center justify-between font-mono text-[10px] text-zinc-500">
+                        <span className="tracking-wider uppercase">ARCHIVE ID: #{book.id.substring(0, 8)}</span>
+                        <span className={`px-2 py-0.5 rounded ${book.status === 'Hoàn thành' ? 'text-emerald-400 bg-emerald-500/10' : 'text-amber-400 bg-amber-500/10'}`}>
+                          {book.status}
+                        </span>
                       </div>
 
-                      {/* Metadata */}
-                      <div className="p-4">
-                        <div className="text-[11px] font-mono opacity-70 mb-1">
-                          Tác giả: {book.author}
+                      {/* Asymmetric Split: Spine & Cover + Details */}
+                      <div className="p-4 sm:p-5 flex gap-4 sm:gap-5">
+                        
+                        {/* Book Jacket (Bìa Sách Khối 3D Tinh Tế) */}
+                        <div className="w-28 sm:w-32 flex-shrink-0">
+                          <div className="relative aspect-[3/4.2] w-full rounded overflow-hidden shadow-lg border border-black/20 group-hover:shadow-2xl transition-all duration-300">
+                            <img 
+                              src={book.cover} 
+                              alt={book.title} 
+                              loading="lazy"
+                              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                              onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = './covers/ban-tron-chi-mang.jpg';
+                              }}
+                            />
+                            {/* Book Spine Texture Line */}
+                            <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-r from-black/40 to-transparent"></div>
+                          </div>
+                          
+                          <div className="mt-2 text-center font-mono text-[10px] text-zinc-400 truncate">
+                            {book.totalChapters}
+                          </div>
                         </div>
 
-                        <h3 className="font-bold text-base line-clamp-2 leading-snug">
-                          {book.title}
-                        </h3>
+                        {/* Literary Typography Details */}
+                        <div className="flex-1 min-w-0 flex flex-col justify-between">
+                          <div>
+                            <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mb-1 truncate">
+                              {book.author}
+                            </div>
 
-                        <p className={`mt-2 text-xs leading-relaxed line-clamp-3 ${isDarkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                          {book.description}
-                        </p>
+                            <h2 className="font-serif text-lg sm:text-xl font-bold leading-snug group-hover:text-[#E5B54F] transition-colors line-clamp-2">
+                              {book.title}
+                            </h2>
 
-                        {/* Tags */}
-                        <div className="mt-3 flex flex-wrap gap-1">
-                          {book.tags.map((tag, idx) => (
-                            <span 
-                              key={idx} 
-                              className={`text-[9px] px-2 py-0.5 rounded ${isDarkMode ? 'bg-white/5 text-slate-300' : 'bg-slate-100 text-slate-600'}`}
-                            >
-                              #{tag}
-                            </span>
-                          ))}
+                            <div className="font-serif italic text-xs text-zinc-400 mt-1 truncate">
+                              {book.originalTitle}
+                            </div>
+
+                            <p className={`mt-2.5 text-xs leading-relaxed line-clamp-3 font-sans ${isDarkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
+                              {book.description}
+                            </p>
+                          </div>
+
+                          {/* Editorial Tags */}
+                          <div className="mt-3 flex flex-wrap gap-1">
+                            {book.tags.map((tag, idx) => (
+                              <span 
+                                key={idx} 
+                                className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${isDarkMode ? 'bg-white/[0.04] text-zinc-400' : 'bg-black/[0.04] text-zinc-600'}`}
+                              >
+                                #{tag}
+                              </span>
+                            ))}
+                          </div>
+
                         </div>
                       </div>
                     </div>
 
-                    {/* Actions */}
-                    <div className={`p-4 pt-3 border-t flex items-center justify-between ${isDarkMode ? 'border-white/5' : 'border-slate-100'}`}>
+                    {/* Card Actions Toolbar */}
+                    <div className={`px-4 sm:px-5 py-3 border-t flex items-center justify-between font-mono text-xs ${isDarkMode ? 'border-white/[0.08] bg-black/20' : 'border-black/[0.08] bg-black/[0.02]'}`}>
                       <button
                         onClick={() => setReadingBook(book)}
-                        className="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-black text-xs font-semibold flex items-center gap-1.5 transition-all shadow-sm active:scale-95"
+                        className={`px-3.5 py-1.5 rounded font-semibold text-xs flex items-center gap-1.5 transition-colors ${
+                          isDarkMode 
+                            ? 'bg-[#E5B54F] text-black hover:bg-[#D9A336]' 
+                            : 'bg-amber-600 text-white hover:bg-amber-700'
+                        }`}
                       >
                         <BookOpen className="w-3.5 h-3.5" />
                         <span>Đọc thử ({book.chapters.length})</span>
@@ -285,15 +304,15 @@ export default function App() {
                       <a
                         href={book.downloadUrl}
                         download
-                        className={`text-xs flex items-center gap-1 font-mono transition-colors ${isDarkMode ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'}`}
-                        title="Tải file mẫu về máy đọc sách"
+                        className={`text-xs flex items-center gap-1 transition-colors hover:text-[#E5B54F] ${isDarkMode ? 'text-zinc-400' : 'text-zinc-600'}`}
+                        title="Tải file mẫu định dạng EPUB"
                       >
-                        <Download className="w-3.5 h-3.5 text-amber-500" />
+                        <Download className="w-3.5 h-3.5" />
                         <span>EPUB</span>
                       </a>
                     </div>
 
-                  </div>
+                  </article>
                 ))}
               </div>
             )}
@@ -301,46 +320,45 @@ export default function App() {
           </main>
 
         </div>
-
       </div>
 
-      {/* Footer */}
-      <footer id="contact" className={`border-t py-10 px-4 mt-12 transition-colors ${isDarkMode ? 'bg-[#0D1017] border-white/10' : 'bg-white border-slate-200'}`}>
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-sm">
+      {/* Editorial Footer */}
+      <footer id="contact" className={`border-t py-12 px-4 sm:px-6 mt-20 transition-colors font-mono ${isDarkMode ? 'bg-[#06080B] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
           <div>
-            <div className="font-bold flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-              <span>PIETAZ PRIVATE DEN</span>
+            <div className="font-bold text-sm tracking-wider text-current">
+              PIETAZ PRIVATE DEN
             </div>
-            <p className={`text-xs mt-1 max-w-md ${isDarkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-              Trang trưng bày và đọc thử bản dịch truyện chữ. Nhận chuyển giao file EPUB, MOBI chất lượng cao cho Kindle/Kobo.
+            <p className="text-[11px] mt-1 text-zinc-400 max-w-md">
+              Thư phòng lưu trữ và trưng bày bản dịch văn học chọn lọc. Tối ưu hóa 100% cho màn hình điện thoại và thiết bị đọc sách chuyên dụng.
             </p>
           </div>
 
-          <div className="flex items-center gap-3 w-full sm:w-auto justify-center">
+          <div className="flex items-center gap-3">
             <a 
               href="https://t.me/" 
               target="_blank" 
               rel="noreferrer"
-              className="px-4 py-2 rounded-xl bg-amber-500 text-black font-semibold text-xs flex items-center gap-1.5 hover:bg-amber-400 transition-colors shadow-sm"
+              className={`px-4 py-2 rounded font-semibold text-xs flex items-center gap-1.5 transition-colors ${
+                isDarkMode ? 'bg-[#E5B54F] text-black hover:bg-[#D9A336]' : 'bg-amber-600 text-white hover:bg-amber-700'
+              }`}
             >
-              <Send className="w-3.5 h-3.5" />
-              <span>Telegram</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+              <span>Telegram Dispatch</span>
             </a>
             <a 
               href="https://zalo.me/" 
               target="_blank" 
               rel="noreferrer"
-              className={`px-4 py-2 rounded-xl border text-xs font-medium flex items-center gap-1.5 transition-colors ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-slate-200' : 'border-slate-200 hover:bg-slate-100 text-slate-700'}`}
+              className={`px-4 py-2 rounded border text-xs transition-colors ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-zinc-300' : 'border-black/10 hover:bg-black/5 text-zinc-700'}`}
             >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Zalo</span>
+              Zalo
             </a>
           </div>
         </div>
 
-        <div className={`mt-6 pt-4 border-t text-center text-[11px] ${isDarkMode ? 'border-white/5 text-slate-500' : 'border-slate-100 text-slate-400'}`}>
-          © 2026 PIETAZ PRIVATE DEN • Archival Quality Translation Showcase
+        <div className={`mt-8 pt-4 border-t text-center text-[10px] ${isDarkMode ? 'border-white/[0.05] text-zinc-400' : 'border-black/[0.05] text-zinc-400'}`}>
+          PIETAZ PRIVATE DEN © 2026 • ARCHIVAL TRANSLATION STANDARD • ZERO AI SLOP
         </div>
       </footer>
 
