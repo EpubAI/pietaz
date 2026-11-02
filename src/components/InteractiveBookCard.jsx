@@ -1,15 +1,15 @@
 import React, { useRef, useState } from 'react';
-import { BookOpen, ChevronRight, Bookmark, Calendar, Maximize2, X } from 'lucide-react';
+import { BookOpen, Calendar, Maximize2, X, Award, ChevronRight, FileText, Info } from 'lucide-react';
 
 export function InteractiveBookCard({ book, onRead, isDarkMode }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
   const [isCoverModalOpen, setIsCoverModalOpen] = useState(false);
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
   const [spotlight, setSpotlight] = useState({ x: 0, y: 0 });
   const containerRef = useRef(null);
 
   const handleMouseMove = (e) => {
-    if (!containerRef.current || isOpen) return;
+    if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
@@ -36,7 +36,8 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
         style={{
           perspective: '1400px'
         }}
-        className="w-full relative"
+        className="w-full relative cursor-pointer"
+        onClick={() => setIsDetailModalOpen(true)}
       >
         {/* 3D BOOK CASING CONTAINER */}
         <div
@@ -44,7 +45,7 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
             transform: `rotateX(${rotate.x}deg) rotateY(${rotate.y}deg)`,
             transition: 'transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)'
           }}
-          className={`relative rounded-2xl border transition-all duration-500 overflow-hidden ${
+          className={`relative rounded-2xl border transition-all duration-500 overflow-hidden group hover:border-[#E5B54F]/50 ${
             isDarkMode 
               ? 'bg-[#0E1118] border-white/10 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)]' 
               : 'bg-white border-black/10 shadow-xl'
@@ -61,12 +62,15 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
           {/* MAIN BODY: 3D BOOK HARDCOVER + FOLIO DETAILS */}
           <div className="p-5 sm:p-6 flex flex-col sm:flex-row gap-6 sm:gap-7 items-center sm:items-start">
             
-            {/* INTERACTIVE 3D HARDBACK BOOK JACKET (KHÔNG GIAN LỚN) */}
+            {/* INTERACTIVE 3D HARDBACK BOOK JACKET */}
             <div className="w-64 sm:w-48 md:w-52 flex-shrink-0 relative select-none flex flex-col items-center">
               
               {/* Realistic Book Mockup with 3D Spine and Pages Thickness */}
               <div 
-                onClick={() => setIsCoverModalOpen(true)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsCoverModalOpen(true);
+                }}
                 className="relative aspect-[3/4.4] w-full rounded-r-xl overflow-hidden border-r-2 border-b-2 border-black/50 shadow-[0_15px_35px_rgba(0,0,0,0.6)] cursor-pointer group/cover transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(229,181,79,0.3)]"
                 title="Bấm để phóng to xem ảnh bìa rõ nét"
               >
@@ -96,15 +100,23 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                 <div className="absolute -bottom-2 left-6 w-3 h-5 bg-[#E5B54F] shadow-md transform rotate-2 pointer-events-none"></div>
               </div>
 
-              {/* Action xem trích đoạn */}
-              <div className="mt-2.5 text-center">
+              {/* Nút Đọc Demo Tác Phẩm đặt ngay dưới ảnh bìa để tối ưu không gian */}
+              <div className="mt-3 w-full">
                 <button
                   type="button"
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="inline-flex items-center gap-1 font-mono text-[11px] text-[#E5B54F] hover:underline"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onRead(book);
+                  }}
+                  className={`w-full py-2 px-3 rounded-lg font-mono text-xs font-semibold flex items-center justify-center gap-1.5 transition-all duration-200 active:scale-95 shadow-md ${
+                    isDarkMode
+                      ? 'bg-[#E5B54F] text-black hover:bg-[#F2C76A] hover:shadow-[0_0_20px_rgba(229,181,79,0.35)]'
+                      : 'bg-amber-600 text-white hover:bg-amber-700 hover:shadow-[0_0_20px_rgba(217,119,6,0.3)]'
+                  }`}
+                  title="Đọc thử ngay tác phẩm"
                 >
-                  <span>{isOpen ? 'Đóng trích đoạn' : 'Xem trích đoạn'}</span>
-                  <ChevronRight className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
+                  <BookOpen className="w-3.5 h-3.5" />
+                  <span>Đọc demo tác phẩm</span>
                 </button>
               </div>
             </div>
@@ -119,22 +131,33 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                 </div>
 
                 {/* Vietnamese Master Title */}
-                <h2 className="font-serif text-2xl sm:text-2xl font-bold leading-tight hover:text-[#E5B54F] transition-colors">
+                <h2 className="font-serif text-2xl sm:text-2xl font-bold leading-tight group-hover:text-[#E5B54F] transition-colors">
                   {book.title}
                 </h2>
 
-                {/* Ngày cập nhật upload */}
-                {book.updatedAt && (
-                  <div className="flex items-center gap-1.5 text-[11px] font-mono text-zinc-400 mt-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-[#E5B54F]" />
-                    <span>Cập nhật: {book.updatedAt}</span>
-                  </div>
-                )}
+                {/* Ngày cập nhật upload & Quy mô chương */}
+                <div className="flex items-center gap-3 text-[11px] font-mono text-zinc-400 mt-1.5 flex-wrap">
+                  {book.updatedAt && (
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-3.5 h-3.5 text-[#E5B54F]" />
+                      <span>Cập nhật: {book.updatedAt}</span>
+                    </div>
+                  )}
+                  {book.totalChapters && (
+                    <div className="flex items-center gap-1 text-zinc-400">
+                      <span>•</span>
+                      <span>{book.totalChapters}</span>
+                    </div>
+                  )}
+                </div>
 
                 {/* Section Header: Giới thiệu tác phẩm */}
-                <div className="mt-4 pb-1 border-b border-current/10">
+                <div className="mt-3.5 pb-1 border-b border-current/10 flex items-center justify-between">
                   <span className="text-xs font-mono text-[#E5B54F] font-semibold tracking-wider uppercase">
                     Giới thiệu tác phẩm:
+                  </span>
+                  <span className="text-[10px] font-mono opacity-50 group-hover:opacity-100 group-hover:text-[#E5B54F] transition-all flex items-center gap-0.5">
+                    Chi tiết <ChevronRight className="w-3 h-3" />
                   </span>
                 </div>
 
@@ -144,7 +167,7 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                 </p>
 
                 {/* Tags */}
-                <div className="mt-4 flex flex-wrap gap-1.5">
+                <div className="mt-3.5 flex flex-wrap gap-1.5">
                   {book.tags.map((tag, idx) => (
                     <span
                       key={idx}
@@ -160,50 +183,123 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                 </div>
               </div>
 
-              {/* Bottom Actions Bar */}
-              <div className="mt-6 pt-4 border-t border-current/10 flex items-center justify-between font-mono text-xs">
-                <button
-                  onClick={() => onRead(book)}
-                  className={`w-full sm:w-auto px-5 py-2.5 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-200 active:scale-95 shadow-md ${
-                    isDarkMode
-                      ? 'bg-[#E5B54F] text-black hover:bg-[#F2C76A] hover:shadow-[0_0_20px_rgba(229,181,79,0.35)]'
-                      : 'bg-amber-600 text-white hover:bg-amber-700 hover:shadow-[0_0_20px_rgba(217,119,6,0.3)]'
-                  }`}
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      {/* POPUP XEM TOÀN BỘ THÔNG TIN CHI TIẾT CỦA TÁC PHẨM */}
+      {isDetailModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
+          onClick={() => setIsDetailModalOpen(false)}
+        >
+          <div 
+            className={`relative max-w-2xl w-full max-h-[90vh] rounded-2xl border flex flex-col shadow-2xl overflow-hidden animate-in zoom-in-95 duration-200 ${
+              isDarkMode ? 'bg-[#0D1017] text-[#E4E7EB] border-white/15' : 'bg-white text-[#1A1F2C] border-black/15'
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header popup */}
+            <div className="p-4 sm:p-5 border-b border-current/10 flex items-center justify-between sticky top-0 bg-inherit backdrop-blur-md z-10">
+              <div className="flex items-center gap-2">
+                <Info className="w-4 h-4 text-[#E5B54F]" />
+                <span className="font-mono text-xs uppercase tracking-wider font-bold">Hồ Sơ Tác Phẩm</span>
+              </div>
+              <button
+                onClick={() => setIsDetailModalOpen(false)}
+                className="p-1.5 rounded-lg hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Nội dung chi tiết cuộn */}
+            <div className="flex-1 overflow-y-auto p-5 sm:p-7 space-y-6">
+              
+              {/* Cụm thông tin chính */}
+              <div className="flex flex-col sm:flex-row gap-5 items-center sm:items-start">
+                <div 
+                  onClick={() => setIsCoverModalOpen(true)}
+                  className="w-36 flex-shrink-0 aspect-[3/4.4] rounded-lg overflow-hidden border border-white/20 shadow-xl cursor-pointer hover:opacity-90"
+                  title="Xem ảnh bìa lớn"
                 >
-                  <BookOpen className="w-4 h-4" />
-                  <span>Đọc tác phẩm</span>
-                </button>
+                  <img src={book.cover} alt={book.title} className="w-full h-full object-cover" />
+                </div>
+                
+                <div className="flex-1 min-w-0 text-center sm:text-left">
+                  <div className="text-xs font-mono opacity-60 uppercase tracking-widest">{book.author}</div>
+                  <h2 className="text-2xl font-serif font-bold text-[#E5B54F] mt-0.5">{book.title}</h2>
+                  {book.originalTitle && (
+                    <div className="text-sm font-serif italic opacity-75 mt-0.5">{book.originalTitle}</div>
+                  )}
+
+                  <div className="mt-3 space-y-1 text-xs font-mono opacity-80">
+                    <div>• <span className="font-semibold">Quy mô:</span> {book.totalChapters || `${book.chapters?.length || 0} chương`}</div>
+                    {book.updatedAt && <div>• <span className="font-semibold">Cập nhật:</span> {book.updatedAt}</div>}
+                    {book.authorBio && <div>• <span className="font-semibold">Tác giả:</span> {book.authorBio}</div>}
+                  </div>
+
+                  <div className="mt-4">
+                    <button
+                      onClick={() => {
+                        setIsDetailModalOpen(false);
+                        onRead(book);
+                      }}
+                      className="px-5 py-2 rounded-lg font-mono text-xs font-bold bg-[#E5B54F] text-black hover:bg-[#F2C76A] transition-all shadow-md flex items-center gap-2 mx-auto sm:mx-0"
+                    >
+                      <BookOpen className="w-4 h-4" />
+                      <span>Đọc demo tác phẩm ({book.chapters?.length || 0} chương)</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Giải thưởng & Thành tựu nếu có */}
+              {book.awards && (
+                <div className={`p-4 rounded-xl border ${isDarkMode ? 'bg-[#E5B54F]/5 border-[#E5B54F]/20 text-zinc-300' : 'bg-amber-500/10 border-amber-600/20 text-zinc-800'}`}>
+                  <div className="flex items-center gap-1.5 font-mono text-xs text-[#E5B54F] font-bold uppercase mb-1.5">
+                    <Award className="w-4 h-4" />
+                    <span>Giải thưởng & Thành tựu:</span>
+                  </div>
+                  <p className="text-xs sm:text-[13px] leading-relaxed font-sans">
+                    {book.awards}
+                  </p>
+                </div>
+              )}
+
+              {/* Tóm tắt mở rộng / Đánh giá chuyên sâu */}
+              <div>
+                <div className="font-mono text-xs text-[#E5B54F] font-bold uppercase pb-1.5 border-b border-current/10 flex items-center gap-1.5">
+                  <FileText className="w-4 h-4" />
+                  <span>Bình luận & Giới thiệu chuyên sâu:</span>
+                </div>
+                <div className="mt-3 text-xs sm:text-[13px] leading-relaxed space-y-3 font-sans opacity-90 text-justify whitespace-pre-line">
+                  {book.extendedReview || book.description}
+                </div>
+              </div>
+
+              {/* Tags */}
+              <div className="pt-2 border-t border-current/10">
+                <div className="flex flex-wrap gap-1.5">
+                  {book.tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="text-[10px] font-mono px-2 py-0.5 rounded border border-current/15 opacity-70"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
               </div>
 
             </div>
 
           </div>
-
-          {/* EXPANDABLE FOLIO PREVIEW (HIỆU ỨNG RÚT BẢN THẢO TRÍCH ĐOẠN) */}
-          {isOpen && (
-            <div className="border-t border-current/10 p-5 sm:p-6 bg-black/20 animate-in slide-in-from-top-2 duration-300">
-              <div className="flex items-center justify-between pb-3 border-b border-current/10 font-mono text-xs text-[#E5B54F]">
-                <div className="flex items-center gap-1.5 font-semibold">
-                  <Bookmark className="w-3.5 h-3.5" />
-                  <span>Trích đoạn mở đầu: {book.chapters[0]?.title}</span>
-                </div>
-                <button 
-                  onClick={() => onRead(book)}
-                  className="underline hover:opacity-80"
-                >
-                  Đọc toàn văn →
-                </button>
-              </div>
-
-              <div className="mt-3 font-serif-reading text-xs sm:text-sm leading-relaxed opacity-85 space-y-2 text-justify">
-                <p>{book.chapters[0]?.content[0]}</p>
-                <p>{book.chapters[0]?.content[1]}</p>
-              </div>
-            </div>
-          )}
-
         </div>
-      </div>
+      )}
 
       {/* MODAL POPUP PHÓNG TO ẢNH BÌA SẮC NÉT */}
       {isCoverModalOpen && (
