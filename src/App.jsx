@@ -88,16 +88,45 @@ export default function App() {
             />
           </div>
 
-          {/* Theme & Live Status */}
-          <div className="flex items-center gap-3">
-            <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded border border-emerald-500/20 bg-emerald-500/5 text-[10px] font-mono text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>EPUB ARCHIVE ONLINE</span>
-            </div>
+          {/* Contact Links & Theme Toggle */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Telegram */}
+            <a 
+              href="https://t.me/Pietaz" 
+              target="_blank" 
+              rel="noreferrer"
+              className={`px-2.5 sm:px-3 py-1.5 rounded-lg font-semibold text-xs flex items-center gap-1.5 transition-all shadow-sm ${
+                isDarkMode 
+                  ? 'bg-[#E5B54F] text-black hover:bg-[#F2C76A] hover:shadow-[0_0_15px_rgba(229,181,79,0.35)]' 
+                  : 'bg-amber-600 text-white hover:bg-amber-700 shadow'
+              }`}
+              title="Kênh Telegram trao đổi: @Pietaz"
+            >
+              <Send className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline font-mono">Telegram</span>
+            </a>
+
+            {/* Facebook */}
+            <a 
+              href="https://www.facebook.com/heywazzup2024" 
+              target="_blank" 
+              rel="noreferrer"
+              className={`px-2.5 sm:px-3 py-1.5 rounded-lg border text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                isDarkMode 
+                  ? 'border-white/15 hover:bg-white/5 text-zinc-200 hover:border-white/30' 
+                  : 'border-black/15 hover:bg-black/5 text-zinc-800 hover:border-black/30'
+              }`}
+              title="Facebook cá nhân"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-blue-400" />
+              <span className="hidden sm:inline">Facebook</span>
+            </a>
+
+            <div className="h-4 w-px bg-current opacity-20 mx-0.5 sm:mx-1"></div>
 
             <button
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`p-1.5 rounded border transition-colors ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-[#E5B54F]' : 'border-black/10 hover:bg-black/5 text-amber-700'}`}
+              className={`p-1.5 rounded-lg border transition-colors ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-[#E5B54F]' : 'border-black/10 hover:bg-black/5 text-amber-700'}`}
               title={isDarkMode ? 'Giao diện Sáng' : 'Giao diện Tối'}
             >
               {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
