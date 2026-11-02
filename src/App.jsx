@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { 
-  Sun, Moon, Search, BookOpen, Download, 
-  Compass, ArrowUpRight, Check, X, Shield, Sparkles
+  Sun, Moon, Search, Feather, Send, MessageCircle, X, Sparkles, Compass
 } from 'lucide-react';
 import { BOOKS } from './data/books';
 import { CATEGORIES } from './data/categories';
+import { InteractiveBookCard } from './components/InteractiveBookCard';
 import ReaderModal from './components/ReaderModal';
 
 export default function App() {
@@ -26,16 +26,16 @@ export default function App() {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <div className={isDarkMode ? 'dark bg-[#08090C] text-[#ECEFF4] min-h-screen selection:bg-[#E5B54F] selection:text-black font-sans' : 'bg-[#F9FAFB] text-[#1A1F2C] min-h-screen selection:bg-[#D97706] selection:text-white font-sans'}>
+    <div className={isDarkMode ? 'dark bg-[#07080B] text-[#E8ECF2] min-h-screen selection:bg-[#E5B54F] selection:text-black font-sans' : 'bg-[#F9FAFB] text-[#1A1F2C] min-h-screen selection:bg-amber-600 selection:text-white font-sans'}>
       
-      {/* Editorial Top Border Rule */}
-      <div className="h-0.5 bg-gradient-to-r from-transparent via-[#E5B54F] to-transparent opacity-60"></div>
+      {/* Dynamic Golden Accent Beam Header */}
+      <div className="h-0.5 bg-gradient-to-r from-transparent via-[#E5B54F] to-transparent opacity-80"></div>
 
-      {/* Masthead Header */}
-      <header className={`border-b transition-colors sticky top-0 z-40 backdrop-blur-md ${isDarkMode ? 'bg-[#08090C]/90 border-white/[0.08]' : 'bg-[#F9FAFB]/90 border-black/[0.08]'}`}>
+      {/* Top Navbar */}
+      <header className={`sticky top-0 z-40 border-b backdrop-blur-md transition-colors ${isDarkMode ? 'bg-[#07080B]/90 border-white/[0.08]' : 'bg-[#F9FAFB]/90 border-black/[0.08]'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           
-          {/* Logo / Monogram */}
+          {/* Brand */}
           <div className="flex items-center gap-3">
             <div className={`w-8 h-8 rounded border flex items-center justify-center font-mono font-bold text-xs tracking-wider ${isDarkMode ? 'border-[#E5B54F]/40 bg-[#E5B54F]/10 text-[#E5B54F]' : 'border-amber-600/40 bg-amber-500/10 text-amber-700'}`}>
               P
@@ -66,7 +66,7 @@ export default function App() {
             />
           </div>
 
-          {/* Theme Switcher & Status */}
+          {/* Theme & Live Status */}
           <div className="flex items-center gap-3">
             <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded border border-emerald-500/20 bg-emerald-500/5 text-[10px] font-mono text-emerald-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -76,7 +76,7 @@ export default function App() {
             <button
               onClick={() => setIsDarkMode(!isDarkMode)}
               className={`p-1.5 rounded border transition-colors ${isDarkMode ? 'border-white/10 hover:bg-white/5 text-[#E5B54F]' : 'border-black/10 hover:bg-black/5 text-amber-700'}`}
-              title={isDarkMode ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối'}
+              title={isDarkMode ? 'Giao diện Sáng' : 'Giao diện Tối'}
             >
               {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
@@ -85,8 +85,8 @@ export default function App() {
         </div>
       </header>
 
-      {/* Mobile Search & Categories Filter (Horizontal swipeable track) */}
-      <div className={`lg:hidden border-b px-4 py-3 sticky top-16 z-30 backdrop-blur-md ${isDarkMode ? 'bg-[#0B0D12]/95 border-white/[0.08]' : 'bg-white/95 border-black/[0.08]'}`}>
+      {/* Mobile Sticky Filter Track */}
+      <div className={`lg:hidden border-b px-4 py-3 sticky top-16 z-30 backdrop-blur-md ${isDarkMode ? 'bg-[#0A0C10]/95 border-white/[0.08]' : 'bg-white/95 border-black/[0.08]'}`}>
         <div className="relative mb-2.5">
           <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500" />
           <input
@@ -105,7 +105,6 @@ export default function App() {
           )}
         </div>
 
-        {/* Categories Bar */}
         <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
           {CATEGORIES.map((cat) => {
             const active = selectedCategory === cat.id;
@@ -130,16 +129,16 @@ export default function App() {
         </div>
       </div>
 
-      {/* Main Grid Layout */}
+      {/* Main Content Layout */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* DESKTOP SIDEBAR: Archival Taxonomy */}
+          {/* Desktop Sidebar */}
           <aside className="hidden lg:block lg:col-span-3 sticky top-24">
-            <div className={`p-4 rounded border ${isDarkMode ? 'bg-[#0E1118] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
+            <div className={`p-4 rounded border ${isDarkMode ? 'bg-[#0C0E14] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
               <div className="flex items-center justify-between pb-3 mb-2 border-b border-current/10 font-mono text-[11px]">
                 <span className="uppercase tracking-widest text-zinc-400 font-semibold">
-                  Mục Lục Thể Loại
+                  Thể Loại Truyện
                 </span>
                 <span className="text-[#E5B54F]">
                   {filteredBooks.length} Tác phẩm
@@ -177,21 +176,22 @@ export default function App() {
               </nav>
 
               <div className="mt-6 pt-4 border-t border-current/10 font-mono text-[10px] text-zinc-500 space-y-1.5 leading-relaxed">
-                <div>• Bản dịch hoàn thiện đối soát song ngữ</div>
-                <div>• Đóng gói EPUB 3.0 cho Kindle/Kobo</div>
+                <div>• Thẻ tương tác 3D Tilt & Cursor Spotlight</div>
+                <div>• Đóng gói EPUB chuẩn cho máy đọc sách</div>
               </div>
             </div>
           </aside>
 
-          {/* MAIN CONTENT: Sách dạng Tạp Chí / Thẻ Thư Viện Chuyên Nghiệp */}
+          {/* Gallery of Interactive 3D Tilt Books */}
           <main className="lg:col-span-9">
             
             <div className="hidden lg:flex mb-6 items-baseline justify-between border-b border-current/10 pb-3">
-              <h1 className="text-lg font-bold font-mono uppercase tracking-widest">
-                {CATEGORIES.find(c => c.id === selectedCategory)?.label || 'Tất cả tác phẩm'}
+              <h1 className="text-lg font-bold font-mono uppercase tracking-widest flex items-center gap-2">
+                <span>{CATEGORIES.find(c => c.id === selectedCategory)?.label || 'Tất cả tác phẩm'}</span>
+                <Sparkles className="w-4 h-4 text-[#E5B54F]" />
               </h1>
               <span className="font-mono text-xs text-zinc-400">
-                [Lưu hành độc quyền • Bấm để đọc trực tiếp]
+                [Di chuột để nghiêng 3D • Bấm để mở đọc trực tiếp]
               </span>
             </div>
 
@@ -206,113 +206,14 @@ export default function App() {
                 </button>
               </div>
             ) : (
-              /* Gallery of Architectural Book Cards */
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {filteredBooks.map((book) => (
-                  <article 
+                  <InteractiveBookCard
                     key={book.id}
-                    className={`rounded border overflow-hidden flex flex-col justify-between transition-all duration-300 group hover:border-[#E5B54F]/50 ${
-                      isDarkMode 
-                        ? 'bg-[#0E1118] border-white/[0.08]' 
-                        : 'bg-white border-black/[0.08] shadow-sm'
-                    }`}
-                  >
-                    <div>
-                      {/* Top Meta Bar */}
-                      <div className="px-4 py-2.5 border-b border-current/10 flex items-center justify-between font-mono text-[10px] text-zinc-500">
-                        <span className="tracking-wider uppercase">ARCHIVE ID: #{book.id.substring(0, 8)}</span>
-                        <span className={`px-2 py-0.5 rounded ${book.status === 'Hoàn thành' ? 'text-emerald-400 bg-emerald-500/10' : 'text-amber-400 bg-amber-500/10'}`}>
-                          {book.status}
-                        </span>
-                      </div>
-
-                      {/* Asymmetric Split: Spine & Cover + Details */}
-                      <div className="p-4 sm:p-5 flex gap-4 sm:gap-5">
-                        
-                        {/* Book Jacket (Bìa Sách Khối 3D Tinh Tế) */}
-                        <div className="w-28 sm:w-32 flex-shrink-0">
-                          <div className="relative aspect-[3/4.2] w-full rounded overflow-hidden shadow-lg border border-black/20 group-hover:shadow-2xl transition-all duration-300">
-                            <img 
-                              src={book.cover} 
-                              alt={book.title} 
-                              loading="lazy"
-                              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                              onError={(e) => {
-                                e.target.onerror = null;
-                                e.target.src = './covers/ban-tron-chi-mang.jpg';
-                              }}
-                            />
-                            {/* Book Spine Texture Line */}
-                            <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-r from-black/40 to-transparent"></div>
-                          </div>
-                          
-                          <div className="mt-2 text-center font-mono text-[10px] text-zinc-400 truncate">
-                            {book.totalChapters}
-                          </div>
-                        </div>
-
-                        {/* Literary Typography Details */}
-                        <div className="flex-1 min-w-0 flex flex-col justify-between">
-                          <div>
-                            <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mb-1 truncate">
-                              {book.author}
-                            </div>
-
-                            <h2 className="font-serif text-lg sm:text-xl font-bold leading-snug group-hover:text-[#E5B54F] transition-colors line-clamp-2">
-                              {book.title}
-                            </h2>
-
-                            <div className="font-serif italic text-xs text-zinc-400 mt-1 truncate">
-                              {book.originalTitle}
-                            </div>
-
-                            <p className={`mt-2.5 text-xs leading-relaxed line-clamp-3 font-sans ${isDarkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
-                              {book.description}
-                            </p>
-                          </div>
-
-                          {/* Editorial Tags */}
-                          <div className="mt-3 flex flex-wrap gap-1">
-                            {book.tags.map((tag, idx) => (
-                              <span 
-                                key={idx} 
-                                className={`text-[10px] font-mono px-1.5 py-0.5 rounded ${isDarkMode ? 'bg-white/[0.04] text-zinc-400' : 'bg-black/[0.04] text-zinc-600'}`}
-                              >
-                                #{tag}
-                              </span>
-                            ))}
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Card Actions Toolbar */}
-                    <div className={`px-4 sm:px-5 py-3 border-t flex items-center justify-between font-mono text-xs ${isDarkMode ? 'border-white/[0.08] bg-black/20' : 'border-black/[0.08] bg-black/[0.02]'}`}>
-                      <button
-                        onClick={() => setReadingBook(book)}
-                        className={`px-3.5 py-1.5 rounded font-semibold text-xs flex items-center gap-1.5 transition-colors ${
-                          isDarkMode 
-                            ? 'bg-[#E5B54F] text-black hover:bg-[#D9A336]' 
-                            : 'bg-amber-600 text-white hover:bg-amber-700'
-                        }`}
-                      >
-                        <BookOpen className="w-3.5 h-3.5" />
-                        <span>Đọc thử ({book.chapters.length})</span>
-                      </button>
-
-                      <a
-                        href={book.downloadUrl}
-                        download
-                        className={`text-xs flex items-center gap-1 transition-colors hover:text-[#E5B54F] ${isDarkMode ? 'text-zinc-400' : 'text-zinc-600'}`}
-                        title="Tải file mẫu định dạng EPUB"
-                      >
-                        <Download className="w-3.5 h-3.5" />
-                        <span>EPUB</span>
-                      </a>
-                    </div>
-
-                  </article>
+                    book={book}
+                    onRead={(selected) => setReadingBook(selected)}
+                    isDarkMode={isDarkMode}
+                  />
                 ))}
               </div>
             )}
@@ -322,8 +223,8 @@ export default function App() {
         </div>
       </div>
 
-      {/* Editorial Footer */}
-      <footer id="contact" className={`border-t py-12 px-4 sm:px-6 mt-20 transition-colors font-mono ${isDarkMode ? 'bg-[#06080B] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
+      {/* Footer */}
+      <footer id="contact" className={`border-t py-12 px-4 sm:px-6 mt-20 transition-colors font-mono ${isDarkMode ? 'bg-[#050608] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
           <div>
             <div className="font-bold text-sm tracking-wider text-current">
@@ -343,7 +244,6 @@ export default function App() {
                 isDarkMode ? 'bg-[#E5B54F] text-black hover:bg-[#D9A336]' : 'bg-amber-600 text-white hover:bg-amber-700'
               }`}
             >
-              <ArrowUpRight className="w-3.5 h-3.5" />
               <span>Telegram Dispatch</span>
             </a>
             <a 
@@ -357,12 +257,12 @@ export default function App() {
           </div>
         </div>
 
-        <div className={`mt-8 pt-4 border-t text-center text-[10px] ${isDarkMode ? 'border-white/[0.05] text-zinc-400' : 'border-black/[0.05] text-zinc-400'}`}>
-          PIETAZ PRIVATE DEN © 2026 • ARCHIVAL TRANSLATION STANDARD • ZERO AI SLOP
+        <div className={`mt-8 pt-4 border-t text-center text-[10px] ${isDarkMode ? 'border-white/[0.05] text-zinc-500' : 'border-black/[0.05] text-zinc-400'}`}>
+          PIETAZ PRIVATE DEN © 2026 • ARCHIVAL TRANSLATION STANDARD
         </div>
       </footer>
 
-      {/* Reader Modal */}
+      {/* In-Browser Reader Modal */}
       {readingBook && (
         <ReaderModal 
           book={readingBook} 
