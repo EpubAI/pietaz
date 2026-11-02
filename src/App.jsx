@@ -6,6 +6,7 @@ import { BOOKS } from './data/books';
 import { CATEGORIES } from './data/categories';
 import { InteractiveBookCard } from './components/InteractiveBookCard';
 import ReaderModal from './components/ReaderModal';
+import { normalizeVietnamese } from './utils/text';
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -13,14 +14,38 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [readingBook, setReadingBook] = useState(null);
 
-  // Filter books
+  // Helper lấy danh sách category id của 1 cuốn sách (hỗ trợ cả mảng categories lẫn category đơn)
+  const getBookCategories = (book) => {
+    if (Array.isArray(book.categories) && book.categories.length > 0) {
+      return book.categories;
+    }
+    if (book.category) {
+      return [book.category];
+    }
+    return [];
+  };
+
+  // Filter books với chuẩn hóa không dấu và hỗ trợ multi-category
   const filteredBooks = useMemo(() => {
+    const queryNorm = normalizeVietnamese(searchQuery);
+
     return BOOKS.filter((book) => {
-      const matchCategory = selectedCategory === 'all' || book.category === selectedCategory;
+      const bookCats = getBookCategories(book);
+      const matchCategory = selectedCategory === 'all' || bookCats.includes(selectedCategory);
+
+      if (!queryNorm) return matchCategory;
+
+      const titleNorm = normalizeVietnamese(book.title);
+      const originalTitleNorm = normalizeVietnamese(book.originalTitle || '');
+      const authorNorm = normalizeVietnamese(book.author);
+      const matchTag = Array.isArray(book.tags) && book.tags.some(t => normalizeVietnamese(t).includes(queryNorm));
+
       const matchSearch = 
-        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
+        titleNorm.includes(queryNorm) ||
+        originalTitleNorm.includes(queryNorm) ||
+        authorNorm.includes(queryNorm) ||
+        matchTag;
+
       return matchCategory && matchSearch;
     });
   }, [selectedCategory, searchQuery]);
@@ -150,7 +175,7 @@ export default function App() {
                   const active = selectedCategory === cat.id;
                   const count = cat.id === 'all' 
                     ? BOOKS.length 
-                    : BOOKS.filter(b => b.category === cat.id).length;
+                    : BOOKS.filter(b => getBookCategories(b).includes(cat.id)).length;
 
                   return (
                     <button

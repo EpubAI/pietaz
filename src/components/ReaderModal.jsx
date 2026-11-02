@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { 
   X, ChevronLeft, ChevronRight, List, 
-  ArrowLeft, BookOpen, Sun, Moon 
+  ArrowLeft, BookOpen, Sun, Moon, Type
 } from 'lucide-react';
 
 export default function ReaderModal({ book, onClose, isDarkMode }) {
-  const [fontSize, setFontSize] = useState(18);
+  const [fontSize, setFontSize] = useState(19);
+  const [fontFamily, setFontFamily] = useState('bookerly'); // 'bookerly' | 'libron'
   const [readerTheme, setReaderTheme] = useState('dark');
   const [currentChapterIndex, setCurrentChapterIndex] = useState(0);
   const [showChapterDrawer, setShowChapterDrawer] = useState(false);
@@ -33,26 +34,26 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
   const currentChapter = book.chapters[currentChapterIndex] || book.chapters[0];
 
   const themeClasses = {
-    dark: 'bg-[#12151D] text-slate-200 border-white/10',
+    dark: 'bg-[#0E1118] text-[#E4E7EB] border-white/10',
     sepia: 'bg-[#F4EBD9] text-[#2C241D] border-amber-900/20',
     paper: 'bg-[#FAF8F5] text-[#1E232A] border-slate-300'
   };
 
   const headerThemeClasses = {
-    dark: 'border-white/10 bg-[#0C0E14]/85 text-slate-300',
-    sepia: 'border-amber-900/10 bg-[#E8DCB8]/85 text-[#2C241D]',
-    paper: 'border-slate-200 bg-[#EFECE6]/85 text-[#1E232A]'
+    dark: 'border-white/10 bg-[#0A0D14]/90 text-slate-300',
+    sepia: 'border-amber-900/10 bg-[#E8DCB8]/90 text-[#2C241D]',
+    paper: 'border-slate-200 bg-[#EFECE6]/90 text-[#1E232A]'
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-6 bg-black/85 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       <div 
         className={`w-full max-w-4xl h-[95vh] rounded-2xl border flex flex-col shadow-2xl overflow-hidden relative transition-colors duration-200 ${themeClasses[readerTheme]}`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Controls Toolbar */}
         <header className={`px-4 sm:px-6 py-3 border-b flex items-center justify-between backdrop-blur-md sticky top-0 z-20 ${headerThemeClasses[readerTheme]}`}>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button 
               onClick={onClose} 
               className="p-1.5 rounded-lg hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
@@ -73,10 +74,37 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-4">
+            
+            {/* FONT SELECTOR TOGGLE: Bookerly vs Libron */}
+            <div className="flex items-center border border-current/20 rounded-lg p-0.5 text-xs font-mono">
+              <button
+                onClick={() => setFontFamily('bookerly')}
+                className={`px-2.5 py-1 rounded transition-colors text-xs ${
+                  fontFamily === 'bookerly'
+                    ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
+                    : 'opacity-70 hover:opacity-100'
+                }`}
+                title="Font Bookerly (Chuẩn máy đọc sách Kindle)"
+              >
+                Bookerly
+              </button>
+              <button
+                onClick={() => setFontFamily('libron')}
+                className={`px-2.5 py-1 rounded transition-colors text-xs ${
+                  fontFamily === 'libron'
+                    ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
+                    : 'opacity-70 hover:opacity-100'
+                }`}
+                title="Font Libron (Tối ưu đọc số & e-readers)"
+              >
+                Libron
+              </button>
+            </div>
+
             {/* Font scale */}
             <div className="flex items-center border border-current/20 rounded-lg p-0.5 text-xs font-mono">
               <button 
-                onClick={() => setFontSize(Math.max(14, fontSize - 1))} 
+                onClick={() => setFontSize(Math.max(15, fontSize - 1))} 
                 className="px-2 py-1 hover:bg-black/10 dark:hover:bg-white/10 rounded transition-colors"
                 title="Giảm cỡ chữ"
               >
@@ -84,7 +112,7 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
               </button>
               <span className="px-1.5 opacity-70 text-[11px]">{fontSize}px</span>
               <button 
-                onClick={() => setFontSize(Math.min(26, fontSize + 1))} 
+                onClick={() => setFontSize(Math.min(28, fontSize + 1))} 
                 className="px-2 py-1 hover:bg-black/10 dark:hover:bg-white/10 rounded transition-colors font-bold"
                 title="Tăng cỡ chữ"
               >
@@ -96,17 +124,17 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
             <div className="flex items-center gap-1.5 border border-current/20 rounded-lg p-1">
               <button
                 onClick={() => setReaderTheme('dark')}
-                className={`w-4 h-4 rounded-full bg-[#12151D] border border-white/40 transition-transform ${readerTheme === 'dark' ? 'scale-125 ring-2 ring-amber-500' : 'hover:scale-110'}`}
+                className={`w-4 h-4 rounded-full bg-[#0E1118] border border-white/40 transition-transform ${readerTheme === 'dark' ? 'scale-125 ring-2 ring-[#E5B54F]' : 'hover:scale-110'}`}
                 title="Chế độ Tối"
               />
               <button
                 onClick={() => setReaderTheme('sepia')}
-                className={`w-4 h-4 rounded-full bg-[#F4EBD9] border border-amber-900/40 transition-transform ${readerTheme === 'sepia' ? 'scale-125 ring-2 ring-amber-500' : 'hover:scale-110'}`}
+                className={`w-4 h-4 rounded-full bg-[#F4EBD9] border border-amber-900/40 transition-transform ${readerTheme === 'sepia' ? 'scale-125 ring-2 ring-[#E5B54F]' : 'hover:scale-110'}`}
                 title="Chế độ Giấy Điệp (Sepia)"
               />
               <button
                 onClick={() => setReaderTheme('paper')}
-                className={`w-4 h-4 rounded-full bg-[#FAF8F5] border border-slate-400 transition-transform ${readerTheme === 'paper' ? 'scale-125 ring-2 ring-amber-500' : 'hover:scale-110'}`}
+                className={`w-4 h-4 rounded-full bg-[#FAF8F5] border border-slate-400 transition-transform ${readerTheme === 'paper' ? 'scale-125 ring-2 ring-[#E5B54F]' : 'hover:scale-110'}`}
                 title="Chế độ Giấy Sáng (Paper)"
               />
             </div>
@@ -124,7 +152,7 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
         {showChapterDrawer && (
           <div className="absolute inset-y-12 left-0 w-72 sm:w-80 bg-inherit border-r border-current/15 shadow-2xl z-30 flex flex-col backdrop-blur-xl animate-in slide-in-from-left duration-200">
             <div className="p-4 border-b border-current/10 flex items-center justify-between">
-              <span className="font-bold text-sm">Mục Lục Các Chương</span>
+              <span className="font-bold text-sm font-mono">Mục Lục Các Chương</span>
               <button onClick={() => setShowChapterDrawer(false)} className="p-1 hover:opacity-75">
                 <X className="w-4 h-4" />
               </button>
@@ -139,7 +167,7 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
                   }}
                   className={`w-full text-left p-2.5 rounded-lg transition-colors flex items-center justify-between ${
                     idx === currentChapterIndex 
-                      ? 'bg-amber-500 text-black font-semibold' 
+                      ? 'bg-[#E5B54F] text-black font-semibold' 
                       : 'hover:bg-black/5 dark:hover:bg-white/5 opacity-80'
                   }`}
                 >
@@ -153,7 +181,9 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
 
         {/* Reading Body */}
         <div 
-          className="flex-1 overflow-y-auto px-6 sm:px-16 py-10 font-serif-reading leading-relaxed selection:bg-amber-500 selection:text-black"
+          className={`flex-1 overflow-y-auto px-6 sm:px-16 py-10 leading-relaxed selection:bg-[#E5B54F] selection:text-black ${
+            fontFamily === 'bookerly' ? 'font-bookerly' : 'font-libron'
+          }`}
           style={{ fontSize: `${fontSize}px` }}
         >
           <div className="max-w-2xl mx-auto space-y-6">
@@ -164,13 +194,17 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
               <h1 className="text-2xl sm:text-3xl font-bold mt-2">
                 {currentChapter.title}
               </h1>
-              <p className="font-sans text-xs opacity-60 mt-2 font-mono">
-                Tác giả: {book.author} • Chương {currentChapterIndex + 1}/{book.chapters.length}
-              </p>
+              <div className="flex items-center justify-center gap-3 font-sans text-xs opacity-60 mt-2 font-mono">
+                <span>Tác giả: {book.author}</span>
+                <span>•</span>
+                <span className="text-[#E5B54F]">Phông: {fontFamily === 'bookerly' ? 'Bookerly' : 'Libron'}</span>
+                <span>•</span>
+                <span>Chương {currentChapterIndex + 1}/{book.chapters.length}</span>
+              </div>
             </div>
 
             {currentChapter.content.map((paragraph, index) => (
-              <p key={index} className="text-justify indent-7 leading-[2]">
+              <p key={index} className="text-justify indent-8 leading-[2.1] tracking-normal">
                 {paragraph}
               </p>
             ))}
@@ -188,7 +222,7 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
 
               <button
                 onClick={() => setShowChapterDrawer(true)}
-                className="font-mono text-amber-500 hover:underline"
+                className="font-mono text-[#E5B54F] hover:underline"
               >
                 Mục lục chương
               </button>
