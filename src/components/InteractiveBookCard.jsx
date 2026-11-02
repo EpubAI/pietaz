@@ -238,6 +238,9 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
 
                   <div className="mt-3 space-y-1 text-xs font-mono opacity-80">
                     <div>• <span className="font-semibold">Quy mô:</span> {book.totalChapters || `${book.chapters?.length || 0} chương`}</div>
+                    {book.wordCount && (
+                      <div>• <span className="font-semibold">Tổng số chữ:</span> <span className="text-[#E5B54F] font-bold">{book.wordCount}</span></div>
+                    )}
                     {book.updatedAt && <div>• <span className="font-semibold">Cập nhật:</span> {book.updatedAt}</div>}
                     {book.authorBio && <div>• <span className="font-semibold">Tác giả:</span> {book.authorBio}</div>}
                   </div>
