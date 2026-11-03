@@ -2,7 +2,8 @@ export const banTronChiMang = {
   "id": "ban-tron-chi-mang",
   "title": "Bàn Tròn Chí Mạng",
   "originalTitle": "致命圆桌 (Zhi Ming Yuan Zhuo)",
-  "author": "Tiêu Thanh Thành (Xiao Qing Cheng)",
+  "author": "Tiếu Thanh Chanh",
+  "authorBio": "Cây bút nổi bật thể loại vô hạn lưu kinh dị và trò chơi sinh tử cân não SCP.",
   "updatedAt": "03/11/2026",
   "categories": [
     "trinh-tham",
@@ -12,13 +13,15 @@ export const banTronChiMang = {
   "wordCount": "42,7 vạn chữ (427,058 chữ)",
   "totalChapters": "108 chương (42,7 vạn chữ (427,058 chữ))",
   "cover": "./covers/ban-tron-chi-mang.jpg",
-  "description": "Một trò chơi sinh tồn tàn khốc xoay quanh chiếc bàn tròn bí ẩn. Những phán quyết chí mạng, trò chơi suy luận cân não và màn đấu trí nghẹt thở giữa các người chơi để tìm ra sự thật.",
-  "extendedReview": "Một trò chơi sinh tồn tàn khốc xoay quanh chiếc bàn tròn bí ẩn. Khi Giang Khải tỉnh lại, anh thấy mình bị kéo vào một căn phòng kim loại không lối thoát cùng 11 người chơi khác. Những chiếc ghế quanh bàn tròn đại diện cho những số phận bị giằng xé giữa sự sống và cái chết.\n\nMỗi vòng chơi là một thử thách cân não đỉnh cao: từ việc lật tẩy kẻ nói dối, giải mã mật mã đường hầm, cho đến việc đối mặt với những góc tối tàn độc nhất trong nhân tính con người. Tác phẩm sở hữu lối hành văn sắc lạnh, dồn dập, logic phá án chặt chẽ và những cú twist nghẹt thở khiến người đọc không thể rời mắt.",
+  "awards": "Tác phẩm tiêu biểu hàng đầu thể loại Vô hạn lưu giải đố SCP, liên tục nằm trong danh sách đề cử tác phẩm kinh dị suy luận được yêu thích nhất.",
+  "description": "Chiếc đồng hồ cát màu máu vừa lật ngược giữa bàn kim loại lạnh ngắt thì tiếng xương gãy giòn tan đã vang lên trong bóng tối và một kẻ chơi xấu số bị nghiền nát ngay trước mắt mười một con người còn lại. Không có thời gian để hoảng loạn, không có chỗ cho nước mắt, một giọng nói điện tử vô cảm cất lên từ khoảng không vô định: \"Trong vòng mười lăm phút, hãy chỉ ra kẻ đang nói dối, hoặc một người ngẫu nhiên sẽ phải chết.\"",
+  "extendedReview": "Bàn Tròn Chí Mạng\nTác giả: Tiếu Thanh Chanh (Xiao Qing Cheng)\nThể loại: Vô hạn lưu, Trinh thám sinh tồn, Kinh dị giải đố, Cân não SCP\nQuy mô: 106 chương chính văn, 2 ngoại truyện\nCác giải thưởng, thành tựu: Tác phẩm tiêu biểu hàng đầu thể loại Vô hạn lưu giải đố SCP, liên tục nằm trong danh sách đề cử tác phẩm kinh dị suy luận được yêu thích nhất của Tấn Giang.\n\nChiếc đồng hồ cát màu máu vừa lật ngược giữa bàn kim loại lạnh ngắt thì tiếng xương gãy giòn tan đã vang lên trong bóng tối và một kẻ chơi xấu số bị nghiền nát ngay trước mắt mười một con người còn lại. Không có thời gian để hoảng loạn, không có chỗ cho nước mắt, một giọng nói điện tử vô cảm cất lên từ khoảng không vô định: \"Trong vòng mười lăm phút, hãy chỉ ra kẻ đang nói dối, hoặc một người ngẫu nhiên sẽ phải chết.\"\n\nNếu bạn từng nghẹt thở trước những cánh cửa sinh tử rợn người trong Kính Vạn Hoa Chết Chóc, từng say mê những màn giải mã lạnh lùng sắc bén của Tử Thần Trò Chơi thì Bàn Tròn Chí Mạng chính là một cơn ác mộng tinh xảo khiến nhịp tim bạn đập loạn xạ theo từng tích tắc đếm ngược. Tác giả đã mổ xẻ các hồ sơ dị thường rùng rợn của Tổ chức SCP rồi cài cắm chúng vào một bàn cờ sinh tử tàn nhẫn, nơi mỗi bước đi sai lầm đều phải trả giá bằng thịt nát xương tan.\n\nGiang Vấn Nguyên bước vào bàn tròn không phải để tìm kiếm vinh quang hay sự sống sót đơn thuần, cậu đem mạng sống của mình ra đặt cược chỉ để đổi lấy một cơ hội gặp lại người bạn trai đã chết. Nhưng càng dấn sâu vào những phó bản quái dị ngập tràn máu và cạm bẫy tâm lý, cậu kinh hoàng nhận ra người đàn ông cậu từng hết lòng thương nhớ dường như chưa từng thuộc về thế giới bình thường ngoài kia. Những nụ cười giả tạo, những lời nói dối ngọt ngào và những bóng ma rình rập từ tổ chức ngầm bắt đầu xé rách bức màn bí mật.\n\nTiếu Thanh Chanh duy trì tiết tấu dồn dập đến nghẹt thở, liên tục đẩy các nhân vật vào thế chân tường bằng những câu đố logic hóc búa và đòn tâm lý chiến khốc liệt. Kẻ thù đáng sợ nhất trong căn phòng tròn kín mít không phải là những thực thể ma quái ngoài hành lang, mà chính là ánh mắt nghi kỵ lẫn nhau của những người cùng ngồi quanh bàn khi thời gian cạn dần. Bạn sẽ không thể đoán trước ai sẽ là kẻ phản bội tiếp theo, bởi vì trong trò chơi này, sự thật là thứ xa xỉ nhất và chỉ có kẻ dám đối mặt với vực thẳm mới có cơ hội sống sót bước ra ngoài.",
   "tags": [
     "Vô hạn lưu",
-    "Trinh thám",
-    "Sinh tồn",
-    "Cân não"
+    "Trinh thám sinh tồn",
+    "Kinh dị giải đố",
+    "Cân não SCP",
+    "Tiếu Thanh Chanh"
   ],
   "chapters": [
     {
