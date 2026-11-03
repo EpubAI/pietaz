@@ -1,3 +1,4 @@
+import { tiepThi70 } from './novels/tiepThi70';
 import { daoTuChu } from './novels/daoTuChu';
 import { hauVeDongQuanTruongKy } from './novels/hauVeDongQuanTruongKy';
 import { khieuDaiThan } from './novels/khieuDaiThan';
@@ -14,6 +15,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website
 export const BOOKS = [
+  tiepThi70,             // Kinh tế học & Quản trị chiến lược: Tiếp Thị 7.0 - Philip Kotler
   daoTuChu,              // Linh dị kinh dị & Vô hạn lưu giải đố: Đảo Tử Chú - Hắc Sắc Hỏa Chủng
   hauVeDongQuanTruongKy, // Hiện thực xã hội & Quan trường thế thái: Hầu Vệ Đông Quan Trường Ký - Tiểu Kiều Lão Thụ
   khieuDaiThan,          // Linh dị dân tục & Tát Mãn Vu thuật: Khiêu Đại Thần - Thôi Tẩu Triệu
