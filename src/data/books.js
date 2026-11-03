@@ -1,3 +1,8 @@
+import { tangPhong } from './novels/tangPhong';
+import { tamXoaKich } from './novels/tamXoaKich';
+import { chungTaSongTaiNamKinh } from './novels/chungTaSongTaiNamKinh';
+import { theWorldatWorkHandbook } from './novels/theWorldatWorkHandbook';
+import { trungKhanhMeThanh } from './novels/trungKhanhMeThanh';
 import { chetTrenSaoHoa } from './novels/chetTrenSaoHoa';
 import { theBat } from './novels/theBat';
 import { satThien } from './novels/satThien';
@@ -23,6 +28,11 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  tangPhong,             // Trinh thám hình sự & Cảnh doanh: Tàng Phong - Lữ Tranh
+  tamXoaKich,            // Trinh thám hình sự & Tội phạm kinh tế: Tam Xoa Kích - Lữ Tranh
+  chungTaSongTaiNamKinh, // Khoa học viễn tưởng & Vô tuyến thời không: Chúng Ta Sống Tại Nam Kinh - Thiên Thụy Thuyết Phù
+  theWorldatWorkHandbook,// Kinh tế học & Quản trị nhân tài: Cẩm Nang Đãi Ngộ Tổng Thể WorldatWork - Dan Cafaro
+  trungKhanhMeThanh,     // Kỳ bí dân quốc & Trinh thám lịch sử: Trùng Khánh Mê Thành - E Bá Tước
   chetTrenSaoHoa,        // Khoa học viễn tưởng: Chết Trên Sao Hỏa - Thiên Thụy Thuyết Phù
   theBat,                // Trinh thám hình sự Bắc Âu: Dơi (The Bat) - Jo Nesbø
   satThien,              // Võ hiệp thực chiến & Sử thi kỳ hiệp: Sát Thiền - Kiều Tĩnh Phu
