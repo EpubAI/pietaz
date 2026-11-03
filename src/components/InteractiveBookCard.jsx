@@ -8,6 +8,9 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
   const [spotlight, setSpotlight] = useState({ x: 0, y: 0 });
   const containerRef = useRef(null);
 
+  // Phổ quát hóa đường dẫn ảnh bìa (hỗ trợ cả book.cover lẫn book.coverImage, cả ./covers lẫn /covers)
+  const coverSrc = book.cover || book.coverImage || './covers/ban-tron-chi-mang.jpg';
+
   const handleMouseMove = (e) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -75,7 +78,7 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                 title="Bấm để phóng to xem ảnh bìa rõ nét"
               >
                 <img
-                  src={book.cover}
+                  src={coverSrc}
                   alt={book.title}
                   loading="lazy"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover/cover:scale-105"
@@ -130,7 +133,7 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                   {book.originalTitle && <span className="font-serif italic text-right">{book.originalTitle}</span>}
                 </div>
 
-                {/* Vietnamese Master Title (Hỗ trợ chuẩn 100% tiếng Việt, không lỗi dấu) */}
+                {/* Vietnamese Master Title */}
                 <h2 className="font-title-book text-2xl sm:text-[26px] font-bold leading-tight group-hover:text-[#E5B54F] transition-colors">
                   {book.title}
                 </h2>
@@ -143,10 +146,10 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                       <span>Cập nhật: {book.updatedAt}</span>
                     </div>
                   )}
-                  {book.totalChapters && (
+                  {(book.totalChapters || book.chapters?.length) && (
                     <div className="flex items-center gap-1 text-zinc-400">
                       <span>•</span>
-                      <span>{book.totalChapters}</span>
+                      <span>{book.totalChapters || `${book.chapters.length} chương`}</span>
                     </div>
                   )}
                 </div>
@@ -167,20 +170,22 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                 </p>
 
                 {/* Tags */}
-                <div className="mt-3.5 flex flex-wrap gap-1.5">
-                  {book.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
-                        isDarkMode 
-                          ? 'bg-white/[0.03] border-white/10 text-zinc-300' 
-                          : 'bg-black/[0.03] border-black/10 text-zinc-700'
-                      }`}
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
+                {Array.isArray(book.tags) && book.tags.length > 0 && (
+                  <div className="mt-3.5 flex flex-wrap gap-1.5">
+                    {book.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className={`text-[10px] font-mono px-2 py-0.5 rounded border ${
+                          isDarkMode 
+                            ? 'bg-white/[0.03] border-white/10 text-zinc-300' 
+                            : 'bg-black/[0.03] border-black/10 text-zinc-700'
+                        }`}
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
 
             </div>
@@ -226,7 +231,7 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                   className="w-36 flex-shrink-0 aspect-[3/4.4] rounded-lg overflow-hidden border border-white/20 shadow-xl cursor-pointer hover:opacity-90"
                   title="Xem ảnh bìa lớn"
                 >
-                  <img src={book.cover} alt={book.title} className="w-full h-full object-cover" />
+                  <img src={coverSrc} alt={book.title} className="w-full h-full object-cover" />
                 </div>
                 
                 <div className="flex-1 min-w-0 text-center sm:text-left">
@@ -242,7 +247,9 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                       <div>• <span className="font-semibold">Tổng số chữ:</span> <span className="text-[#E5B54F] font-bold">{book.wordCount}</span></div>
                     )}
                     {book.updatedAt && <div>• <span className="font-semibold">Cập nhật:</span> {book.updatedAt}</div>}
-                    {book.authorBio && <div>• <span className="font-semibold">Tác giả:</span> {book.authorBio}</div>}
+                    {(book.authorBio || book.authorInfo?.bio) && (
+                      <div>• <span className="font-semibold">Tác giả:</span> {book.authorBio || book.authorInfo?.bio}</div>
+                    )}
                   </div>
 
                   <div className="mt-4">
@@ -251,90 +258,65 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                         setIsDetailModalOpen(false);
                         onRead(book);
                       }}
-                      className="px-5 py-2 rounded-lg font-mono text-xs font-bold bg-[#E5B54F] text-black hover:bg-[#F2C76A] transition-all shadow-md flex items-center gap-2 mx-auto sm:mx-0"
+                      className="px-4 py-2 rounded-lg bg-[#E5B54F] text-black font-mono text-xs font-bold hover:bg-[#F2C76A] transition-all flex items-center gap-1.5 shadow-md active:scale-95 mx-auto sm:mx-0"
                     >
-                      <BookOpen className="w-4 h-4" />
-                      <span>Đọc demo tác phẩm ({book.chapters?.length || 0} chương)</span>
+                      <BookOpen className="w-3.5 h-3.5" />
+                      <span>Bắt đầu đọc demo ({book.chapters?.length || 0} chương)</span>
                     </button>
                   </div>
                 </div>
               </div>
 
-              {/* Giải thưởng & Thành tựu nếu có */}
+              {/* Giải thưởng & Thành tựu */}
               {book.awards && (
-                <div className={`p-4 rounded-xl border ${isDarkMode ? 'bg-[#E5B54F]/5 border-[#E5B54F]/20 text-zinc-300' : 'bg-amber-500/10 border-amber-600/20 text-zinc-800'}`}>
-                  <div className="flex items-center gap-1.5 font-mono text-xs text-[#E5B54F] font-bold uppercase mb-1.5">
+                <div className="p-3.5 rounded-xl border border-[#E5B54F]/25 bg-[#E5B54F]/5">
+                  <div className="flex items-center gap-2 text-xs font-mono text-[#E5B54F] font-bold uppercase mb-1">
                     <Award className="w-4 h-4" />
-                    <span>Giải thưởng & Thành tựu:</span>
+                    <span>Giải thưởng & Thành tựu</span>
                   </div>
-                  <p className="text-xs sm:text-[13px] leading-relaxed font-sans">
-                    {book.awards}
-                  </p>
+                  <p className="text-xs opacity-90 leading-relaxed font-sans">{book.awards}</p>
                 </div>
               )}
 
-              {/* Tóm tắt mở rộng / Đánh giá chuyên sâu */}
-              <div>
-                <div className="font-mono text-xs text-[#E5B54F] font-bold uppercase pb-1.5 border-b border-current/10 flex items-center gap-1.5">
-                  <FileText className="w-4 h-4" />
-                  <span>Bình luận & Giới thiệu chuyên sâu:</span>
+              {/* Bài Review Chuyên Sâu Toàn Văn */}
+              {(book.extendedReview || book.description) && (
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-mono text-[#E5B54F] font-bold uppercase mb-2">
+                    <FileText className="w-4 h-4" />
+                    <span>Bài Đánh Giá & Phân Tích Chuyên Sâu</span>
+                  </div>
+                  <div className="text-xs sm:text-[13px] leading-relaxed opacity-90 space-y-3 font-sans whitespace-pre-line border-t border-current/10 pt-3 text-justify">
+                    {book.extendedReview || book.description}
+                  </div>
                 </div>
-                <div className="mt-3 text-xs sm:text-[13px] leading-relaxed space-y-3 font-sans opacity-90 text-justify whitespace-pre-line">
-                  {book.extendedReview || book.description}
-                </div>
-              </div>
-
-              {/* Tags */}
-              <div className="pt-2 border-t border-current/10">
-                <div className="flex flex-wrap gap-1.5">
-                  {book.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="text-[10px] font-mono px-2 py-0.5 rounded border border-current/15 opacity-70"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              )}
 
             </div>
-
           </div>
         </div>
       )}
 
-      {/* MODAL POPUP PHÓNG TO ẢNH BÌA SẮC NÉT */}
+      {/* POPUP PHÓNG TO ẢNH BÌA */}
       {isCoverModalOpen && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-in fade-in duration-200"
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/95 backdrop-blur-lg animate-in fade-in duration-200"
           onClick={() => setIsCoverModalOpen(false)}
         >
-          <div 
-            className="relative max-w-sm sm:max-w-md w-full bg-[#0A0D14] rounded-2xl overflow-hidden border border-white/20 shadow-2xl p-3 flex flex-col items-center animate-in zoom-in-95 duration-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Nút đóng */}
+          <div className="relative max-w-lg w-full max-h-[90vh] flex flex-col items-center">
             <button
               onClick={() => setIsCoverModalOpen(false)}
-              className="absolute top-4 right-4 p-2 rounded-full bg-black/70 hover:bg-black text-white/90 transition-all z-10 border border-white/10"
-              title="Đóng xem ảnh bìa"
+              className="absolute -top-10 right-0 p-2 text-white/80 hover:text-white"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
-
-            {/* Bìa to */}
-            <div className="w-full aspect-[3/4.4] rounded-xl overflow-hidden shadow-2xl border border-white/10">
-              <img
-                src={book.cover}
-                alt={book.title}
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-
-            <div className="mt-3 text-center w-full px-2">
-              <h3 className="font-serif font-bold text-base text-zinc-100">{book.title}</h3>
-              <p className="text-xs font-mono text-[#E5B54F] mt-0.5">{book.author}</p>
+            <img 
+              src={coverSrc} 
+              alt={book.title} 
+              className="max-h-[85vh] w-auto rounded-xl shadow-2xl object-contain border border-white/20"
+              onClick={(e) => e.stopPropagation()} 
+            />
+            <div className="text-center mt-3 text-white/80 font-mono text-xs font-bold">
+              {book.title}
             </div>
           </div>
         </div>
