@@ -1,3 +1,4 @@
+import { benhVienSo444 } from './novels/benhVienSo444';
 import { tiepThi70 } from './novels/tiepThi70';
 import { daoTuChu } from './novels/daoTuChu';
 import { hauVeDongQuanTruongKy } from './novels/hauVeDongQuanTruongKy';
@@ -15,6 +16,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website
 export const BOOKS = [
+  benhVienSo444,         // Linh dị kinh dị & Quy tắc y khoa: Bệnh Viện Số 444 - Hắc Sắc Hỏa Chủng
   tiepThi70,             // Kinh tế học & Quản trị chiến lược: Tiếp Thị 7.0 - Philip Kotler
   daoTuChu,              // Linh dị kinh dị & Vô hạn lưu giải đố: Đảo Tử Chú - Hắc Sắc Hỏa Chủng
   hauVeDongQuanTruongKy, // Hiện thực xã hội & Quan trường thế thái: Hầu Vệ Đông Quan Trường Ký - Tiểu Kiều Lão Thụ
