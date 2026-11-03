@@ -1,3 +1,10 @@
+import { chetTrenSaoHoa } from './novels/chetTrenSaoHoa';
+import { theBat } from './novels/theBat';
+import { satThien } from './novels/satThien';
+import { chuCamSonHai } from './novels/chuCamSonHai';
+import { hauDaLoiHinhTrinh } from './novels/hauDaLoiHinhTrinh';
+import { ladyJokerTap1 } from './novels/ladyJokerTap1';
+import { ladyJokerTap2 } from './novels/ladyJokerTap2';
 import { benhVienSo444 } from './novels/benhVienSo444';
 import { tiepThi70 } from './novels/tiepThi70';
 import { daoTuChu } from './novels/daoTuChu';
@@ -14,8 +21,15 @@ import { banTronChiMang } from './novels/banTronChiMang';
 import { kiemLai } from './novels/kiemLai';
 import { daiKichDoi } from './novels/daiKichDoi';
 
-// Danh sách tổng hợp tác phẩm hiển thị trên website
+// Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  chetTrenSaoHoa,        // Khoa học viễn tưởng: Chết Trên Sao Hỏa - Thiên Thụy Thuyết Phù
+  theBat,                // Trinh thám hình sự Bắc Âu: Dơi (The Bat) - Jo Nesbø
+  satThien,              // Võ hiệp thực chiến & Sử thi kỳ hiệp: Sát Thiền - Kiều Tĩnh Phu
+  chuCamSonHai,          // Tiên hiệp & Sơn Hải đại hàng hải: Chú Cấm Sơn Hải - Bắc Hải Mục Kình
+  hauDaLoiHinhTrinh,     // Trinh thám hình sự thực tế: Hầu Đại Lợi: Ký Sự Hình Trinh - Tiểu Kiều Lão Thụ
+  ladyJokerTap1,         // Trinh thám xã hội Nhật Bản: Lady Joker (Tập 1) - Kaoru Takamura
+  ladyJokerTap2,         // Trinh thám xã hội Nhật Bản: Lady Joker (Tập 2) - Kaoru Takamura
   benhVienSo444,         // Linh dị kinh dị & Quy tắc y khoa: Bệnh Viện Số 444 - Hắc Sắc Hỏa Chủng
   tiepThi70,             // Kinh tế học & Quản trị chiến lược: Tiếp Thị 7.0 - Philip Kotler
   daoTuChu,              // Linh dị kinh dị & Vô hạn lưu giải đố: Đảo Tử Chú - Hắc Sắc Hỏa Chủng
