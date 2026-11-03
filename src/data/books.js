@@ -1,3 +1,5 @@
+import { nangNangVaNang } from './novels/nangNangVaNang';
+import { daoSiKhongDeChoc } from './novels/daoSiKhongDeChoc';
 import { tangPhong } from './novels/tangPhong';
 import { tamXoaKich } from './novels/tamXoaKich';
 import { chungTaSongTaiNamKinh } from './novels/chungTaSongTaiNamKinh';
@@ -28,6 +30,8 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  nangNangVaNang,        // Trinh thám hình sự & Quần tượng nữ giới: Nàng, Nàng và Nàng - Cảnh Thiên Trạch
+  daoSiKhongDeChoc,      // Đô thị linh dị & Phong thủy đạo môn: Đạo Sĩ Không Dễ Chọc - Khốn Đích Thụy Bất Trứ
   tangPhong,             // Trinh thám hình sự & Cảnh doanh: Tàng Phong - Lữ Tranh
   tamXoaKich,            // Trinh thám hình sự & Tội phạm kinh tế: Tam Xoa Kích - Lữ Tranh
   chungTaSongTaiNamKinh, // Khoa học viễn tưởng & Vô tuyến thời không: Chúng Ta Sống Tại Nam Kinh - Thiên Thụy Thuyết Phù
