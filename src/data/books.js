@@ -1,3 +1,4 @@
+import { khieuDaiThan } from './novels/khieuDaiThan';
 import { gocNhoAltay } from './novels/gocNhoAltay';
 import { tuyetTrungHanDaoHanh } from './novels/tuyetTrungHanDaoHanh';
 import { bachVienKhachSan } from './novels/bachVienKhachSan';
@@ -11,6 +12,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website
 export const BOOKS = [
+  khieuDaiThan,         // Linh dị dân tục & Tát Mãn Vu thuật: Khiêu Đại Thần - Thôi Tẩu Triệu
   gocNhoAltay,          // Tản văn & Ký sự thảo nguyên: Góc Nhỏ Altay - Lý Quyên
   tuyetTrungHanDaoHanh, // Sử thi huyền huyễn võ hiệp: Tuyết Trung Hãn Đao Hành - Phong Hỏa Hí Chư Hầu
   bachVienKhachSan,     // Dân quốc kỳ bí giang hồ bí thuật: Bạch Viên Khách Sạn - Liệp Y Dương
