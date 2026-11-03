@@ -1,3 +1,4 @@
+import { danhDe } from './novels/danhDe';
 import { nangNangVaNang } from './novels/nangNangVaNang';
 import { daoSiKhongDeChoc } from './novels/daoSiKhongDeChoc';
 import { tangPhong } from './novels/tangPhong';
@@ -30,6 +31,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  danhDe,                // Trinh thám hình sự & Nghệ thuật hỏi cung: Danh Đề: Cuộc Hỏi Cung Tối Thượng - Lữ Tranh
   nangNangVaNang,        // Trinh thám hình sự & Quần tượng nữ giới: Nàng, Nàng và Nàng - Cảnh Thiên Trạch
   daoSiKhongDeChoc,      // Đô thị linh dị & Phong thủy đạo môn: Đạo Sĩ Không Dễ Chọc - Khốn Đích Thụy Bất Trứ
   tangPhong,             // Trinh thám hình sự & Cảnh doanh: Tàng Phong - Lữ Tranh
