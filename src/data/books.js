@@ -1,3 +1,4 @@
+import { daoTuChu } from './novels/daoTuChu';
 import { hauVeDongQuanTruongKy } from './novels/hauVeDongQuanTruongKy';
 import { khieuDaiThan } from './novels/khieuDaiThan';
 import { gocNhoAltay } from './novels/gocNhoAltay';
@@ -13,6 +14,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website
 export const BOOKS = [
+  daoTuChu,              // Linh dị kinh dị & Vô hạn lưu giải đố: Đảo Tử Chú - Hắc Sắc Hỏa Chủng
   hauVeDongQuanTruongKy, // Hiện thực xã hội & Quan trường thế thái: Hầu Vệ Đông Quan Trường Ký - Tiểu Kiều Lão Thụ
   khieuDaiThan,          // Linh dị dân tục & Tát Mãn Vu thuật: Khiêu Đại Thần - Thôi Tẩu Triệu
   gocNhoAltay,           // Tản văn & Ký sự thảo nguyên: Góc Nhỏ Altay - Lý Quyên
