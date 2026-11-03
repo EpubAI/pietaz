@@ -1,3 +1,4 @@
+import { bachVienKhachSan } from './novels/bachVienKhachSan';
 import { altayCuaToi } from './novels/altayCuaToi';
 import { ngungUyenChiMau } from './novels/ngungUyenChiMau';
 import { mieuCuongDaoSu } from './novels/mieuCuongDaoSu';
@@ -8,11 +9,12 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website
 export const BOOKS = [
-  altayCuaToi,     // Tản văn & Ký sự thảo nguyên: Altay Của Tôi - Lý Quyên
-  ngungUyenChiMau, // Phóng sự trọng án hiện thực: Ngưng Uyên Chi Mâu - Trần Mãnh
-  mieuCuongDaoSu,  // Tiền truyện huyền thoại Miêu Cương: Miêu Cương Đạo Sự - Nam Vô Cà Sa Lệ Khoa Phật
-  coSuMieuCuong,   // Tuyệt phẩm linh dị vu cổ: Cổ Sự Miêu Cương - Nam Vô Cà Sa Lý Khoa Phật
-  banTronChiMang,  // Trò chơi sinh tồn cân não SCP: Bàn Tròn Chí Mạng
-  kiemLai,         // Siêu phẩm tiên hiệp: Kiếm Lai - Phong Hỏa Hí Chư Hầu
-  daiKichDoi       // Tiểu thuyết hình sự: Đại Kích Đội - Lữ Tranh
+  bachVienKhachSan, // Dân quốc kỳ bí giang hồ bí thuật: Bạch Viên Khách Sạn - Liệp Y Dương
+  altayCuaToi,      // Tản văn & Ký sự thảo nguyên: Altay Của Tôi - Lý Quyên
+  ngungUyenChiMau,  // Phóng sự trọng án hiện thực: Ngưng Uyên Chi Mâu - Trần Mãnh
+  mieuCuongDaoSu,   // Tiền truyện huyền thoại Miêu Cương: Miêu Cương Đạo Sự - Nam Vô Cà Sa Lệ Khoa Phật
+  coSuMieuCuong,    // Tuyệt phẩm linh dị vu cổ: Cổ Sự Miêu Cương - Nam Vô Cà Sa Lý Khoa Phật
+  banTronChiMang,   // Trò chơi sinh tồn cân não SCP: Bàn Tròn Chí Mạng
+  kiemLai,          // Siêu phẩm tiên hiệp: Kiếm Lai - Phong Hỏa Hí Chư Hầu
+  daiKichDoi        // Tiểu thuyết hình sự: Đại Kích Đội - Lữ Tranh
 ];
