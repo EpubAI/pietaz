@@ -1,3 +1,7 @@
+import { monLinhQuaiDam } from './novels/monLinhQuaiDam';
+import { duoiConPhatGia } from './novels/duoiConPhatGia';
+import { phapYQuocDan } from './novels/phapYQuocDan';
+import { vangRongMeHoac } from './novels/vangRongMeHoac';
 import { danhDe } from './novels/danhDe';
 import { nangNangVaNang } from './novels/nangNangVaNang';
 import { daoSiKhongDeChoc } from './novels/daoSiKhongDeChoc';
@@ -31,6 +35,10 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  monLinhQuaiDam,        // Kỳ bí kinh dị & Vòng lặp thời không: Môn Lĩnh Quái Đàm - Thiên Hạ Bá Xướng
+  duoiConPhatGia,        // Tiên hiệp võ đạo & Phật môn dĩ bạo chế bạo: Dưới Côn Phật Gia, Ác Nhân Khó Sống - Tạo Hóa Trai Chủ
+  phapYQuocDan,          // Trinh thám hình sự thực tế & Nghiệp vụ pháp y: Pháp Y Quốc Dân - Chí Điểu Thôn
+  vangRongMeHoac,        // Trinh thám xã hội đen & Hài kịch đen: Vàng Ròng Mê Hoặc - Lục Xuân Ngô
   danhDe,                // Trinh thám hình sự & Nghệ thuật hỏi cung: Danh Đề: Cuộc Hỏi Cung Tối Thượng - Lữ Tranh
   nangNangVaNang,        // Trinh thám hình sự & Quần tượng nữ giới: Nàng, Nàng và Nàng - Cảnh Thiên Trạch
   daoSiKhongDeChoc,      // Đô thị linh dị & Phong thủy đạo môn: Đạo Sĩ Không Dễ Chọc - Khốn Đích Thụy Bất Trứ
