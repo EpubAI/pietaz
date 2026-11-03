@@ -6,10 +6,9 @@ export const gocNhoAltay = {
   "authorBio": "Hiện tượng văn học phi hư cấu kiệt xuất Trung Quốc, chủ nhân Giải thưởng Văn học Lỗ Tấn, Giải thưởng Văn học Nhân dân.",
   "updatedAt": "03/11/2026",
   "categories": [
-    "khoa-hoc",
-    "lich-su"
+    "tan-van"
   ],
-  "category": "khoa-hoc",
+  "category": "tan-van",
   "wordCount": "12.8 vạn chữ (127,822 chữ)",
   "totalChapters": "36 chương (12.8 vạn chữ (127,822 chữ))",
   "cover": "./covers/goc-nho-altay.jpg",
@@ -22,7 +21,8 @@ export const gocNhoAltay = {
     "Tân Cương",
     "Altay",
     "Lý Quyên",
-    "Chữa lành"
+    "Chữa lành",
+    "Đời sống du mục"
   ],
   "chapters": [
     {

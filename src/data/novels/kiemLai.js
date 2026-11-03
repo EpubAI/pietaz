@@ -19,8 +19,7 @@ export const kiemLai = {
     "Tiên hiệp",
     "Kiếm tu",
     "Huyền huyễn",
-    "Phong Hỏa Hí Chư Hầu",
-    "Tuyết Trung Hãn Đao Hành"
+    "Phong Hỏa Hí Chư Hầu"
   ],
   "chapters": [
     {

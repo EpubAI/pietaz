@@ -6,7 +6,8 @@ export const ngungUyenChiMau = {
   "authorBio": "Hội viên Hội Nhà văn Hà Bắc; chuyên gia chắp bút các phóng sự trọng án và hồi ký tội phạm thực tế gai góc bậc nhất Trung Quốc.",
   "updatedAt": "03/11/2026",
   "categories": [
-    "trinh-tham"
+    "trinh-tham",
+    "hien-thuc"
   ],
   "category": "trinh-tham",
   "wordCount": "12,3 vạn chữ (122,980 chữ)",
@@ -19,7 +20,7 @@ export const ngungUyenChiMau = {
     "Trinh thám hình sự",
     "Trọng án hiện thực",
     "Hồ sơ tội phạm",
-    "Tâm lý học tội phạm",
+    "Tâm lý tội phạm",
     "Trần Mãnh"
   ],
   "chapters": [

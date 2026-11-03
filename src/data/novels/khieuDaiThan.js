@@ -6,8 +6,7 @@ export const khieuDaiThan = {
   "authorBio": "Đại thần tiên phong của dòng tiểu thuyết linh dị phong tục phương Bắc, tác giả của bộ ba kinh điển 'Vận Mệnh Tam Bộ Khúc'.",
   "updatedAt": "03/11/2026",
   "categories": [
-    "huyen-bi",
-    "trinh-tham"
+    "huyen-bi"
   ],
   "category": "huyen-bi",
   "wordCount": "87.6 vạn chữ (876,027 chữ)",
@@ -21,6 +20,7 @@ export const khieuDaiThan = {
     "Dân gian",
     "Tát Mãn",
     "Xuất Mã Tiên",
+    "Đông Bắc",
     "Thôi Tẩu Triệu"
   ],
   "chapters": [

@@ -6,10 +6,9 @@ export const hauVeDongQuanTruongKy = {
   "authorBio": "Cựu quan chức chính phủ công tác hàng chục năm trong hệ thống công quyền, Phó Chủ tịch Hiệp hội Nhà văn Trùng Khánh; tác giả của Hầu Thương Vinh Thương Đạo Ký.",
   "updatedAt": "03/11/2026",
   "categories": [
-    "lich-su",
-    "huyen-bi"
+    "hien-thuc"
   ],
-  "category": "lich-su",
+  "category": "hien-thuc",
   "wordCount": "267.1 vạn chữ (2,670,808 chữ)",
   "totalChapters": "897 chương (267.1 vạn chữ (2,670,808 chữ))",
   "cover": "./covers/hau-ve-dong-quan-truong-ky.jpg",
@@ -21,6 +20,7 @@ export const hauVeDongQuanTruongKy = {
     "Quan trường",
     "Đấu trí",
     "Chính trị",
+    "Bách khoa toàn thư công quyền",
     "Tiểu Kiều Lão Thụ"
   ],
   "chapters": [

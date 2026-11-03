@@ -6,10 +6,9 @@ export const altayCuaToi = {
   "authorBio": "Nhà văn tản văn & phi hư cấu hàng đầu Trung Quốc đương đại, chủ nhân Giải thưởng Văn học Lỗ Tấn, Giải Văn học Nhân dân và Giải Tản văn Chu Tự Thanh.",
   "updatedAt": "03/11/2026",
   "categories": [
-    "lich-su",
-    "huyen-bi"
+    "tan-van"
   ],
-  "category": "lich-su",
+  "category": "tan-van",
   "wordCount": "10,8 vạn chữ (108,084 chữ)",
   "totalChapters": "35 chương (10,8 vạn chữ (108,084 chữ))",
   "cover": "./covers/altay-cua-toi.jpg",
@@ -17,10 +16,11 @@ export const altayCuaToi = {
   "description": "Một cú giật cương đột ngột giữa bão tuyết âm bốn mươi hai độ, chiếc xe máy rồ ga lao chênh vênh qua rìa hoang mạc gồ ghề và thảo nguyên Altay mở toang ra trước mắt như một vết cắt nguyên sơ chưa từng bị thế giới văn minh chạm tới. Không có những triết lý giáo điều, không có sự lãng mạn hóa giả tạo, vùng đất viễn bắc Tân Cương hiện lên bằng tiếng vó ngựa nện thình thịch trên nền cỏ cháy, mùi khói phân bò nồng nặc bốc lên từ chiếc bếp lò di động và những con người Kazakh chất phác sẵn sàng đánh cược cả sinh mạng theo từng mùa dời tổ.",
   "extendedReview": "Altay Của Tôi\nTác giả: Lý Quyên (Li Juan)\nThể loại: Phi hư cấu, Ký sự hiện thực, Đời sống du mục, Văn học chữa lành\nQuy mô: 35 chương chính văn (chia làm 3 phần hồi ức), 0 ngoại truyện\nCác giải thưởng, thành tựu: Giải Vàng Bản quyền Trung Quốc (China Copyright Gold Award), tác phẩm được chuyển thể thành series phim truyền hình ăn khách bậc nhất của đạo diễn Đằng Tùng Tùng, tác giả từng đoạt Giải thưởng Văn học Lỗ Tấn, Giải Văn học Nhân dân và Giải Tản văn Chu Tự Thanh.\n\nMột cú giật cương đột ngột giữa bão tuyết âm bốn mươi hai độ, chiếc xe máy rồ ga lao chênh vênh qua rìa hoang mạc gồ ghề và thảo nguyên Altay mở toang ra trước mắt như một vết cắt nguyên sơ chưa từng bị thế giới văn minh chạm tới. Không có những triết lý giáo điều, không có sự lãng mạn hóa giả tạo, vùng đất viễn bắc Tân Cương hiện lên bằng tiếng vó ngựa nện thình thịch trên nền cỏ cháy, mùi khói phân bò nồng nặc bốc lên từ chiếc bếp lò di động và những con người Kazakh chất phác sẵn sàng đánh cược cả sinh mạng theo từng mùa dời tổ.\n\nNếu bạn từng ngột ngạt trước nhịp sống bê tông cốt thép của thành thị, từng khao khát một chuyến độc hành rũ sạch mọi âu lo như trong Vào Trong Hoang Dã (Into the Wild) thì Altay Của Tôi là một cú chạm thanh khiết đến tận đáy lòng nhưng lại đầy ắp sự gai góc của hiện thực sinh tồn. Cuốn sách không ru ngủ người đọc bằng những bức tranh phong cảnh êm đềm, nó ném bạn vào cuộc sống trần trụi của một gia đình người Hán mở tiệm may và cửa hàng tạp hóa nhỏ lẻ, bám theo những đàn cừu thiên di dọc sườn núi A Lạp Thái.\n\nLý Quyên viết văn với một đôi mắt tinh quái và trái tim tự do đến mức hoang dại. Dưới ngòi bút của bà, cuộc sống kham khổ chốn thảo nguyên không hề mang màu sắc than vãn, mà ngược lại, tràn ngập tiếng cười tự trào, sự ngơ ngác đáng yêu trước những va chạm văn hóa và tình người ấm áp đến thắt lòng giữa những đêm đông lạnh buốt xương tủy. Đó là câu chuyện về một con ngựa bướng bỉnh không chịu nghe lời, chiếc điện thoại công cộng chập chờn nơi ngã ba suối, những buổi dạ hội khiêu vũ nông thôn cuồng nhiệt bụi mù đất cát, và cả sự im lặng bao la của đất trời khiến con người ta bỗng thấy mình nhỏ bé như hạt bụi.\n\nAltay Của Tôi lôi cuốn người đọc bằng một nhịp điệu tự nhiên như hơi thở nhưng lại ẩn chứa sức sống mãnh liệt đến kỳ lạ. Bạn sẽ thấy mình vừa cười nghiêng ngả trước những tình huống dở khóc dở cười của tiệm may vá lưu động, lại vừa lặng người rơi nước mắt trước sự kiên cường và lòng bao dung vô bờ bến của những phận người lang bạt nơi rìa thế giới. Khi gấp trang sách lại, thứ đọng lại trong tâm trí bạn không phải là nỗi hoài niệm xa xôi, mà là một luồng gió thảo nguyên thanh sạch thổi bùng lên ngọn lửa khao khát được sống thật thà, can đảm và tự do giữa cuộc đời đầy biến động.",
   "tags": [
+    "Tản văn",
     "Phi hư cấu",
-    "Ký sự hiện thực",
+    "Ký sự thảo nguyên",
     "Đời sống du mục",
-    "Altay Tân Cương",
+    "Altay",
     "Lý Quyên"
   ],
   "chapters": [

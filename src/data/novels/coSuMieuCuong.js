@@ -6,8 +6,7 @@ export const coSuMieuCuong = {
   "authorBio": "Cây bút tiên phong của dòng tiểu thuyết vu cổ và linh dị dân gian Trung Quốc; tác giả của Miêu Cương Đạo Sự, Tróc Cổ Ký.",
   "updatedAt": "03/11/2026",
   "categories": [
-    "huyen-bi",
-    "trinh-tham"
+    "huyen-bi"
   ],
   "category": "huyen-bi",
   "wordCount": "363,6 vạn chữ (3,636,126 chữ)",
@@ -20,7 +19,6 @@ export const coSuMieuCuong = {
     "Linh dị dân gian",
     "Vu cổ Miêu Cương",
     "Kỳ bí rùng rợn",
-    "Hành động",
     "Nam Vô Cà Sa Lý Khoa Phật"
   ],
   "chapters": [

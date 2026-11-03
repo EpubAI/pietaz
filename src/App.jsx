@@ -25,6 +25,15 @@ export default function App() {
     return [];
   };
 
+  // Danh mục thể loại hiển thị linh hoạt: Luôn giữ 'all', và chỉ hiện các thể loại thực tế có sách (hoặc cấu hình sẵn)
+  const availableCategories = useMemo(() => {
+    return CATEGORIES.filter(cat => {
+      if (cat.id === 'all') return true;
+      const count = BOOKS.filter(b => getBookCategories(b).includes(cat.id)).length;
+      return count > 0;
+    });
+  }, []);
+
   // Filter books với chuẩn hóa không dấu và hỗ trợ multi-category
   const filteredBooks = useMemo(() => {
     const queryNorm = normalizeVietnamese(searchQuery);
@@ -171,7 +180,7 @@ export default function App() {
                   : 'bg-white border-black/15 text-zinc-800 focus:border-amber-600'
               }`}
             >
-              {CATEGORIES.map((cat) => {
+              {availableCategories.map((cat) => {
                 const count = cat.id === 'all' 
                   ? BOOKS.length 
                   : BOOKS.filter(b => getBookCategories(b).includes(cat.id)).length;
@@ -206,7 +215,7 @@ export default function App() {
               </div>
 
               <nav className="space-y-1">
-                {CATEGORIES.map((cat) => {
+                {availableCategories.map((cat) => {
                   const active = selectedCategory === cat.id;
                   const count = cat.id === 'all' 
                     ? BOOKS.length 

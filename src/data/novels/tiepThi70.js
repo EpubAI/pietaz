@@ -6,9 +6,10 @@ export const tiepThi70 = {
   "authorBio": "Philip Kotler — Cha đẻ của Tiếp thị hiện đại cùng Hermawan Kartajaya và Iwan Setiawan, bộ ba tác giả của chuỗi tác phẩm kinh điển Marketing 3.0, 4.0, 5.0, 6.0, 7.0 ấn hành bởi Wiley.",
   "updatedAt": "03/11/2026",
   "categories": [
+    "kinh-te",
     "khoa-hoc"
   ],
-  "category": "khoa-hoc",
+  "category": "kinh-te",
   "wordCount": "7.7 vạn chữ (76,569 chữ)",
   "totalChapters": "12 chương (7.7 vạn chữ (76,569 chữ))",
   "cover": "./covers/tiep-thi-7-0.jpg",
@@ -20,8 +21,8 @@ export const tiepThi70 = {
     "Quản trị",
     "Marketing 7.0",
     "Philip Kotler",
-    "Trí tuệ nhân tạo",
-    "Chiến lược kinh doanh"
+    "Chiến lược kinh doanh",
+    "Trí tuệ nhân tạo"
   ],
   "chapters": [
     {

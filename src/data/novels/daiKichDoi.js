@@ -6,7 +6,8 @@ export const daiKichDoi = {
   "authorBio": "Tác giả của Cuồng Phong, Tam Xoa Kích; Sĩ quan cảnh sát đương nhiệm",
   "updatedAt": "03/11/2026",
   "categories": [
-    "trinh-tham"
+    "trinh-tham",
+    "hien-thuc"
   ],
   "category": "trinh-tham",
   "wordCount": "15,3 vạn chữ (153,052 chữ)",
@@ -19,8 +20,7 @@ export const daiKichDoi = {
     "Trinh thám hình sự",
     "Cảnh sát thực chiến",
     "Hiện thực xã hội",
-    "Lữ Tranh",
-    "Cuồng Phong"
+    "Lữ Tranh"
   ],
   "chapters": [
     {
