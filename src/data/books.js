@@ -1,3 +1,4 @@
+import { phuongChuotCho } from './novels/phuongChuotCho';
 import { monLinhQuaiDam } from './novels/monLinhQuaiDam';
 import { duoiConPhatGia } from './novels/duoiConPhatGia';
 import { phapYQuocDan } from './novels/phapYQuocDan';
@@ -35,6 +36,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  phuongChuotCho,        // Trinh thám xã hội & Bí ẩn gia tộc qua băng cát-xét: Phường Chuột Chó - Trang Vĩ Nhạc
   monLinhQuaiDam,        // Kỳ bí kinh dị & Vòng lặp thời không: Môn Lĩnh Quái Đàm - Thiên Hạ Bá Xướng
   duoiConPhatGia,        // Tiên hiệp võ đạo & Phật môn dĩ bạo chế bạo: Dưới Côn Phật Gia, Ác Nhân Khó Sống - Tạo Hóa Trai Chủ
   phapYQuocDan,          // Trinh thám hình sự thực tế & Nghiệp vụ pháp y: Pháp Y Quốc Dân - Chí Điểu Thôn
