@@ -7,7 +7,8 @@ export const vangRongMeHoac = {
   "updatedAt": "03/11/2026",
   "categories": [
     "trinh-tham",
-    "hien-thuc"
+    "hien-thuc",
+    "free"
   ],
   "category": "trinh-tham",
   "wordCount": "12.1 vạn chữ (121,140 chữ)",

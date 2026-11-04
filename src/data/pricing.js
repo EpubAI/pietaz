@@ -5,6 +5,7 @@
 // - Nhóm 3: Đại trường thiên & Siêu phẩm (>= 2.0M chữ): bậc 50k đến 400k và step đều đặn đến 1 triệu
 
 export const FREE_BOOK_IDS = new Set([
+  'vang-rong-me-hoac',
   'mon-linh-quai-dam',
   'nang-nang-va-nang',
   'khieu-dai-than',
