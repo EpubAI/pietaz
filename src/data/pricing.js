@@ -16,9 +16,39 @@ export const FREE_BOOK_IDS = new Set([
   'benh-vien-so-444',
   'altay-cua-toi',
   'goc-nho-altay',
+  'nhung-nam-thang-toi-lam-thay-am-duong',
+  'cuc-quan-ly-truyen-thuyet',
+  'duong-cuu-tam-bo-khuc',
 ]);
 
 export const BOOK_PRICING = {
+  "nhung-nam-thang-toi-lam-thay-am-duong": {
+    "price": 150000,
+    "priceDisplay": "150.000 đ",
+    "isFree": false,
+    "rawWordCount": 1048769,
+    "rawWordCountFormatted": "1.048.769 chữ gốc",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 2H (1.0M - 1.25M chữ)"
+  },
+  "cuc-quan-ly-truyen-thuyet": {
+    "price": 165000,
+    "priceDisplay": "165.000 đ",
+    "isFree": false,
+    "rawWordCount": 1487175,
+    "rawWordCountFormatted": "1.487.175 chữ gốc",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 2I (1.25M - 1.5M chữ)"
+  },
+  "duong-cuu-tam-bo-khuc": {
+    "price": 80000,
+    "priceDisplay": "80.000 đ",
+    "isFree": false,
+    "rawWordCount": 330763,
+    "rawWordCountFormatted": "330.763 chữ",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 2A (300k - 400k chữ)"
+  },
   "dia-cau-lang-thang": {
     "price": 70000,
     "priceDisplay": "70.000 đ",

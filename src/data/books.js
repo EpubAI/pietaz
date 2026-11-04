@@ -1,3 +1,6 @@
+import { nhungNamThangToiLamThayAmDuong } from './novels/nhungNamThangToiLamThayAmDuong';
+import { cucQuanLyTruyenThuyet } from './novels/cucQuanLyTruyenThuyet';
+import { duongCuuTamBoKhuc } from './novels/duongCuuTamBoKhuc';
 import { diaCauLangThang } from './novels/diaCauLangThang';
 import { phuongChuotCho } from './novels/phuongChuotCho';
 import { monLinhQuaiDam } from './novels/monLinhQuaiDam';
@@ -37,6 +40,9 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  nhungNamThangToiLamThayAmDuong, // Linh dị dân gian Đông Bắc & Thầy âm dương: Thôi Tẩu Triệu
+  cucQuanLyTruyenThuyet,          // Thần thoại vô hạn lưu & Não động công sở: Sát Trùng Đội Đội Viên
+  duongCuuTamBoKhuc,              // Tản văn phi hư cấu & Ký sự du mục Altay: Lý Quyên
   diaCauLangThang,       // Khoa hoc vien tuong: Dia Cau Lang Thang - Luu Tu Han
   phuongChuotCho,        // Trinh thám xã hội & Bí ẩn gia tộc qua băng cát-xét: Phường Chuột Chó - Trang Vĩ Nhạc
   monLinhQuaiDam,        // Kỳ bí kinh dị & Vòng lặp thời không: Môn Lĩnh Quái Đàm - Thiên Hạ Bá Xướng
