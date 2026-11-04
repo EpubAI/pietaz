@@ -359,6 +359,7 @@ export default function App() {
                     key={book.id}
                     book={book}
                     onRead={(selected) => setReadingBook(selected)}
+                    onSelectDetail={(selected) => setDetailBook(selected)}
                     isDarkMode={isDarkMode}
                   />
                 ))}

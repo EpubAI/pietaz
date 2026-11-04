@@ -58,23 +58,6 @@ export function BookDetailModal({ book, isOpen, onClose, onRead, isDarkMode }) {
 
                 <div className="mt-3 space-y-1 text-xs font-mono opacity-80">
                   <div>• <span className="font-semibold">Quy mô:</span> {book.totalChapters || `${book.chapters?.length || 0} chương`}</div>
-                  {book.wordCount && (
-                    <div>• <span className="font-semibold">Tổng số chữ:</span> <span className="text-[#E5B54F] font-bold">{book.wordCount}</span></div>
-                  )}
-                  {pricing && (
-                    <div className="p-2.5 rounded-lg border border-[#E5B54F]/30 bg-[#E5B54F]/10 mt-2">
-                      <div className="flex items-center justify-between text-xs font-mono">
-                        <span className="font-semibold text-zinc-300">Định mức giá:</span>
-                        <span className={`font-bold px-2 py-0.5 rounded ${pricing.isFree ? 'bg-emerald-500 text-white' : 'bg-[#E5B54F] text-black'}`}>
-                          {pricing.priceDisplay}
-                        </span>
-                      </div>
-                      <div className="text-[11px] font-mono text-zinc-400 mt-1 flex justify-between">
-                        <span>Text gốc: {pricing.rawWordCountFormatted}</span>
-                        <span>Phân tầng: {pricing.priceTier}</span>
-                      </div>
-                    </div>
-                  )}
                   {book.updatedAt && <div>• <span className="font-semibold">Cập nhật:</span> {book.updatedAt}</div>}
                   {(book.authorBio || book.authorInfo?.bio) && (
                     <div>• <span className="font-semibold">Tác giả:</span> {book.authorBio || book.authorInfo?.bio}</div>
