@@ -25,6 +25,16 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "khuc-ca-cua-ke-mo-da-chet-va-grimscribe": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 231244,
+    "rawWordCountFormatted": "231.244 chữ",
+    "rawUnit": "chỮ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
+
   "mua-thu-nam": {
     "price": 70000,
     "priceDisplay": "70.000 đ",

@@ -1,3 +1,4 @@
+import { khucCaCuaKeMoDaChetVaGrimscribe } from './novels/khucCaCuaKeMoDaChetVaGrimscribe';
 import { muaThuNam } from './novels/muaThuNam';
 import { congThachTru } from './novels/congThachTru';
 import { bauTroiDa } from './novels/bauTroiDa';
@@ -43,6 +44,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  khucCaCuaKeMoDaChetVaGrimscribe,  // Kinh dị triết học Penguin Classics: Thomas Ligotti
   muaThuNam,                      // Sci-Fi đoạt giải Hugo 2016: Mùa Thứ Năm - N. K. Jemisin
   congThachTru,                    // Sci-Fi đoạt giải Hugo 2017: Cổng Thạch Trụ - N. K. Jemisin
   bauTroiDa,                       // Sci-Fi đoạt giải Hugo 2018: Bầu Trời Đá - N. K. Jemisin
