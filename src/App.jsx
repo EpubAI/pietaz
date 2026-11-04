@@ -1,10 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import { 
-  Sun, Moon, Search, Feather, Send, MessageCircle, X, Sparkles, Compass
+  Sun, Moon, Search, Feather, Send, MessageCircle, X, Sparkles, Compass, LayoutGrid, List
 } from 'lucide-react';
 import { BOOKS } from './data/books';
 import { CATEGORIES } from './data/categories';
 import { InteractiveBookCard } from './components/InteractiveBookCard';
+import { CompactBookRow } from './components/CompactBookRow';
+import { BookDetailModal } from './components/BookDetailModal';
 import ReaderModal from './components/ReaderModal';
 import { normalizeVietnamese } from './utils/text';
 
@@ -13,6 +15,19 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [readingBook, setReadingBook] = useState(null);
+  const [detailBook, setDetailBook] = useState(null);
+  const [viewMode, setViewMode] = useState(() => {
+    return localStorage.getItem('piepub_view_mode') || 'list';
+  });
+
+  const handleSetViewMode = (mode) => {
+    setViewMode(mode);
+    try {
+      localStorage.setItem('piepub_view_mode', mode);
+    } catch (e) {
+      // ignore
+    }
+  };
 
   // Helper lấy danh sách category id của 1 cuốn sách (hỗ trợ cả mảng categories lẫn category đơn)
   const getBookCategories = (book) => {
@@ -165,12 +180,9 @@ export default function App() {
           )}
         </div>
 
-        {/* Dropdown chọn thể loại trên Mobile */}
-        <div className="relative">
-          <label className="block text-[10px] font-mono text-zinc-400 mb-1 uppercase tracking-wider">
-            Thể loại:
-          </label>
-          <div className="relative">
+        {/* Dropdown chọn thể loại & nút chuyển chế độ xem trên Mobile */}
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1">
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
@@ -194,6 +206,24 @@ export default function App() {
             <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 opacity-60">
               ▼
             </div>
+          </div>
+
+          {/* Toggle view mode mobile */}
+          <div className={`flex items-center rounded-lg border p-0.5 ${isDarkMode ? 'border-white/15 bg-white/[0.02]' : 'border-black/15 bg-black/[0.02]'}`}>
+            <button
+              onClick={() => handleSetViewMode('list')}
+              className={`p-1.5 rounded transition-colors ${viewMode === 'list' ? (isDarkMode ? 'bg-[#E5B54F] text-black' : 'bg-amber-600 text-white') : 'opacity-60 hover:opacity-100'}`}
+              title="Danh sách gọn (1 hàng)"
+            >
+              <List className="w-4 h-4" />
+            </button>
+            <button
+              onClick={() => handleSetViewMode('grid')}
+              className={`p-1.5 rounded transition-colors ${viewMode === 'grid' ? (isDarkMode ? 'bg-[#E5B54F] text-black' : 'bg-amber-600 text-white') : 'opacity-60 hover:opacity-100'}`}
+              title="Thẻ 3D lớn (2 cột)"
+            >
+              <LayoutGrid className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </div>
@@ -246,14 +276,56 @@ export default function App() {
             </div>
           </aside>
 
-          {/* Gallery of Interactive 3D Tilt Books */}
+          {/* Gallery / Feed of Books */}
           <main className="lg:col-span-9">
             
-            <div className="hidden lg:flex mb-6 items-baseline justify-between border-b border-current/10 pb-3">
-              <h1 className="text-lg font-bold font-mono uppercase tracking-widest flex items-center gap-2">
+            {/* Header thanh công cụ & Chuyển đổi View Mode */}
+            <div className="flex mb-6 items-center justify-between border-b border-current/10 pb-3 flex-wrap gap-3">
+              <h1 className="text-base sm:text-lg font-bold font-mono uppercase tracking-widest flex items-center gap-2">
                 <span>{CATEGORIES.find(c => c.id === selectedCategory)?.label || 'Tất cả tác phẩm'}</span>
                 <Sparkles className="w-4 h-4 text-[#E5B54F]" />
+                <span className="text-xs font-normal opacity-50 font-mono">({filteredBooks.length})</span>
               </h1>
+
+              {/* View Switcher (Desktop & Tablet) */}
+              <div className="flex items-center gap-1.5">
+                <span className="text-[11px] font-mono text-zinc-400 mr-1 hidden sm:inline">Chế độ xem:</span>
+                <div className={`flex items-center rounded-lg border p-0.5 ${isDarkMode ? 'border-white/10 bg-[#0E1118]' : 'border-black/10 bg-zinc-100'}`}>
+                  <button
+                    onClick={() => handleSetViewMode('list')}
+                    className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-mono transition-all ${
+                      viewMode === 'list'
+                        ? isDarkMode
+                          ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
+                          : 'bg-amber-600 text-white font-bold shadow-sm'
+                        : isDarkMode
+                          ? 'text-zinc-400 hover:text-white'
+                          : 'text-zinc-600 hover:text-black'
+                    }`}
+                    title="Chế độ 1 hàng / tác phẩm (Gọn gàng, dễ quét danh sách)"
+                  >
+                    <List className="w-3.5 h-3.5" />
+                    <span className="text-[11px]">1 Hàng (Gọn)</span>
+                  </button>
+
+                  <button
+                    onClick={() => handleSetViewMode('grid')}
+                    className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-mono transition-all ${
+                      viewMode === 'grid'
+                        ? isDarkMode
+                          ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
+                          : 'bg-amber-600 text-white font-bold shadow-sm'
+                        : isDarkMode
+                          ? 'text-zinc-400 hover:text-white'
+                          : 'text-zinc-600 hover:text-black'
+                    }`}
+                    title="Chế độ thẻ lớn 3D (2 cột)"
+                  >
+                    <LayoutGrid className="w-3.5 h-3.5" />
+                    <span className="text-[11px]">2 Cột (Thẻ 3D)</span>
+                  </button>
+                </div>
+              </div>
             </div>
 
             {filteredBooks.length === 0 ? (
@@ -266,7 +338,21 @@ export default function App() {
                   Xem toàn bộ thư khố
                 </button>
               </div>
+            ) : viewMode === 'list' ? (
+              /* VIEW 1 HÀNG GỌN GÀNG (COMPACT ROW) */
+              <div className="space-y-3.5">
+                {filteredBooks.map((book) => (
+                  <CompactBookRow
+                    key={book.id}
+                    book={book}
+                    onRead={(selected) => setReadingBook(selected)}
+                    onSelectDetail={(selected) => setDetailBook(selected)}
+                    isDarkMode={isDarkMode}
+                  />
+                ))}
+              </div>
             ) : (
+              /* VIEW 2 CỘT THẺ 3D TRUYỀN THỐNG */
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {filteredBooks.map((book) => (
                   <InteractiveBookCard
@@ -330,6 +416,17 @@ export default function App() {
           PIETAZ PRIVATE DEN © 2026 • AI TRANSLATION ARCHIVE & DEMO SHOWCASE
         </div>
       </footer>
+
+      {/* Modal xem chi tiết tác phẩm (dùng chung cho Compact Row) */}
+      {detailBook && (
+        <BookDetailModal
+          book={detailBook}
+          isOpen={Boolean(detailBook)}
+          onClose={() => setDetailBook(null)}
+          onRead={(book) => setReadingBook(book)}
+          isDarkMode={isDarkMode}
+        />
+      )}
 
       {/* In-Browser Reader Modal */}
       {readingBook && (
