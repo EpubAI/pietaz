@@ -69,18 +69,6 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
             
             {/* INTERACTIVE 3D HARDBACK BOOK JACKET */}
             <div className="w-64 sm:w-48 md:w-52 flex-shrink-0 relative select-none flex flex-col items-center">
-              {pricing && (
-                <div className={`absolute -top-2.5 left-2 z-20 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold shadow-md flex items-center gap-1 border ${
-                  pricing.isFree
-                    ? 'bg-emerald-500 text-white border-emerald-300'
-                    : isDarkMode
-                      ? 'bg-amber-500/90 text-black border-amber-300'
-                      : 'bg-amber-600 text-white border-amber-400'
-                }`}>
-                  <Tag className="w-3 h-3" />
-                  <span>{pricing.priceDisplay}</span>
-                </div>
-              )}
               
               {/* Realistic Book Mockup with 3D Spine and Pages Thickness */}
               <div 
@@ -167,22 +155,9 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                 </div>
 
                 {/* Vietnamese Master Title & Price Tag */}
-                <div className="flex items-start justify-between gap-3">
-                  <h2 className="font-title-book text-2xl sm:text-[26px] font-bold leading-tight group-hover:text-[#E5B54F] transition-colors">
-                    {book.title}
-                  </h2>
-                  {pricing && (
-                    <span className={`flex-shrink-0 text-xs font-mono font-bold px-2.5 py-1 rounded-lg border shadow-sm ${
-                      pricing.isFree
-                        ? 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30'
-                        : isDarkMode
-                          ? 'bg-[#E5B54F]/15 text-[#E5B54F] border-[#E5B54F]/30'
-                          : 'bg-amber-100 text-amber-900 border-amber-300'
-                    }`}>
-                      {pricing.priceDisplay}
-                    </span>
-                  )}
-                </div>
+                <h2 className="font-title-book text-2xl sm:text-[26px] font-bold leading-tight group-hover:text-[#E5B54F] transition-colors">
+                  {book.title}
+                </h2>
 
                 {/* Ngày cập nhật upload & Quy mô chương */}
                 <div className="flex items-center gap-3 text-[11px] font-mono text-zinc-400 mt-1.5 flex-wrap">
