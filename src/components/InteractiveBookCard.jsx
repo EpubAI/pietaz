@@ -127,18 +127,22 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
 
               {/* Price Tag đặt trang trọng ngay dưới nút Đọc Demo */}
               {pricing && (
-                <div className={`mt-2 w-full py-1.5 px-2.5 rounded-lg border font-mono text-xs font-bold flex items-center justify-between shadow-sm transition-all ${
+                <div className={`mt-2 w-full py-2 px-3 rounded-xl border font-mono text-xs font-bold flex items-center justify-between shadow-md transition-all ${
                   pricing.isFree
-                    ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400'
+                    ? 'bg-emerald-500/20 border-emerald-400 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.2)]'
                     : isDarkMode
-                      ? 'bg-[#E5B54F]/10 border-[#E5B54F]/30 text-[#E5B54F]'
+                      ? 'bg-[#E5B54F]/10 border-[#E5B54F]/40 text-[#E5B54F]'
                       : 'bg-amber-50 border-amber-300 text-amber-900'
                 }`}>
-                  <div className="flex items-center gap-1 text-[11px] opacity-80 uppercase tracking-wider">
-                    <Tag className="w-3 h-3" />
-                    <span>Giá trọn bộ:</span>
+                  <div className="flex items-center gap-1.5 text-[11px] font-bold tracking-wider">
+                    <Tag className={`w-3.5 h-3.5 ${pricing.isFree ? 'text-emerald-400' : 'text-[#E5B54F]'}`} />
+                    <span>{pricing.isFree ? 'ƯU ĐÃI:' : 'GIÁ TRỌN BỘ:'}</span>
                   </div>
-                  <span className={`text-xs ${pricing.isFree ? 'text-emerald-400 font-extrabold' : 'text-[#E5B54F] font-black'}`}>
+                  <span className={`text-xs uppercase tracking-wide px-2 py-0.5 rounded-md ${
+                    pricing.isFree 
+                      ? 'bg-emerald-500 text-black font-black shadow-sm' 
+                      : 'text-[#E5B54F] font-black'
+                  }`}>
                     {pricing.priceDisplay}
                   </span>
                 </div>

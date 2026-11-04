@@ -5,9 +5,7 @@ export const diaCauLangThang = {
   "author": "Lưu Từ Hân",
   "authorBio": "Nhà văn đoạt giải Hugo, ngọn cờ đầu của nền khoa học viễn tưởng châu Á vươn tầm thế giới.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "khoa-hoc"
-  ],
+  "categories": ["khoa-hoc", 'free'],
   "category": "khoa-hoc",
   "wordCount": "17.9 vạn chữ (179,320 chữ)",
   "totalChapters": "11 truyện ngắn kiệt tác (17.9 vạn chữ (179,320 chữ))",

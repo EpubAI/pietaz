@@ -5,7 +5,17 @@
 // - Nhóm 3: Đại trường thiên & Siêu phẩm (>= 2.0M chữ): bậc 50k đến 400k và step đều đặn đến 1 triệu
 
 export const FREE_BOOK_IDS = new Set([
-  // Điền id tác phẩm muốn đặt Miễn phí (Free) vào đây
+  'khieu-dai-than',
+  'chet-tren-sao-hoa',
+  'chung-ta-song-tai-nam-kinh',
+  'bach-vien-khach-san',
+  'hau-da-loi-hinh-trinh',
+  'tam-xoa-kich',
+  'ngung-uyen-chi-mau',
+  'dia-cau-lang-thang',
+  'benh-vien-so-444',
+  'altay-cua-toi',
+  'goc-nho-altay',
 ]);
 
 export const BOOK_PRICING = {

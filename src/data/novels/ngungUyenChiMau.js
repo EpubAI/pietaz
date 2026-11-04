@@ -5,10 +5,8 @@ export const ngungUyenChiMau = {
   "author": "Trần Mãnh",
   "authorBio": "Hội viên Hội Nhà văn Hà Bắc; chuyên gia chắp bút các phóng sự trọng án và hồi ký tội phạm thực tế gai góc bậc nhất Trung Quốc.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "trinh-tham",
-    "hien-thuc"
-  ],
+  "categories": ["trinh-tham",
+    "hien-thuc", 'free'],
   "category": "trinh-tham",
   "wordCount": "12,3 vạn chữ (122,980 chữ)",
   "totalChapters": "62 chương (12,3 vạn chữ (122,980 chữ))",

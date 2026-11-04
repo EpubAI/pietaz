@@ -2,6 +2,7 @@
 // Được thiết kế theo cấu trúc mở (Open-ended), có thể tự động ánh xạ hoặc mở rộng thêm
 export const CATEGORIES = [
   { id: 'all', label: 'Tất cả tác phẩm', icon: 'Library' },
+  { id: 'free', label: 'Miễn phí / Free', icon: 'Gift' },
   { id: 'huyen-bi', label: 'Huyền bí / Ma dị', icon: 'Ghost' },
   { id: 'trinh-tham', label: 'Trinh thám / Hình sự', icon: 'Compass' },
   { id: 'tien-hiep', label: 'Tiên hiệp / Cổ phong', icon: 'Sword' },

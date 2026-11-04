@@ -5,9 +5,7 @@ export const gocNhoAltay = {
   "author": "Lý Quyên",
   "authorBio": "Hiện tượng văn học phi hư cấu kiệt xuất Trung Quốc, chủ nhân Giải thưởng Văn học Lỗ Tấn, Giải thưởng Văn học Nhân dân.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "tan-van"
-  ],
+  "categories": ["tan-van", 'free'],
   "category": "tan-van",
   "wordCount": "12.8 vạn chữ (127,822 chữ)",
   "totalChapters": "36 chương (12.8 vạn chữ (127,822 chữ))",

@@ -5,11 +5,9 @@ export const bachVienKhachSan = {
   "author": "Liệp Y Dương",
   "authorBio": "Cây bút nổi bật thế hệ mới chuyên dòng huyền nghi lịch sử và kỳ án giang hồ; tác giả của Ám Lưu: Cửu Hà Kỳ Án, Trát Cục.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "lich-su",
+  "categories": ["lich-su",
     "huyen-bi",
-    "trinh-tham"
-  ],
+    "trinh-tham", 'free'],
   "category": "lich-su",
   "wordCount": "47,4 vạn chữ (473,588 chữ)",
   "totalChapters": "174 chương (47,4 vạn chữ (473,588 chữ))",

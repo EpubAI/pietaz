@@ -5,9 +5,7 @@ export const chungTaSongTaiNamKinh = {
   "author": "Thiên Thụy Thuyết Phù",
   "authorBio": "Cây bút khoa học viễn tưởng hàng đầu Trung Quốc, hai lần đoạt Giải thưởng Ngân Hà danh giá (tác giả của Chết Trên Sao Hỏa).",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "khoa-hoc"
-  ],
+  "categories": ["khoa-hoc", 'free'],
   "category": "khoa-hoc",
   "wordCount": "32.2 vạn chữ (321,805 chữ)",
   "totalChapters": "149 chương (32.2 vạn chữ (321,805 chữ))",

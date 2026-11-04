@@ -5,10 +5,8 @@ export const tamXoaKich = {
   "author": "Lữ Tranh",
   "authorBio": "Nhà văn công an hàng đầu Trung Quốc, tác giả nguyên tác của phim truyền hình và điện ảnh ăn khách Tam Xoa Kích.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "trinh-tham",
-    "hien-thuc"
-  ],
+  "categories": ["trinh-tham",
+    "hien-thuc", 'free'],
   "category": "trinh-tham",
   "wordCount": "17.5 vạn chữ (174,886 chữ)",
   "totalChapters": "64 chương (17.5 vạn chữ (174,886 chữ))",

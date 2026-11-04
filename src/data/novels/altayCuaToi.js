@@ -5,9 +5,7 @@ export const altayCuaToi = {
   "author": "Lý Quyên",
   "authorBio": "Nhà văn tản văn & phi hư cấu hàng đầu Trung Quốc đương đại, chủ nhân Giải thưởng Văn học Lỗ Tấn, Giải Văn học Nhân dân và Giải Tản văn Chu Tự Thanh.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "tan-van"
-  ],
+  "categories": ["tan-van", 'free'],
   "category": "tan-van",
   "wordCount": "10,8 vạn chữ (108,084 chữ)",
   "totalChapters": "35 chương (10,8 vạn chữ (108,084 chữ))",

@@ -5,9 +5,7 @@ export const hauDaLoiHinhTrinh = {
   "author": "Tiểu Kiều Lão Thụ",
   "authorBio": "Cựu cán bộ chính pháp, gia đình ba đời làm cảnh sát, Phó Chủ tịch Hội Nhà văn Trùng Khánh; tác giả Hầu Vệ Đông Quan Trường Ký.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "trinh-tham"
-  ],
+  "categories": ["trinh-tham", 'free'],
   "category": "trinh-tham",
   "wordCount": "92.2 vạn chữ (921,594 chữ)",
   "totalChapters": "54 chương đại án (92.2 vạn chữ (921,594 chữ))",

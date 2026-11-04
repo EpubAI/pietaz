@@ -5,9 +5,7 @@ export const khieuDaiThan = {
   "author": "Thôi Tẩu Triệu",
   "authorBio": "Đại thần tiên phong của dòng tiểu thuyết linh dị phong tục phương Bắc, tác giả của bộ ba kinh điển 'Vận Mệnh Tam Bộ Khúc'.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "huyen-bi"
-  ],
+  "categories": ["huyen-bi", 'free'],
   "category": "huyen-bi",
   "wordCount": "87.6 vạn chữ (876,027 chữ)",
   "totalChapters": "235 chương (87.6 vạn chữ (876,027 chữ))",

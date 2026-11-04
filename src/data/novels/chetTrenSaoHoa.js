@@ -5,9 +5,7 @@ export const chetTrenSaoHoa = {
   "author": "Thiên Thụy Thuyết Phù",
   "authorBio": "Cây bút khoa học viễn tưởng hàng đầu Trung Quốc đương đại, hai lần đoạt Giải thưởng Ngân Hà danh giá (tác giả của Chúng Ta Sống Ở Nam Kinh).",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "khoa-hoc"
-  ],
+  "categories": ["khoa-hoc", 'free'],
   "category": "khoa-hoc",
   "wordCount": "50.2 vạn chữ (501,954 chữ)",
   "totalChapters": "277 chương (50.2 vạn chữ (501,954 chữ))",

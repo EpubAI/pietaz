@@ -5,10 +5,8 @@ export const benhVienSo444 = {
   "author": "Hắc Sắc Hỏa Chủng",
   "authorBio": "Đại thần kinh dị quy tắc sinh tồn hàng đầu mạng văn học Trung Quốc; tác giả của các hiện tượng kinh điển Địa Ngục Chung Cư, Địa Ngục Rạp Chiếu Phim, Ác Ma Chung Cư, Đảo Tử Chú.",
   "updatedAt": "03/11/2026",
-  "categories": [
-    "huyen-bi",
-    "trinh-tham"
-  ],
+  "categories": ["huyen-bi",
+    "trinh-tham", 'free'],
   "category": "huyen-bi",
   "wordCount": "131.8 vạn chữ (1,317,915 chữ)",
   "totalChapters": "691 chương (131.8 vạn chữ (1,317,915 chữ))",
