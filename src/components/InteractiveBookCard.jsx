@@ -136,6 +136,25 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                   <span>Đọc demo tác phẩm</span>
                 </button>
               </div>
+
+              {/* Price Tag đặt trang trọng ngay dưới nút Đọc Demo */}
+              {pricing && (
+                <div className={`mt-2 w-full py-1.5 px-2.5 rounded-lg border font-mono text-xs font-bold flex items-center justify-between shadow-sm transition-all ${
+                  pricing.isFree
+                    ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400'
+                    : isDarkMode
+                      ? 'bg-[#E5B54F]/10 border-[#E5B54F]/30 text-[#E5B54F]'
+                      : 'bg-amber-50 border-amber-300 text-amber-900'
+                }`}>
+                  <div className="flex items-center gap-1 text-[11px] opacity-80 uppercase tracking-wider">
+                    <Tag className="w-3 h-3" />
+                    <span>Giá trọn bộ:</span>
+                  </div>
+                  <span className={`text-xs ${pricing.isFree ? 'text-emerald-400 font-extrabold' : 'text-[#E5B54F] font-black'}`}>
+                    {pricing.priceDisplay}
+                  </span>
+                </div>
+              )}
             </div>
 
             {/* RIGHT METADATA & FOLIO TEXT */}
