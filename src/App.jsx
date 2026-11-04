@@ -17,7 +17,13 @@ export default function App() {
   const [readingBook, setReadingBook] = useState(null);
   const [detailBook, setDetailBook] = useState(null);
   const [viewMode, setViewMode] = useState(() => {
-    return localStorage.getItem('piepub_view_mode') || 'list';
+    const saved = localStorage.getItem('piepub_view_mode');
+    if (saved) return saved;
+    // Mặc định: hàng ngang (list) trên máy tính/tablet (>=768px), cột thẻ (grid) trên điện thoại (<768px)
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      return 'grid';
+    }
+    return 'list';
   });
 
   const handleSetViewMode = (mode) => {
