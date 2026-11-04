@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { BookOpen, Calendar, Maximize2, X, Award, ChevronRight, FileText, Info } from 'lucide-react';
+import { BookOpen, Calendar, Maximize2, X, Award, ChevronRight, FileText, Info, Tag } from 'lucide-react';
+import { getBookPrice } from '../data/pricing';
 
 export function InteractiveBookCard({ book, onRead, isDarkMode }) {
   const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
@@ -10,6 +11,7 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
 
   // Phổ quát hóa đường dẫn ảnh bìa (hỗ trợ cả book.cover lẫn book.coverImage, cả ./covers lẫn /covers)
   const coverSrc = book.cover || book.coverImage || './covers/ban-tron-chi-mang.jpg';
+  const pricing = getBookPrice(book);
 
   const handleMouseMove = (e) => {
     if (!containerRef.current) return;
@@ -67,6 +69,18 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
             
             {/* INTERACTIVE 3D HARDBACK BOOK JACKET */}
             <div className="w-64 sm:w-48 md:w-52 flex-shrink-0 relative select-none flex flex-col items-center">
+              {pricing && (
+                <div className={`absolute -top-2.5 left-2 z-20 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold shadow-md flex items-center gap-1 border ${
+                  pricing.isFree
+                    ? 'bg-emerald-500 text-white border-emerald-300'
+                    : isDarkMode
+                      ? 'bg-amber-500/90 text-black border-amber-300'
+                      : 'bg-amber-600 text-white border-amber-400'
+                }`}>
+                  <Tag className="w-3 h-3" />
+                  <span>{pricing.priceDisplay}</span>
+                </div>
+              )}
               
               {/* Realistic Book Mockup with 3D Spine and Pages Thickness */}
               <div 
@@ -133,10 +147,23 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                   {book.originalTitle && <span className="font-serif italic text-right">{book.originalTitle}</span>}
                 </div>
 
-                {/* Vietnamese Master Title */}
-                <h2 className="font-title-book text-2xl sm:text-[26px] font-bold leading-tight group-hover:text-[#E5B54F] transition-colors">
-                  {book.title}
-                </h2>
+                {/* Vietnamese Master Title & Price Tag */}
+                <div className="flex items-start justify-between gap-3">
+                  <h2 className="font-title-book text-2xl sm:text-[26px] font-bold leading-tight group-hover:text-[#E5B54F] transition-colors">
+                    {book.title}
+                  </h2>
+                  {pricing && (
+                    <span className={`flex-shrink-0 text-xs font-mono font-bold px-2.5 py-1 rounded-lg border shadow-sm ${
+                      pricing.isFree
+                        ? 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30'
+                        : isDarkMode
+                          ? 'bg-[#E5B54F]/15 text-[#E5B54F] border-[#E5B54F]/30'
+                          : 'bg-amber-100 text-amber-900 border-amber-300'
+                    }`}>
+                      {pricing.priceDisplay}
+                    </span>
+                  )}
+                </div>
 
                 {/* Ngày cập nhật upload & Quy mô chương */}
                 <div className="flex items-center gap-3 text-[11px] font-mono text-zinc-400 mt-1.5 flex-wrap">
@@ -245,6 +272,20 @@ export function InteractiveBookCard({ book, onRead, isDarkMode }) {
                     <div>• <span className="font-semibold">Quy mô:</span> {book.totalChapters || `${book.chapters?.length || 0} chương`}</div>
                     {book.wordCount && (
                       <div>• <span className="font-semibold">Tổng số chữ:</span> <span className="text-[#E5B54F] font-bold">{book.wordCount}</span></div>
+                    )}
+                    {pricing && (
+                      <div className="p-2.5 rounded-lg border border-[#E5B54F]/30 bg-[#E5B54F]/10 mt-2">
+                        <div className="flex items-center justify-between text-xs font-mono">
+                          <span className="font-semibold text-zinc-300">Định mức giá:</span>
+                          <span className={`font-bold px-2 py-0.5 rounded ${pricing.isFree ? 'bg-emerald-500 text-white' : 'bg-[#E5B54F] text-black'}`}>
+                            {pricing.priceDisplay}
+                          </span>
+                        </div>
+                        <div className="text-[11px] font-mono text-zinc-400 mt-1 flex justify-between">
+                          <span>Text gốc (.lg): {pricing.rawWordCountFormatted}</span>
+                          <span>Phân tầng: {pricing.priceTier}</span>
+                        </div>
+                      </div>
                     )}
                     {book.updatedAt && <div>• <span className="font-semibold">Cập nhật:</span> {book.updatedAt}</div>}
                     {(book.authorBio || book.authorInfo?.bio) && (
