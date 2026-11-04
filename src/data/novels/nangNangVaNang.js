@@ -7,7 +7,8 @@ export const nangNangVaNang = {
   "updatedAt": "03/11/2026",
   "categories": [
     "trinh-tham",
-    "hien-thuc"
+    "hien-thuc",
+    "free"
   ],
   "category": "trinh-tham",
   "wordCount": "19.3 vạn chữ (193,261 chữ)",

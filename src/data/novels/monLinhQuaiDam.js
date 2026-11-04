@@ -7,7 +7,8 @@ export const monLinhQuaiDam = {
   "updatedAt": "03/11/2026",
   "categories": [
     "huyen-bi",
-    "trinh-tham"
+    "trinh-tham",
+    "free"
   ],
   "category": "huyen-bi",
   "wordCount": "12.1 vạn chữ (120,962 chữ)",
