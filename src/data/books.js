@@ -1,3 +1,6 @@
+import { muaThuNam } from './novels/muaThuNam';
+import { congThachTru } from './novels/congThachTru';
+import { bauTroiDa } from './novels/bauTroiDa';
 import { nhungNamThangToiLamThayAmDuong } from './novels/nhungNamThangToiLamThayAmDuong';
 import { cucQuanLyTruyenThuyet } from './novels/cucQuanLyTruyenThuyet';
 import { duongCuuTamBoKhuc } from './novels/duongCuuTamBoKhuc';
@@ -40,6 +43,9 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  muaThuNam,                      // Sci-Fi đoạt giải Hugo 2016: Mùa Thứ Năm - N. K. Jemisin
+  congThachTru,                    // Sci-Fi đoạt giải Hugo 2017: Cổng Thạch Trụ - N. K. Jemisin
+  bauTroiDa,                       // Sci-Fi đoạt giải Hugo 2018: Bầu Trời Đá - N. K. Jemisin
   nhungNamThangToiLamThayAmDuong, // Linh dị dân gian Đông Bắc & Thầy âm dương: Thôi Tẩu Triệu
   cucQuanLyTruyenThuyet,          // Thần thoại vô hạn lưu & Não động công sở: Sát Trùng Đội Đội Viên
   duongCuuTamBoKhuc,              // Tản văn phi hư cấu & Ký sự du mục Altay: Lý Quyên

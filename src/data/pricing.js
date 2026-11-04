@@ -25,6 +25,33 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "mua-thu-nam": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 186421,
+    "rawWordCountFormatted": "186.421 chữ",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
+  "cong-thach-tru": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 168828,
+    "rawWordCountFormatted": "168.828 chữ",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
+  "bau-troi-da": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 172177,
+    "rawWordCountFormatted": "172.177 chữ",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "nhung-nam-thang-toi-lam-thay-am-duong": {
     "price": 150000,
     "priceDisplay": "150.000 đ",
