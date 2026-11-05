@@ -25,6 +25,16 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "co-su-mieu-cuong-2": {
+    "price": 300000,
+    "priceDisplay": "300.000 đ",
+    "isFree": false,
+    "rawWordCount": 3489537,
+    "rawWordCountFormatted": "3.489.537 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 3C (3.2M - 3.9M chò)"
+  },
+
   "khuc-ca-cua-ke-mo-da-chet-va-grimscribe": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
