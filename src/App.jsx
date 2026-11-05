@@ -87,25 +87,32 @@ export default function App() {
     });
   }, []);
 
-  // Filter books với chuẩn hóa không dấu và hỗ trợ multi-category
+  // Filter books với chuẩn hóa không dấu và tìm kiếm toàn diện
   const filteredBooks = useMemo(() => {
     const queryNorm = normalizeVietnamese(searchQuery);
 
     return BOOKS.filter((book) => {
       const bookCats = getBookCategories(book);
-      const matchCategory = selectedCategory === 'all' || bookCats.includes(selectedCategory);
+      
+      // Nếu không tìm kiếm: lọc theo danh mục đang chọn
+      if (!queryNorm) {
+        return selectedCategory === 'all' || bookCats.includes(selectedCategory);
+      }
 
-      if (!queryNorm) return matchCategory;
+      // Nếu đang gõ tìm kiếm: tìm trên toàn bộ thư viện (hoặc theo danh mục nếu không chọn 'all')
+      const matchCategory = selectedCategory === 'all' || bookCats.includes(selectedCategory);
 
       const titleNorm = normalizeVietnamese(book.title);
       const originalTitleNorm = normalizeVietnamese(book.originalTitle || '');
       const authorNorm = normalizeVietnamese(book.author);
+      const descNorm = normalizeVietnamese(book.description || '');
       const matchTag = Array.isArray(book.tags) && book.tags.some(t => normalizeVietnamese(t).includes(queryNorm));
 
       const matchSearch = 
         titleNorm.includes(queryNorm) ||
         originalTitleNorm.includes(queryNorm) ||
         authorNorm.includes(queryNorm) ||
+        descNorm.includes(queryNorm) ||
         matchTag;
 
       return matchCategory && matchSearch;
@@ -142,12 +149,21 @@ export default function App() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Tìm theo tên tác phẩm, tác giả..."
-              className={`w-full pl-9 pr-4 py-1.5 text-xs rounded border transition-colors outline-none font-mono ${
+              className={`w-full pl-9 pr-8 py-1.5 text-xs rounded border transition-colors outline-none font-mono ${
                 isDarkMode 
                   ? 'bg-white/[0.03] border-white/10 text-zinc-200 placeholder-zinc-500 focus:border-[#E5B54F]/50' 
                   : 'bg-black/[0.02] border-black/10 text-zinc-800 placeholder-zinc-400 focus:border-amber-600/50'
               }`}
             />
+            {searchQuery && (
+              <button 
+                onClick={() => setSearchQuery('')} 
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white transition-colors"
+                title="Xóa tìm kiếm"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
           </div>
 
           {/* Contact Links & Theme Toggle */}
@@ -317,15 +333,17 @@ export default function App() {
           {/* Gallery / Feed of Books */}
           <main className="lg:col-span-9">
 
-            {/* KHU VỰC TÁC PHẨM XEM NHIỀU (TRENDING SPOTLIGHT) */}
-            <TrendingSpotlight
-              trendingItems={trendingBooks}
-              timeframe={trendingTimeframe}
-              onTimeframeChange={setTrendingTimeframe}
-              onSelectBook={handleSelectDetail}
-              onReadBook={handleReadBook}
-              isDarkMode={isDarkMode}
-            />
+            {/* KHU VỰC TÁC PHẨM XEM NHIỀU (TRENDING SPOTLIGHT) - Tự ẩn khi người dùng gõ tìm kiếm */}
+            {!searchQuery.trim() && (
+              <TrendingSpotlight
+                trendingItems={trendingBooks}
+                timeframe={trendingTimeframe}
+                onTimeframeChange={setTrendingTimeframe}
+                onSelectBook={handleSelectDetail}
+                onReadBook={handleReadBook}
+                isDarkMode={isDarkMode}
+              />
+            )}
             
             {/* Header thanh công cụ & Chuyển đổi View Mode */}
             <div className="flex mb-6 items-center justify-between border-b border-current/10 pb-3 flex-wrap gap-3">
