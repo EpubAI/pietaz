@@ -1,0 +1,8 @@
+name = "piepub-views-api"
+main = "worker.js"
+compatibility_date = "2026-11-05"
+account_id = "95ddd738c8f93d65367fb1c5fa68b37e"
+
+[[kv_namespaces]]
+binding = "PIETAZ_VIEWS"
+id = "c7034b7084d047f08e3b8178ac1631b3"

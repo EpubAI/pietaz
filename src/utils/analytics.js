@@ -2,7 +2,7 @@
 // Hỗ trợ đồng bộ đám mây qua Cloudflare Worker (Edge API) & Fallback LocalStorage
 
 const STORAGE_KEY = 'piepub_book_clicks_v1';
-const REMOTE_API_ENDPOINT = 'https://api.piepub.net/api';
+const REMOTE_API_ENDPOINT = 'https://piepub-views-api.markus-truong-001.workers.dev/api';
 
 // Lấy toàn bộ dữ liệu clicks cục bộ từ localStorage
 export function getStoredClicks() {
