@@ -7,6 +7,9 @@ import { CATEGORIES } from './data/categories';
 import { InteractiveBookCard } from './components/InteractiveBookCard';
 import { CompactBookRow } from './components/CompactBookRow';
 import { BookDetailModal } from './components/BookDetailModal';
+import { TrendingSpotlight } from './components/TrendingSpotlight';
+import { recordBookInteraction, getTrendingBooks } from './utils/analytics';
+
 import ReaderModal from './components/ReaderModal';
 import { normalizeVietnamese } from './utils/text';
 
@@ -16,6 +19,22 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [readingBook, setReadingBook] = useState(null);
   const [detailBook, setDetailBook] = useState(null);
+  const [trendingTimeframe, setTrendingTimeframe] = useState('week');
+
+  // Top tác phẩm xem nhiều (Trending) theo tuần / tháng
+  const trendingBooks = useMemo(() => {
+    return getTrendingBooks(BOOKS, trendingTimeframe, 6);
+  }, [trendingTimeframe]);
+
+  const handleReadBook = (book) => {
+    recordBookInteraction(book?.id);
+    setReadingBook(book);
+  };
+
+  const handleSelectDetail = (book) => {
+    recordBookInteraction(book?.id);
+    setDetailBook(book);
+  };
   const [viewMode, setViewMode] = useState(() => {
     const saved = localStorage.getItem('piepub_view_mode');
     if (saved) return saved;
@@ -284,6 +303,16 @@ export default function App() {
 
           {/* Gallery / Feed of Books */}
           <main className="lg:col-span-9">
+
+            {/* KHU VỰC TÁC PHẨM XEM NHIỀU (TRENDING SPOTLIGHT) */}
+            <TrendingSpotlight
+              trendingItems={trendingBooks}
+              timeframe={trendingTimeframe}
+              onTimeframeChange={setTrendingTimeframe}
+              onSelectBook={handleSelectDetail}
+              onReadBook={handleReadBook}
+              isDarkMode={isDarkMode}
+            />
             
             {/* Header thanh công cụ & Chuyển đổi View Mode */}
             <div className="flex mb-6 items-center justify-between border-b border-current/10 pb-3 flex-wrap gap-3">
@@ -351,8 +380,8 @@ export default function App() {
                   <CompactBookRow
                     key={book.id}
                     book={book}
-                    onRead={(selected) => setReadingBook(selected)}
-                    onSelectDetail={(selected) => setDetailBook(selected)}
+                    onRead={(selected) => handleReadBook(selected)}
+                    onSelectDetail={(selected) => handleSelectDetail(selected)}
                     isDarkMode={isDarkMode}
                   />
                 ))}
@@ -364,8 +393,8 @@ export default function App() {
                   <InteractiveBookCard
                     key={book.id}
                     book={book}
-                    onRead={(selected) => setReadingBook(selected)}
-                    onSelectDetail={(selected) => setDetailBook(selected)}
+                    onRead={(selected) => handleReadBook(selected)}
+                    onSelectDetail={(selected) => handleSelectDetail(selected)}
                     isDarkMode={isDarkMode}
                   />
                 ))}
@@ -430,7 +459,7 @@ export default function App() {
           book={detailBook}
           isOpen={Boolean(detailBook)}
           onClose={() => setDetailBook(null)}
-          onRead={(book) => setReadingBook(book)}
+          onRead={(book) => handleReadBook(book)}
           isDarkMode={isDarkMode}
         />
       )}
