@@ -25,6 +25,16 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "mo-kim-quyet-quy-mon-thien-su": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 140803,
+    "rawWordCountFormatted": "140.803 chừ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
+
   "co-su-mieu-cuong-2": {
     "price": 300000,
     "priceDisplay": "300.000 đ",
