@@ -23,6 +23,54 @@ export default function App() {
   const [trendingTimeframe, setTrendingTimeframe] = useState('week');
   const [remoteViews, setRemoteViews] = useState({});
 
+  // Tự động inject Schema.org JSON-LD CollectionPage + Books vào head để tối ưu Google & AI SEO
+  useEffect(() => {
+    const existing = document.getElementById('piepub-schema-jsonld');
+    if (existing) existing.remove();
+
+    const bookItems = BOOKS.slice(0, 35).map((b, idx) => ({
+      "@type": "Book",
+      "name": b.title,
+      "alternateName": b.originalTitle || undefined,
+      "author": {
+        "@type": "Person",
+        "name": b.author
+      },
+      "inLanguage": "vi",
+      "description": b.description || undefined,
+      "url": "https://piepub.net"
+    }));
+
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "PIETAZ PRIVATE DEN — Thư Khố Đọc Thử Bản Dịch Tuyển Chọn",
+      "url": "https://piepub.net",
+      "description": "Thư phòng đọc thử các bản dịch truyện chọn lọc, lọc theo thể loại và trải nghiệm đọc tinh gọn.",
+      "inLanguage": "vi",
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": BOOKS.length,
+        "itemListElement": bookItems.map((item, idx) => ({
+          "@type": "ListItem",
+          "position": idx + 1,
+          "item": item
+        }))
+      }
+    };
+
+    const script = document.createElement('script');
+    script.id = 'piepub-schema-jsonld';
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(schemaData);
+    document.head.appendChild(script);
+
+    return () => {
+      const el = document.getElementById('piepub-schema-jsonld');
+      if (el) el.remove();
+    };
+  }, []);
+
   // Tự động tải số lượt view từ Cloudflare Worker API
   useEffect(() => {
     let isMounted = true;

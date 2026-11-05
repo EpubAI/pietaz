@@ -1,0 +1,574 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "PIETAZ PRIVATE DEN — Thư Khố Đọc Thử Bản Dịch Tuyển Chọn",
+  "url": "https://piepub.net",
+  "description": "Thư phòng đọc thử các bản dịch truyện chọn lọc, lọc theo thể loại và trải nghiệm đọc tinh gọn.",
+  "inLanguage": "vi",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 46,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Book",
+          "name": "Nguyên Tội",
+          "alternateName": "原罪 (Yuan Zui / Thục Tội Vô Môn)",
+          "author": {
+            "@type": "Person",
+            "name": "Lữ Tranh"
+          },
+          "inLanguage": "vi",
+          "description": "Cuộc đấu trí sinh tử tột cùng giữa một viên cảnh sát hình sự lão luyện mang án tử ung thư giai đoạn cuối và tên trùm tư bản ma mãnh. Một cuộc chạy đua nghẹt thở chống lại thời gian để bảo vệ chân lý và cứu rỗi lương tri.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Book",
+          "name": "Mô Kim Quyết - Quỷ Môn Thiên Sư",
+          "alternateName": "摸金玦之鬼门天师 (Mo Jin Jue Zhi Gui Men Tian Shi)",
+          "author": {
+            "@type": "Person",
+            "name": "Thiên Hạ Bá Xướng"
+          },
+          "inLanguage": "vi",
+          "description": "Giữa bão tuyết mịt mùng và bầy sói đói vùng Đại Hưng An Lĩnh, chàng thanh niên Hồ Bát Nhất cùng Tuyền Béo bước vào chuyến phiêu lưu sinh tử đầu đời, vô tình mở ra tòa cổ mộ Liêu triều ngàn năm u tịch bị phong ấn bởi Quỷ Môn Thiên Sư.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Book",
+          "name": "Cổ Sự Miêu Cương 2",
+          "alternateName": "苗疆蛊事Ⅱ (Miao Jiang Gu Shi 2)",
+          "author": {
+            "@type": "Person",
+            "name": "Nam Vô Ca Sa Lý Khoa Phật"
+          },
+          "inLanguage": "vi",
+          "description": "Tiếng khèn Mèo ai oán vọng qua màn sương lam độc địa vùng Thập Vạn Đại Sơn. Khát vọng sinh tồn buộc chàng trai trẻ Lục Ngôn dấn thân vào giang hồ huyền thuật đầy cạm bẫy, kế thừa ngọn lửa chính nghĩa từ Miêu Cương Cổ Vương Lục Tả đập tan những âm mưu tà giáo kinh thiên động địa.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Book",
+          "name": "Khúc Ca Của Kẻ Mơ Đã Chết & Grimscribe",
+          "alternateName": "Songs of a Dead Dreamer and Grimscribe",
+          "author": {
+            "@type": "Person",
+            "name": "Thomas Ligotti"
+          },
+          "inLanguage": "vi",
+          "description": "Khung cửa sổ của lý tính vỡ vụn, và những gì tràn vào không phải một con quái vật giận dữ, mà là tiếng cười khùng khục của một con rối gỗ nhận ra sợi dây điều khiển trên đầu mình. Kiệt tác kinh dị hiện sinh đỉnh cao của thế kỷ 20 lột trần ảo tưởng về ý thức và sự phi lý tột cùng của kiếp nhân sinh.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Book",
+          "name": "Mùa Thứ Năm",
+          "alternateName": "The Fifth Season (The Broken Earth - Book 1)",
+          "author": {
+            "@type": "Person",
+            "name": "N. K. Jemisin"
+          },
+          "inLanguage": "vi",
+          "description": "Một vĩ nhân căm phẫn xé toang lục địa Tĩnh Địa, khởi đầu Mùa Thứ Năm tàn khốc che lấp mặt trời. Người mẹ Essun đơn độc dấn thân vào hành trình vượt qua đại lục tro tàn để báo thù cho đứa con trai bị sát hại và tìm lại đứa con gái bị bắt cóc.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Book",
+          "name": "Cổng Thạch Trụ",
+          "alternateName": "The Obelisk Gate (The Broken Earth - Book 2)",
+          "author": {
+            "@type": "Person",
+            "name": "N. K. Jemisin"
+          },
+          "inLanguage": "vi",
+          "description": "Mùa diệt vong ngày càng tăm tối, Essun tìm thấy tia hy vọng từ mạng lưới Cổng Thạch Trụ cổ xưa để kết thúc vĩnh viễn thảm họa. Nhưng đứa con gái Nassun sau khi nếm trải sự tàn nhẫn của loài người lại quyết tâm dùng Thạch Trụ để chôn vùi cả thế giới.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Book",
+          "name": "Bầu Trời Đá",
+          "alternateName": "The Stone Sky (The Broken Earth - Book 3)",
+          "author": {
+            "@type": "Person",
+            "name": "N. K. Jemisin"
+          },
+          "inLanguage": "vi",
+          "description": "Quỹ đạo Mặt Trăng thất lạc tiến gần Trái Đất mang theo cơ hội hàn gắn hành tinh hoặc hủy diệt tất cả. Essun và con gái Nassun đứng ở hai đầu chiến tuyến của số phận trong cuộc quyết đấu định đoạt tương lai của Tĩnh Địa.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Book",
+          "name": "Những Năm Tháng Tôi Làm Thầy Âm Dương",
+          "alternateName": "我当阴阳先生的那几年 (Wo Dang Yin Yang Xian Sheng De Na Ji Nian)",
+          "author": {
+            "@type": "Person",
+            "name": "Thôi Tẩu Triệu (崔走召)"
+          },
+          "inLanguage": "vi",
+          "description": "Chàng thanh niên Thôi Tác Phi bất ngờ đuối nước vong mạng, lạc bước cõi âm rồi vô tình lĩnh hội bùa chú Tam Thanh để hoàn dương giữa dương gian. Trói mình vào lời nguyền nghiệt ngã ngũ tệ tam khuyết, anh dấn thân vào hành trình trừ tà, phá giải những bí ẩn rợn người nơi đồng tuyết Đông Bắc.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Book",
+          "name": "Cục Quản Lý Truyền Thuyết",
+          "alternateName": "传说管理局 (Chuan Shuo Guan Li Ju)",
+          "author": {
+            "@type": "Person",
+            "name": "Sát Trùng Đội Đội Viên (杀虫队队员)"
+          },
+          "inLanguage": "vi",
+          "description": "Vừa mới xuất hiện đã tức tưởi lìa đời, Đỗ Vũ ký hợp đồng làm việc cho Cục Quản Lý Truyền Thuyết tối mật để giành cơ hội đầu thai giàu sang. Anh phải xuyên không vào các không gian thần thoại Tây Du, Phong Thần, Sơn Hải Kinh đang bị lệch lạc để chấn chỉnh dòng lịch sử trở lại quỹ đạo.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Book",
+          "name": "Đường Cừu — Tam Bộ Khúc",
+          "alternateName": "羊道三部曲 (Yang Dao San Bu Qu)",
+          "author": {
+            "@type": "Person",
+            "name": "Lý Quyên (李娟)"
+          },
+          "inLanguage": "vi",
+          "description": "Trọn bộ ba tản văn phi hư cấu kinh điển (Mục trường mùa xuân, Mục trường mùa hè vùng núi trước, Mục trường mùa hè trên núi sâu) theo chân gia đình du mục Kazakh thiên di qua những đại ngàn và thảo nguyên Altay hùng vĩ, trong trẻo và lắng đọng sâu xa.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "Book",
+          "name": "Địa Cầu Lang Thang",
+          "alternateName": "流浪地球：刘慈欣短篇小说集 (The Wandering Earth: Selected Short Stories)",
+          "author": {
+            "@type": "Person",
+            "name": "Lưu Từ Hân"
+          },
+          "inLanguage": "vi",
+          "description": "Mặt Trời sắp nổ tung, nhân loại gắn 12.000 động cơ đẩy Trái Đất lang thang 2.500 năm qua vũ trụ lạnh giá, mở ra thiên anh hùng ca bi tráng nhất về ý chí sinh tồn.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "Book",
+          "name": "Phường Chuột Chó",
+          "alternateName": "鼠狗之辈 (Shu Gou Zhi Bei)",
+          "author": {
+            "@type": "Person",
+            "name": "Trang Vĩ Nhạc"
+          },
+          "inLanguage": "vi",
+          "description": "Qua hàng chục cuộn băng cassette phủ bụi thời gian sau cái chết của người cậu ruột, luật sư Đường Tử Siêu ngược dòng thời gian về vụ án mạng bờ sông năm 1980 để giải mã bản án oan nghiệt nghiền nát ba thế hệ gia tộc.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "Book",
+          "name": "Môn Lĩnh Quái Đàm",
+          "alternateName": "门岭怪谈 (Men Ling Guai Tan)",
+          "author": {
+            "@type": "Person",
+            "name": "Thiên Hạ Bá Xướng"
+          },
+          "inLanguage": "vi",
+          "description": "Trú mưa trong ngôi làng hoang ngàn năm tại Môn Lĩnh, ba người anh em bị kẹt vào vòng lặp thời không vô tận nơi những hồn ma thời cổ đại thoắt ẩn thoắt hiện và mỗi bình minh đều tái hiện lại biến cố đẫm máu.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "Book",
+          "name": "Dưới Côn Phật Gia, Ác Nhân Khó Sống",
+          "alternateName": "佛爷棍下不留生 (Fo Ye Gun Xia Bu Liu Sheng)",
+          "author": {
+            "@type": "Person",
+            "name": "Tạo Hóa Trai Chủ"
+          },
+          "inLanguage": "vi",
+          "description": "Không tụng kinh gõ mõ tiêu cực, tiểu hòa thượng Từ Thắng vung thiết côn ngàn cân trảm yêu trừ ma khắp nhân gian, dùng phật môn bạo lực nghiền nát mọi thế lực bất công tàn ác.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "Book",
+          "name": "Pháp Y Quốc Dân",
+          "alternateName": "国民法医 (Guo Min Fa Yi)",
+          "author": {
+            "@type": "Person",
+            "name": "Chí Điểu Thôn"
+          },
+          "inLanguage": "vi",
+          "description": "Thiếu gia giàu có Giang Viễn dấn thân vào nghề bác sĩ pháp y hiện trường, giải mã tiếng nói câm lặng của tử thi và vết máu hiện trường để đưa những kỳ án phức tạp ra ánh sáng công lý.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "Book",
+          "name": "Vàng Ròng Mê Hoặc",
+          "alternateName": "迷人的金子 (Mi Ren De Jin Zi)",
+          "author": {
+            "@type": "Person",
+            "name": "Lục Xuân Ngô"
+          },
+          "inLanguage": "vi",
+          "description": "Một quan tài chứa đầy vàng ròng thay vì thi thể người cha quá cố, và một xác chết xa lạ xuất hiện bên cạnh người thợ nghèo. Vòng xoáy tranh đoạt nghẹt thở giữa lòng tham và tội ác phơi bày trần trụi bản chất con người.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "Book",
+          "name": "Danh Đề: Cuộc Hỏi Cung Tối Thượng",
+          "alternateName": "名提之终极预审 (Ming Ti Zhi Zhong Ji Yu Shen)",
+          "author": {
+            "@type": "Person",
+            "name": "Lữ Tranh"
+          },
+          "inLanguage": "vi",
+          "description": "Huyền thoại hỏi cung Tề Hiếu Thạch với bí pháp \\",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "Book",
+          "name": "Nàng, Nàng và Nàng",
+          "alternateName": "她与她与她 (Ta Yu Ta Yu Ta)",
+          "author": {
+            "@type": "Person",
+            "name": "Cảnh Thiên Trạch"
+          },
+          "inLanguage": "vi",
+          "description": "Sau cái chết bí ẩn của nữ phóng viên điều tra Dương Tư Phàm, ba người phụ nữ từng gắn bó với cô đã liên minh suốt mười năm âm thầm truy vết, dùng ngòi bút và trí tuệ để phơi bày sự thật đằng sau bức màn quyền lực đen tối.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "Book",
+          "name": "Đạo Sĩ Không Dễ Chọc",
+          "alternateName": "道士不好惹 / 古井观传奇 (Dao Shi Bu Hao Re)",
+          "author": {
+            "@type": "Person",
+            "name": "Khốn Đích Thụy Bất Trứ"
+          },
+          "inLanguage": "vi",
+          "description": "Rời Cổ Tỉnh Quan dưới chân núi Chung Nam, truyền nhân Hướng Khuyết bước chân vào chốn đô thị cuồn cuộn, vận dụng bí thuật phong thủy âm dương trừ tà trấn sát và đối đầu sinh tử với các đại môn phái ngàn năm.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "Book",
+          "name": "Tàng Phong",
+          "alternateName": "藏锋 (Cang Feng)",
+          "author": {
+            "@type": "Person",
+            "name": "Lữ Tranh"
+          },
+          "inLanguage": "vi",
+          "description": "Từ một cán bộ văn phòng bị xem là \\",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "item": {
+          "@type": "Book",
+          "name": "Tam Xoa Kích",
+          "alternateName": "三叉戟 (San Cha Ji)",
+          "author": {
+            "@type": "Person",
+            "name": "Lữ Tranh"
+          },
+          "inLanguage": "vi",
+          "description": "Bộ ba cảnh sát lão thành vang bóng một thời tại Bắc Kinh — Đại Bối Đầu, Đại Bôn Đầu và Phan Quỷ Cốt — quyết định tái xuất giang hồ để lật tẩy đường dây rửa tiền và lừa đảo tài chính xuyên quốc gia nghìn tỷ, bảo vệ danh dự người chiến sĩ công an.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
+        "item": {
+          "@type": "Book",
+          "name": "Chúng Ta Sống Tại Nam Kinh",
+          "alternateName": "我们生活在南京 (Wo Men Sheng Huo Zai Nan Jing)",
+          "author": {
+            "@type": "Person",
+            "name": "Thiên Thụy Thuyết Phù"
+          },
+          "inLanguage": "vi",
+          "description": "Qua chiếc máy vô tuyến nghiệp dư, nam sinh Bạch Dương năm 2019 tình cờ liên lạc được với Bán Hạ — cô gái duy nhất còn sống sót giữa Nam Kinh đổ nát năm 2040. Một cuộc giải cứu thời không cảm động nhằm đảo ngược ngày tận thế của loài người.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "item": {
+          "@type": "Book",
+          "name": "Cẩm Nang Đãi Ngộ Tổng Thể WorldatWork",
+          "alternateName": "The WorldatWork Handbook of Total Rewards (2nd Edition)",
+          "author": {
+            "@type": "Person",
+            "name": "Dan Cafaro & WorldatWork"
+          },
+          "inLanguage": "vi",
+          "description": "Cẩm nang chiến lược toàn diện và chuẩn mực nhất thế giới về Lương thưởng, Phúc lợi, Ghi nhận thành tích và Phát triển sự nghiệp, giúp các nhà lãnh đạo và chuyên gia HR tối ưu hóa chiến lược đãi ngộ thu hút nhân tài.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 24,
+        "item": {
+          "@type": "Book",
+          "name": "Trùng Khánh Mê Thành: Chuyện Quái Dị Trong Màn Sương",
+          "alternateName": "重庆迷城：雾中诡事 (Zhong Qing Mi Cheng)",
+          "author": {
+            "@type": "Person",
+            "name": "E Bá Tước"
+          },
+          "inLanguage": "vi",
+          "description": "Trở về quê cha nơi thành phố núi sương mù Trùng Khánh cuối thời Thanh, chàng thanh niên Nhậm Tây Đông bị cuốn vào chuỗi án mạng ma quái, kết hợp giữa tri thức hóa học cận đại và bí thuật giang hồ để lật tẩy âm mưu đoạt mệnh.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 25,
+        "item": {
+          "@type": "Book",
+          "name": "Chết Trên Sao Hỏa",
+          "alternateName": "死在火星上 (Si Zai Huo Xing Shang)",
+          "author": {
+            "@type": "Person",
+            "name": "Thiên Thụy Thuyết Phù"
+          },
+          "inLanguage": "vi",
+          "description": "\\",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 26,
+        "item": {
+          "@type": "Book",
+          "name": "Dơi (The Bat)",
+          "alternateName": "Flaggermusmannen (The Bat)",
+          "author": {
+            "@type": "Person",
+            "name": "Jo Nesbø"
+          },
+          "inLanguage": "vi",
+          "description": "Một thiếu nữ Na Uy bị sát hại dã man tại Sydney, thanh tra hình sự gai góc Harry Hole từ Oslo được cử sang hỗ trợ. Giữa những truyền thuyết thổ dân về Thần Dơi Narahdarn và thế giới ngầm phố đèn đỏ hiểm ác, Harry phải đối mặt với một tên sát nhân hàng loạt reo rắc nỗi kinh hoàng tột độ.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 27,
+        "item": {
+          "@type": "Book",
+          "name": "Sát Thiền",
+          "alternateName": "杀禅 (Sha Shan)",
+          "author": {
+            "@type": "Person",
+            "name": "Kiều Tĩnh Phu"
+          },
+          "inLanguage": "vi",
+          "description": "Chiến trường khốc liệt vứt bỏ sáu người lính, họ cắt máu ăn thề sinh tử để rồi bước vào một võ đài hiểm độc hơn vạn lần: chốn giang hồ và cạm bẫy vương quyền. Một thiên sử thi võ hiệp đen tối trần trụi, nơi lưỡi kiếm thực chiến và lòng trung nghĩa đối đầu với vực sâu dục vọng của con người.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 28,
+        "item": {
+          "@type": "Book",
+          "name": "Chú Cấm Sơn Hải",
+          "alternateName": "咒禁山海 (Zhou Jin Shan Hai)",
+          "author": {
+            "@type": "Person",
+            "name": "Bắc Hải Mục Kình"
+          },
+          "inLanguage": "vi",
+          "description": "Triều đình cấm biển, sóng ngầm cuộn trào tà thần và cấm kỵ. Chàng trai Vương Trừng thức giấc trên con Vương Thuyền tế thần dập dềnh giữa muôn trùng sóng dữ, mang theo đồng tiền cổ bí ẩn và thuật Chú Cấm Thủy Quan dấn thân vào chuyến hải trình sinh tử đoạt mệnh.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 29,
+        "item": {
+          "@type": "Book",
+          "name": "Hầu Đại Lợi: Ký Sự Hình Trinh",
+          "alternateName": "侯大利刑侦笔记 (Hou Da Li Xing Zhen Bi Ji)",
+          "author": {
+            "@type": "Person",
+            "name": "Tiểu Kiều Lão Thụ"
+          },
+          "inLanguage": "vi",
+          "description": "Mười sáu năm kiên trì truy lùng hung thủ sát hại người bạn gái thời thanh xuân, Hầu Đại Lợi bước chân vào ngành công an hình sự, tôi luyện bộ não sắc như dao cạo và đôi mắt tinh tường như kính hiển vi để bóc trần những đại án ly kỳ và phức tạp nhất bên dòng sông Giang Châu.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "item": {
+          "@type": "Book",
+          "name": "Lady Joker — Tập 1",
+          "alternateName": "レディ・ジョーカー (Lady Joker Vol. 1)",
+          "author": {
+            "@type": "Person",
+            "name": "Kaoru Takamura"
+          },
+          "inLanguage": "vi",
+          "description": "Năm người đàn ông dưới đáy xã hội Tokyo bí mật lập mưu bắt cóc Chủ tịch tập đoàn bia Hinode dưới bí danh Lady Joker. Một vụ tống tiền thế kỷ không nhắm vào tài sản, mà giáng một đòn hủy diệt vào những góc khuất dơ bẩn của giới tài phiệt và chính trường hậu bong bóng kinh tế.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
+        "item": {
+          "@type": "Book",
+          "name": "Lady Joker — Tập 2",
+          "alternateName": "レディ・ジョーカー (Lady Joker Vol. 2)",
+          "author": {
+            "@type": "Person",
+            "name": "Kaoru Takamura"
+          },
+          "inLanguage": "vi",
+          "description": "Đại kết cục của vụ án thế kỷ Lady Joker. Khi vòng xoáy khủng hoảng tài chính bùng nổ và ranh giới giữa công lý và tội ác dần tan biến, thanh tra Yuichiro Goda phải đối mặt với những bi kịch xã hội nhức nhối bắt nguồn từ sự phân biệt giai cấp nghiệt ngã của lịch sử.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 32,
+        "item": {
+          "@type": "Book",
+          "name": "Bệnh Viện Số 444",
+          "alternateName": "444号医院 (444 Hao Yi Yuan)",
+          "author": {
+            "@type": "Person",
+            "name": "Hắc Sắc Hỏa Chủng"
+          },
+          "inLanguage": "vi",
+          "description": "Mùi thuốc sát trùng nồng nặc hòa lẫn mùi máu tanh lạnh ngắt nơi hành lang hun hút chìm trong ánh đèn nhấp nháy, cánh cửa phòng cấp cứu Bệnh Viện Số 444 từ từ mở toang đón nhận những ca bệnh ma quái không thuộc về nhân gian. Ở nơi này, bác sĩ dùng dao mổ bị nguyền rủa để phẫu thuật tà linh, và chỉ một sai sót nhỏ trong quy tắc mổ quỷ sẽ lập tức bị nuốt chửng linh hồn.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "item": {
+          "@type": "Book",
+          "name": "Tiếp Thị 7.0",
+          "alternateName": "Marketing 7.0: A Guide for Thinking Marketers in the Age of AI",
+          "author": {
+            "@type": "Person",
+            "name": "Philip Kotler, Hermawan Kartajaya, Iwan Setiawan"
+          },
+          "inLanguage": "vi",
+          "description": "Khi AI tạo sinh sản xuất hàng triệu chiến dịch trong chớp mắt và thuật toán biến khách hàng thành những con số vô cảm, Philip Kotler gióng lên hồi chuông thức tỉnh: Công nghệ càng vô hình, nhân tính càng phải hữu hình. Tiếp Thị 7.0 là cẩm nang sống còn mở toang cánh cửa tâm trí người tiêu dùng công nghệ cao.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "item": {
+          "@type": "Book",
+          "name": "Đảo Tử Chú",
+          "alternateName": "死咒岛 (Si Zhou Dao)",
+          "author": {
+            "@type": "Person",
+            "name": "Hắc Sắc Hỏa Chủng"
+          },
+          "inLanguage": "vi",
+          "description": "Một bản án tử hình đếm ngược mười năm từ Sổ Sinh Tử xé toạc cuộc đời bình yên, đẩy những kẻ tuyệt vọng bước chân lên một hòn đảo ma quái biệt lập giữa đại dương mù mịt sương độc. Nơi ấy lệ quỷ là bất tử, luật lệ quỷ dị chi phối từng hơi thở, và vũ khí duy nhất để con người giành giật lấy mạng sống chính là sự tỉnh táo tột cùng để giải mã những quy tắc sinh tử của bóng tối.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 35,
+        "item": {
+          "@type": "Book",
+          "name": "Hầu Vệ Đông Quan Trường Ký",
+          "alternateName": "侯卫东官场笔记 (Hou Wei Dong Guan Chang Bi Ji)",
+          "author": {
+            "@type": "Person",
+            "name": "Tiểu Kiều Lão Thụ"
+          },
+          "inLanguage": "vi",
+          "description": "Một tiếng thét chói tai xé toạc màn đêm hoang vu nơi thâm sơn cùng cốc thôn Thượng Sa Giang, chàng thanh niên Hầu Vệ Đông nhìn trân trân vào căn lều xiêu vẹo không điện không nước, nhận ra giấc mộng thanh vân đỗ đạt đại học đã bị ném thẳng xuống đáy vực bởi một quyết định điều động tàn nhẫn. Nhưng kẻ mang dòng máu kiên cường không chịu cúi đầu trước nghịch cảnh; từ một cán bộ xã quèn bị gạt ra rìa quyền lực, gã đã biến con đường núi hiểm trở thành bệ phóng cho cú nhảy vọt ngoạn mục nhất lịch sử quan trường.",
+          "url": "https://piepub.net"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+# robots.txt for Pietaz Showcase (piepub.net)
+User-agent: *
+Allow: /
+
+# Cho phép đầy đủ các AI Web Crawlers lập chỉ mục nội dung sách
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://piepub.net/sitemap.xml
