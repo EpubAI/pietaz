@@ -8,7 +8,8 @@ import { InteractiveBookCard } from './components/InteractiveBookCard';
 import { CompactBookRow } from './components/CompactBookRow';
 import { BookDetailModal } from './components/BookDetailModal';
 import { TrendingSpotlight } from './components/TrendingSpotlight';
-import { recordBookInteraction, getTrendingBooks } from './utils/analytics';
+import { recordBookInteraction, getTrendingBooks, fetchRemoteViews } from './utils/analytics';
+import { useEffect } from 'react';
 
 import ReaderModal from './components/ReaderModal';
 import { normalizeVietnamese } from './utils/text';
@@ -20,11 +21,23 @@ export default function App() {
   const [readingBook, setReadingBook] = useState(null);
   const [detailBook, setDetailBook] = useState(null);
   const [trendingTimeframe, setTrendingTimeframe] = useState('week');
+  const [remoteViews, setRemoteViews] = useState({});
 
-  // Top tác phẩm xem nhiều (Trending) theo tuần / tháng
-  const trendingBooks = useMemo(() => {
-    return getTrendingBooks(BOOKS, trendingTimeframe, 6);
+  // Tự động tải số lượt view từ Cloudflare Worker API
+  useEffect(() => {
+    let isMounted = true;
+    fetchRemoteViews(trendingTimeframe).then((views) => {
+      if (isMounted && views && Object.keys(views).length > 0) {
+        setRemoteViews(views);
+      }
+    });
+    return () => { isMounted = false; };
   }, [trendingTimeframe]);
+
+  // Top tác phẩm xem nhiều (Trending) theo tuần / tháng kết hợp Cloudflare Views
+  const trendingBooks = useMemo(() => {
+    return getTrendingBooks(BOOKS, trendingTimeframe, remoteViews, 6);
+  }, [trendingTimeframe, remoteViews]);
 
   const handleReadBook = (book) => {
     recordBookInteraction(book?.id);
