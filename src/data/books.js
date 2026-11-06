@@ -1,3 +1,4 @@
+import { chienDichSanCao } from './novels/chienDichSanCao';
 import { theMountainInTheSea } from './novels/theMountainInTheSea';
 import { nguyenToi } from './novels/nguyenToi';
 import { moKimQuyetQuyMonThienSu } from './novels/moKimQuyetQuyMonThienSu';
@@ -48,6 +49,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  chienDichSanCao,                 // Ký sự trinh sát kinh tế quốc tế Săn Cáo 2014: Lữ Tranh
   theMountainInTheSea,             // Sci-Fi đoạt giải Locus 2023 & Bối cảnh Côn Đảo: Ray Nayler
   nguyenToi,                       // Hình sự tội phạm kinh tế đỉnh cao: Lữ Tranh
   moKimQuyetQuyMonThienSu,          // Tiền truyện Ma Thổi Đèn & Hồ Bát Nhất: Thiên Hạ Bá Xướng

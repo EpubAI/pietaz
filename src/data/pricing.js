@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "chien-dich-san-cao": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 128335,
+    "rawWordCountFormatted": "128.335 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
   "the-mountain-in-the-sea": {
     "price": 50000,
     "priceDisplay": "50.000 đ",
