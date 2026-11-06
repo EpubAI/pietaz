@@ -25,6 +25,16 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "the-mountain-in-the-sea": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 135258,
+    "rawWordCountFormatted": "135.258 chừ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
+
   "nguyen-toi": {
     "price": 50000,
     "priceDisplay": "50.000 đ",

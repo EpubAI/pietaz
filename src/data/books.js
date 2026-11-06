@@ -1,3 +1,4 @@
+import { theMountainInTheSea } from './novels/theMountainInTheSea';
 import { nguyenToi } from './novels/nguyenToi';
 import { moKimQuyetQuyMonThienSu } from './novels/moKimQuyetQuyMonThienSu';
 import { coSuMieuCuong2 } from './novels/coSuMieuCuong2';
@@ -47,6 +48,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  theMountainInTheSea,             // Sci-Fi đoạt giải Locus 2023 & Bối cảnh Côn Đảo: Ray Nayler
   nguyenToi,                       // Hình sự tội phạm kinh tế đỉnh cao: Lữ Tranh
   moKimQuyetQuyMonThienSu,          // Tiền truyện Ma Thổi Đèn & Hồ Bát Nhất: Thiên Hạ Bá Xướng
   coSuMieuCuong2,                   // Huyền thuật Miêu Cương đại trường thiên: Nam Vô Ca Sa Lý Khoa Phật
