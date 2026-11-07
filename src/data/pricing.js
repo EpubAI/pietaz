@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "am-loi": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 262378,
+    "rawWordCountFormatted": "262.378 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "chien-dich-san-cao": {
     "price": 50000,
     "priceDisplay": "50.000 đ",

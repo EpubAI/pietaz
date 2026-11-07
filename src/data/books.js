@@ -1,3 +1,4 @@
+import { amLoi } from './novels/amLoi';
 import { chienDichSanCao } from './novels/chienDichSanCao';
 import { theMountainInTheSea } from './novels/theMountainInTheSea';
 import { nguyenToi } from './novels/nguyenToi';
@@ -49,6 +50,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  amLoi,                           // Trinh thám hình sự Douban TOP 1: Âm Lôi - Lý Đại Phát
   chienDichSanCao,                 // Ký sự trinh sát kinh tế quốc tế Săn Cáo 2014: Lữ Tranh
   theMountainInTheSea,             // Sci-Fi đoạt giải Locus 2023 & Bối cảnh Côn Đảo: Ray Nayler
   nguyenToi,                       // Hình sự tội phạm kinh tế đỉnh cao: Lữ Tranh
