@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "bach-loc-nguyen": {
+    "price": 90000,
+    "priceDisplay": "90.000 đ",
+    "isFree": false,
+    "rawWordCount": 425498,
+    "rawWordCountFormatted": "425.498 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 2B (400k - 500k chữ)"
+  },
   "phu-du-ba-ngay-dao-sat": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
