@@ -1,3 +1,4 @@
+import { phuDuBaNgayDaoSat } from './novels/phuDuBaNgayDaoSat';
 import { amLoi } from './novels/amLoi';
 import { chienDichSanCao } from './novels/chienDichSanCao';
 import { theMountainInTheSea } from './novels/theMountainInTheSea';
@@ -50,6 +51,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  phuDuBaNgayDaoSat,               // Trinh thám hình sự đào sát 72h: Phù Du - Trương Bán Thiên
   amLoi,                           // Trinh thám hình sự Douban TOP 1: Âm Lôi - Lý Đại Phát
   chienDichSanCao,                 // Ký sự trinh sát kinh tế quốc tế Săn Cáo 2014: Lữ Tranh
   theMountainInTheSea,             // Sci-Fi đoạt giải Locus 2023 & Bối cảnh Côn Đảo: Ray Nayler

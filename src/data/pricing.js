@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "phu-du-ba-ngay-dao-sat": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 202540,
+    "rawWordCountFormatted": "202.540 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "am-loi": {
     "price": 70000,
     "priceDisplay": "70.000 đ",

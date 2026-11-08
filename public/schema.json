@@ -7,11 +7,27 @@
   "inLanguage": "vi",
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 49,
+    "numberOfItems": 50,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
+        "item": {
+          "@type": "Book",
+          "name": "Phù Du: Ba Ngày Đào Sát",
+          "alternateName": "蜉蝣：三日逃杀 (Fu You: San Ri Tao Sha)",
+          "author": {
+            "@type": "Person",
+            "name": "Trương Bán Thiên"
+          },
+          "inLanguage": "vi",
+          "description": "Vụ vượt ngục chấn động trước hạn 7 ngày của một phạm nhân gương mẫu mở màn cho cuộc đào sát đếm ngược 72 giờ nghẹt thở. Bản trường ca tội phạm xã hội phái đẫm lệ của Trương Bán Thiên về số phận mong manh của những kiếp phù du đòi lại công lý.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
         "item": {
           "@type": "Book",
           "name": "Âm Lôi",
@@ -27,7 +43,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "item": {
           "@type": "Book",
           "name": "Chiến Dịch Săn Cáo",
@@ -43,7 +59,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 4,
         "item": {
           "@type": "Book",
           "name": "Núi Trong Biển",
@@ -59,7 +75,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 5,
         "item": {
           "@type": "Book",
           "name": "Nguyên Tội",
@@ -75,7 +91,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 6,
         "item": {
           "@type": "Book",
           "name": "Mô Kim Quyết - Quỷ Môn Thiên Sư",
@@ -91,7 +107,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 6,
+        "position": 7,
         "item": {
           "@type": "Book",
           "name": "Cổ Sự Miêu Cương 2",
@@ -107,7 +123,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 7,
+        "position": 8,
         "item": {
           "@type": "Book",
           "name": "Khúc Ca Của Kẻ Mơ Đã Chết & Grimscribe",
@@ -123,7 +139,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 8,
+        "position": 9,
         "item": {
           "@type": "Book",
           "name": "Mùa Thứ Năm",
@@ -139,7 +155,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 9,
+        "position": 10,
         "item": {
           "@type": "Book",
           "name": "Cổng Thạch Trụ",
@@ -155,7 +171,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 10,
+        "position": 11,
         "item": {
           "@type": "Book",
           "name": "Bầu Trời Đá",
@@ -171,7 +187,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 11,
+        "position": 12,
         "item": {
           "@type": "Book",
           "name": "Những Năm Tháng Tôi Làm Thầy Âm Dương",
@@ -187,7 +203,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 12,
+        "position": 13,
         "item": {
           "@type": "Book",
           "name": "Cục Quản Lý Truyền Thuyết",
@@ -203,7 +219,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 13,
+        "position": 14,
         "item": {
           "@type": "Book",
           "name": "Đường Cừu — Tam Bộ Khúc",
@@ -219,7 +235,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 14,
+        "position": 15,
         "item": {
           "@type": "Book",
           "name": "Địa Cầu Lang Thang",
@@ -235,7 +251,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 15,
+        "position": 16,
         "item": {
           "@type": "Book",
           "name": "Phường Chuột Chó",
@@ -251,7 +267,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 16,
+        "position": 17,
         "item": {
           "@type": "Book",
           "name": "Môn Lĩnh Quái Đàm",
@@ -267,7 +283,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 17,
+        "position": 18,
         "item": {
           "@type": "Book",
           "name": "Dưới Côn Phật Gia, Ác Nhân Khó Sống",
@@ -283,7 +299,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 18,
+        "position": 19,
         "item": {
           "@type": "Book",
           "name": "Pháp Y Quốc Dân",
@@ -299,7 +315,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 19,
+        "position": 20,
         "item": {
           "@type": "Book",
           "name": "Vàng Ròng Mê Hoặc",
@@ -315,7 +331,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 20,
+        "position": 21,
         "item": {
           "@type": "Book",
           "name": "Danh Đề: Cuộc Hỏi Cung Tối Thượng",
@@ -331,7 +347,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 21,
+        "position": 22,
         "item": {
           "@type": "Book",
           "name": "Nàng, Nàng và Nàng",
@@ -347,7 +363,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 23,
         "item": {
           "@type": "Book",
           "name": "Đạo Sĩ Không Dễ Chọc",
@@ -363,7 +379,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 24,
         "item": {
           "@type": "Book",
           "name": "Tàng Phong",
@@ -379,7 +395,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 24,
+        "position": 25,
         "item": {
           "@type": "Book",
           "name": "Tam Xoa Kích",
@@ -395,7 +411,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 25,
+        "position": 26,
         "item": {
           "@type": "Book",
           "name": "Chúng Ta Sống Tại Nam Kinh",
@@ -411,7 +427,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 26,
+        "position": 27,
         "item": {
           "@type": "Book",
           "name": "Cẩm Nang Đãi Ngộ Tổng Thể WorldatWork",
@@ -427,7 +443,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 27,
+        "position": 28,
         "item": {
           "@type": "Book",
           "name": "Trùng Khánh Mê Thành: Chuyện Quái Dị Trong Màn Sương",
@@ -443,7 +459,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 28,
+        "position": 29,
         "item": {
           "@type": "Book",
           "name": "Chết Trên Sao Hỏa",
@@ -459,7 +475,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 30,
         "item": {
           "@type": "Book",
           "name": "Dơi (The Bat)",
@@ -475,7 +491,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 30,
+        "position": 31,
         "item": {
           "@type": "Book",
           "name": "Sát Thiền",
@@ -491,7 +507,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 32,
         "item": {
           "@type": "Book",
           "name": "Chú Cấm Sơn Hải",
@@ -507,7 +523,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 33,
         "item": {
           "@type": "Book",
           "name": "Hầu Đại Lợi: Ký Sự Hình Trinh",
@@ -523,7 +539,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 34,
         "item": {
           "@type": "Book",
           "name": "Lady Joker — Tập 1",
@@ -539,7 +555,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 34,
+        "position": 35,
         "item": {
           "@type": "Book",
           "name": "Lady Joker — Tập 2",
@@ -550,22 +566,6 @@
           },
           "inLanguage": "vi",
           "description": "Đại kết cục của vụ án thế kỷ Lady Joker. Khi vòng xoáy khủng hoảng tài chính bùng nổ và ranh giới giữa công lý và tội ác dần tan biến, thanh tra Yuichiro Goda phải đối mặt với những bi kịch xã hội nhức nhối bắt nguồn từ sự phân biệt giai cấp nghiệt ngã của lịch sử.",
-          "url": "https://piepub.net"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 35,
-        "item": {
-          "@type": "Book",
-          "name": "Bệnh Viện Số 444",
-          "alternateName": "444号医院 (444 Hao Yi Yuan)",
-          "author": {
-            "@type": "Person",
-            "name": "Hắc Sắc Hỏa Chủng"
-          },
-          "inLanguage": "vi",
-          "description": "Mùi thuốc sát trùng nồng nặc hòa lẫn mùi máu tanh lạnh ngắt nơi hành lang hun hút chìm trong ánh đèn nhấp nháy, cánh cửa phòng cấp cứu Bệnh Viện Số 444 từ từ mở toang đón nhận những ca bệnh ma quái không thuộc về nhân gian. Ở nơi này, bác sĩ dùng dao mổ bị nguyền rủa để phẫu thuật tà linh, và chỉ một sai sót nhỏ trong quy tắc mổ quỷ sẽ lập tức bị nuốt chửng linh hồn.",
           "url": "https://piepub.net"
         }
       }
