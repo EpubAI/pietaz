@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "dai-y-lang-nhien": {
+    "price": 250000,
+    "priceDisplay": "250.000 đ",
+    "isFree": false,
+    "rawWordCount": 2946878,
+    "rawWordCountFormatted": "2.946.878 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 3B (2.7M - 3.2M chữ)"
+  },
   "bach-loc-nguyen": {
     "price": 90000,
     "priceDisplay": "90.000 đ",

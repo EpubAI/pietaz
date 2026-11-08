@@ -1,3 +1,4 @@
+import { daiYLangNhien } from './novels/daiYLangNhien';
 import { bachLocNguyen } from './novels/bachLocNguyen';
 import { phuDuBaNgayDaoSat } from './novels/phuDuBaNgayDaoSat';
 import { amLoi } from './novels/amLoi';
@@ -52,6 +53,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  daiYLangNhien,                   // Y đạo hiện thực đỉnh cao: Đại Y Lăng Nhiên - Chí Điểu Thôn
   bachLocNguyen,                   // Sử thi hiện thực đoạt giải Mao Thuẫn: Bạch Lộc Nguyên - Trần Trung Thực
   phuDuBaNgayDaoSat,               // Trinh thám hình sự đào sát 72h: Phù Du - Trương Bán Thiên
   amLoi,                           // Trinh thám hình sự Douban TOP 1: Âm Lôi - Lý Đại Phát
