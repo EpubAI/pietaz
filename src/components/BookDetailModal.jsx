@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { Info, X, BookOpen, Award, FileText } from 'lucide-react';
 import { getBookPrice } from '../data/pricing';
 
-export function BookDetailModal({ book, isOpen, onClose, onRead, isDarkMode }) {
+export function BookDetailModal({ book, isOpen, onClose, onRead, onReadBook, isDarkMode }) {
   const [isCoverModalOpen, setIsCoverModalOpen] = useState(false);
 
-  if (!isOpen || !book) return null;
+  // Hỗ trợ cả trường hợp truyền isOpen (boolean) lẫn truyền thẳng book (khi detailBook != null)
+  const isModalVisible = typeof isOpen === 'boolean' ? isOpen : Boolean(book);
+  if (!isModalVisible || !book) return null;
 
+  const handleRead = onRead || onReadBook || (() => {});
   const coverSrc = book.cover || book.coverImage || './covers/ban-tron-chi-mang.jpg';
   const pricing = getBookPrice(book);
 
@@ -39,36 +42,48 @@ export function BookDetailModal({ book, isOpen, onClose, onRead, isDarkMode }) {
           {/* Nội dung chi tiết cuộn */}
           <div className="flex-1 overflow-y-auto p-5 sm:p-7 space-y-6">
             
-            {/* Cụm thông tin chính */}
-            <div className="flex flex-col sm:flex-row gap-5 items-center sm:items-start">
+            {/* Khối thông tin cơ bản: Bìa + Tiêu đề + Quy mô */}
+            <div className="flex flex-col sm:flex-row gap-5 items-center sm:items-start text-center sm:text-left">
               <div 
+                className="relative group shrink-0 cursor-pointer"
                 onClick={() => setIsCoverModalOpen(true)}
-                className="w-36 flex-shrink-0 aspect-[3/4.4] rounded-lg overflow-hidden border border-white/20 shadow-xl cursor-pointer hover:opacity-90"
-                title="Xem ảnh bìa lớn"
+                title="Bấm để xem ảnh bìa lớn"
               >
-                <img src={coverSrc} alt={book.title} className="w-full h-full object-cover" />
+                <img 
+                  src={coverSrc} 
+                  alt={book.title}
+                  className="w-28 sm:w-36 h-40 sm:h-52 object-cover rounded-xl shadow-lg border border-white/10 group-hover:opacity-90 transition-opacity"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity">
+                  <span className="text-[10px] font-mono bg-black/80 px-2 py-1 rounded text-white border border-white/20">Xem bìa</span>
+                </div>
               </div>
-              
-              <div className="flex-1 min-w-0 text-center sm:text-left">
-                <div className="text-xs font-mono opacity-60 uppercase tracking-widest">{book.author}</div>
-                <h2 className="text-2xl font-title-book font-bold text-[#E5B54F] mt-0.5">{book.title}</h2>
-                {book.originalTitle && (
-                  <div className="text-sm font-serif italic opacity-75 mt-0.5">{book.originalTitle}</div>
-                )}
 
-                <div className="mt-3 space-y-1 text-xs font-mono opacity-80">
-                  <div>• <span className="font-semibold">Quy mô:</span> {book.totalChapters || `${book.chapters?.length || 0} chương`}</div>
-                  {book.updatedAt && <div>• <span className="font-semibold">Cập nhật:</span> {book.updatedAt}</div>}
-                  {(book.authorBio || book.authorInfo?.bio) && (
-                    <div>• <span className="font-semibold">Tác giả:</span> {book.authorBio || book.authorInfo?.bio}</div>
-                  )}
+              <div className="flex-1 space-y-2">
+                <h2 className="text-lg sm:text-2xl font-bold font-mono tracking-tight text-[#E5B54F]">
+                  {book.title}
+                </h2>
+                {book.originalTitle && (
+                  <p className="text-xs font-mono opacity-60 italic">
+                    Tên gốc: {book.originalTitle}
+                  </p>
+                )}
+                <p className="text-sm font-semibold">
+                  Tác giả: <span className="text-[#E5B54F]">{book.author}</span>
+                </p>
+
+                {/* Các thông số */}
+                <div className="text-xs space-y-1 opacity-80 pt-1 font-mono">
+                  <div>• Cập nhật: {book.updatedAt || '03/11/2026'}</div>
+                  <div>• Quy mô: {book.totalChapters || `${book.chapters?.length || 0} chương`}</div>
                 </div>
 
-                <div className="mt-4">
+                {/* Nút Đọc Demo */}
+                <div className="pt-3">
                   <button
                     onClick={() => {
                       onClose();
-                      onRead(book);
+                      handleRead(book);
                     }}
                     className="px-4 py-2 rounded-lg bg-[#E5B54F] text-black font-mono text-xs font-bold hover:bg-[#F2C76A] transition-all flex items-center gap-1.5 shadow-md active:scale-95 mx-auto sm:mx-0"
                   >
@@ -93,9 +108,9 @@ export function BookDetailModal({ book, isOpen, onClose, onRead, isDarkMode }) {
             {/* Bài Review Chuyên Sâu Toàn Văn */}
             {(book.extendedReview || book.description) && (
               <div>
-                <div className="flex items-center gap-2 text-xs font-mono text-[#E5B54F] font-bold uppercase mb-2">
-                  <FileText className="w-4 h-4" />
-                  <span>Bài Đánh Giá & Phân Tích Chuyên Sâu</span>
+                <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider font-bold mb-2">
+                  <FileText className="w-4 h-4 text-[#E5B54F]" />
+                  <span>Đánh Giá Chuyên Sâu & Tóm Tắt Tác Phẩm</span>
                 </div>
                 <div className="text-xs sm:text-[13px] leading-relaxed opacity-90 space-y-3 font-sans whitespace-pre-line border-t border-current/10 pt-3 text-justify">
                   {book.extendedReview || book.description}
