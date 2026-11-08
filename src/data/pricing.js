@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "the-cockroaches": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 127210,
+    "rawWordCountFormatted": "127.210 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
   "dai-y-lang-nhien": {
     "price": 250000,
     "priceDisplay": "250.000 đ",

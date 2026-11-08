@@ -7,11 +7,27 @@
   "inLanguage": "vi",
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 52,
+    "numberOfItems": 53,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
+        "item": {
+          "@type": "Book",
+          "name": "Gián",
+          "alternateName": "The Cockroaches (Kakerlakkene)",
+          "author": {
+            "@type": "Person",
+            "name": "Jo Nesbø"
+          },
+          "inLanguage": "vi",
+          "description": "Đại sứ Na Uy bị sát hại bí ẩn tại một nhà chứa tồi tàn ở Bangkok. Thanh tra Harry Hole được điều sang Đông Nam Á với nhiệm vụ ỉm đi vụ việc, nhưng anh đã chạm trán một mạng lưới tội phạm nhớp nhúa như loài gián ẩn sau bức tường quyền lực.",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
         "item": {
           "@type": "Book",
           "name": "Đại Y Lăng Nhiên",
@@ -27,7 +43,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "item": {
           "@type": "Book",
           "name": "Bạch Lộc Nguyên",
@@ -43,7 +59,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 4,
         "item": {
           "@type": "Book",
           "name": "Phù Du: Ba Ngày Đào Sát",
@@ -59,7 +75,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 5,
         "item": {
           "@type": "Book",
           "name": "Âm Lôi",
@@ -75,7 +91,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 6,
         "item": {
           "@type": "Book",
           "name": "Chiến Dịch Săn Cáo",
@@ -91,7 +107,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 6,
+        "position": 7,
         "item": {
           "@type": "Book",
           "name": "Núi Trong Biển",
@@ -107,7 +123,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 7,
+        "position": 8,
         "item": {
           "@type": "Book",
           "name": "Nguyên Tội",
@@ -123,7 +139,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 8,
+        "position": 9,
         "item": {
           "@type": "Book",
           "name": "Mô Kim Quyết - Quỷ Môn Thiên Sư",
@@ -139,7 +155,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 9,
+        "position": 10,
         "item": {
           "@type": "Book",
           "name": "Cổ Sự Miêu Cương 2",
@@ -155,7 +171,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 10,
+        "position": 11,
         "item": {
           "@type": "Book",
           "name": "Khúc Ca Của Kẻ Mơ Đã Chết & Grimscribe",
@@ -171,7 +187,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 11,
+        "position": 12,
         "item": {
           "@type": "Book",
           "name": "Mùa Thứ Năm",
@@ -187,7 +203,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 12,
+        "position": 13,
         "item": {
           "@type": "Book",
           "name": "Cổng Thạch Trụ",
@@ -203,7 +219,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 13,
+        "position": 14,
         "item": {
           "@type": "Book",
           "name": "Bầu Trời Đá",
@@ -219,7 +235,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 14,
+        "position": 15,
         "item": {
           "@type": "Book",
           "name": "Những Năm Tháng Tôi Làm Thầy Âm Dương",
@@ -235,7 +251,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 15,
+        "position": 16,
         "item": {
           "@type": "Book",
           "name": "Cục Quản Lý Truyền Thuyết",
@@ -251,7 +267,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 16,
+        "position": 17,
         "item": {
           "@type": "Book",
           "name": "Đường Cừu — Tam Bộ Khúc",
@@ -267,7 +283,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 17,
+        "position": 18,
         "item": {
           "@type": "Book",
           "name": "Địa Cầu Lang Thang",
@@ -283,7 +299,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 18,
+        "position": 19,
         "item": {
           "@type": "Book",
           "name": "Phường Chuột Chó",
@@ -299,7 +315,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 19,
+        "position": 20,
         "item": {
           "@type": "Book",
           "name": "Môn Lĩnh Quái Đàm",
@@ -315,7 +331,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 20,
+        "position": 21,
         "item": {
           "@type": "Book",
           "name": "Dưới Côn Phật Gia, Ác Nhân Khó Sống",
@@ -331,7 +347,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 21,
+        "position": 22,
         "item": {
           "@type": "Book",
           "name": "Pháp Y Quốc Dân",
@@ -347,7 +363,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 23,
         "item": {
           "@type": "Book",
           "name": "Vàng Ròng Mê Hoặc",
@@ -363,7 +379,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 24,
         "item": {
           "@type": "Book",
           "name": "Danh Đề: Cuộc Hỏi Cung Tối Thượng",
@@ -379,7 +395,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 24,
+        "position": 25,
         "item": {
           "@type": "Book",
           "name": "Nàng, Nàng và Nàng",
@@ -395,7 +411,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 25,
+        "position": 26,
         "item": {
           "@type": "Book",
           "name": "Đạo Sĩ Không Dễ Chọc",
@@ -411,7 +427,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 26,
+        "position": 27,
         "item": {
           "@type": "Book",
           "name": "Tàng Phong",
@@ -427,7 +443,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 27,
+        "position": 28,
         "item": {
           "@type": "Book",
           "name": "Tam Xoa Kích",
@@ -443,7 +459,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 28,
+        "position": 29,
         "item": {
           "@type": "Book",
           "name": "Chúng Ta Sống Tại Nam Kinh",
@@ -459,7 +475,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 30,
         "item": {
           "@type": "Book",
           "name": "Cẩm Nang Đãi Ngộ Tổng Thể WorldatWork",
@@ -475,7 +491,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 30,
+        "position": 31,
         "item": {
           "@type": "Book",
           "name": "Trùng Khánh Mê Thành: Chuyện Quái Dị Trong Màn Sương",
@@ -491,7 +507,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 32,
         "item": {
           "@type": "Book",
           "name": "Chết Trên Sao Hỏa",
@@ -507,7 +523,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 33,
         "item": {
           "@type": "Book",
           "name": "Dơi (The Bat)",
@@ -523,7 +539,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 34,
         "item": {
           "@type": "Book",
           "name": "Sát Thiền",
@@ -539,7 +555,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 34,
+        "position": 35,
         "item": {
           "@type": "Book",
           "name": "Chú Cấm Sơn Hải",
@@ -550,22 +566,6 @@
           },
           "inLanguage": "vi",
           "description": "Triều đình cấm biển, sóng ngầm cuộn trào tà thần và cấm kỵ. Chàng trai Vương Trừng thức giấc trên con Vương Thuyền tế thần dập dềnh giữa muôn trùng sóng dữ, mang theo đồng tiền cổ bí ẩn và thuật Chú Cấm Thủy Quan dấn thân vào chuyến hải trình sinh tử đoạt mệnh.",
-          "url": "https://piepub.net"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 35,
-        "item": {
-          "@type": "Book",
-          "name": "Hầu Đại Lợi: Ký Sự Hình Trinh",
-          "alternateName": "侯大利刑侦笔记 (Hou Da Li Xing Zhen Bi Ji)",
-          "author": {
-            "@type": "Person",
-            "name": "Tiểu Kiều Lão Thụ"
-          },
-          "inLanguage": "vi",
-          "description": "Mười sáu năm kiên trì truy lùng hung thủ sát hại người bạn gái thời thanh xuân, Hầu Đại Lợi bước chân vào ngành công an hình sự, tôi luyện bộ não sắc như dao cạo và đôi mắt tinh tường như kính hiển vi để bóc trần những đại án ly kỳ và phức tạp nhất bên dòng sông Giang Châu.",
           "url": "https://piepub.net"
         }
       }
