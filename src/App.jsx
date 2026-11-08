@@ -1,18 +1,27 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
-  Sun, Moon, Search, Feather, Send, MessageCircle, X, Sparkles, Compass, LayoutGrid, List
+  Sun, Moon, Search, Feather, Send, MessageCircle, X, Sparkles, Compass, LayoutGrid, List,
+  SlidersHorizontal, ArrowUpDown, ArrowUpNarrowWide, ArrowDownWideNarrow, RotateCcw, DollarSign
 } from 'lucide-react';
 import { BOOKS } from './data/books';
 import { CATEGORIES } from './data/categories';
+import { getBookPrice } from './data/pricing';
 import { InteractiveBookCard } from './components/InteractiveBookCard';
 import { CompactBookRow } from './components/CompactBookRow';
 import { BookDetailModal } from './components/BookDetailModal';
 import { TrendingSpotlight } from './components/TrendingSpotlight';
 import { recordBookInteraction, getTrendingBooks, fetchRemoteViews } from './utils/analytics';
-import { useEffect } from 'react';
-
 import ReaderModal from './components/ReaderModal';
 import { normalizeVietnamese } from './utils/text';
+
+// Định nghĩa các preset khoảng giá nhanh
+const PRICE_PRESETS = [
+  { id: 'all', label: 'Tất cả mức giá' },
+  { id: 'free', label: 'Miễn phí (0 đ)' },
+  { id: 'under-100k', label: 'Dưới 100.000 đ' },
+  { id: '100k-200k', label: '100.000 - 200.000 đ' },
+  { id: 'above-200k', label: 'Trên 200.000 đ' },
+];
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -22,6 +31,12 @@ export default function App() {
   const [detailBook, setDetailBook] = useState(null);
   const [trendingTimeframe, setTrendingTimeframe] = useState('week');
   const [remoteViews, setRemoteViews] = useState({});
+
+  // State lọc và sắp xếp theo giá
+  const [pricePreset, setPricePreset] = useState('all');
+  const [customMinPrice, setCustomMinPrice] = useState('');
+  const [customMaxPrice, setCustomMaxPrice] = useState('');
+  const [sortOption, setSortOption] = useState('default'); // 'default' | 'price-asc' | 'price-desc' | 'chapters-desc'
 
   // Tự động inject Schema.org JSON-LD CollectionPage + Books vào head để tối ưu Google & AI SEO
   useEffect(() => {
@@ -96,6 +111,7 @@ export default function App() {
     recordBookInteraction(book?.id);
     setDetailBook(book);
   };
+
   const [viewMode, setViewMode] = useState(() => {
     const saved = localStorage.getItem('piepub_view_mode');
     if (saved) return saved;
@@ -135,37 +151,88 @@ export default function App() {
     });
   }, []);
 
-  // Filter books với chuẩn hóa không dấu và tìm kiếm toàn diện
+  // Reset toàn bộ bộ lọc
+  const handleResetFilters = () => {
+    setSelectedCategory('all');
+    setSearchQuery('');
+    setPricePreset('all');
+    setCustomMinPrice('');
+    setCustomMaxPrice('');
+    setSortOption('default');
+  };
+
+  const isFilterActive = selectedCategory !== 'all' || searchQuery.trim() !== '' || pricePreset !== 'all' || customMinPrice !== '' || customMaxPrice !== '' || sortOption !== 'default';
+
+  // Filter books với chuẩn hóa không dấu, tìm kiếm toàn diện và lọc theo giá
   const filteredBooks = useMemo(() => {
     const queryNorm = normalizeVietnamese(searchQuery);
 
-    return BOOKS.filter((book) => {
+    const minPriceNum = customMinPrice !== '' ? parseInt(customMinPrice.replace(/\D/g, ''), 10) : null;
+    const maxPriceNum = customMaxPrice !== '' ? parseInt(customMaxPrice.replace(/\D/g, ''), 10) : null;
+
+    let result = BOOKS.filter((book) => {
       const bookCats = getBookCategories(book);
       
-      // Nếu không tìm kiếm: lọc theo danh mục đang chọn
-      if (!queryNorm) {
-        return selectedCategory === 'all' || bookCats.includes(selectedCategory);
+      // 1. Lọc theo thể loại
+      const matchCategory = selectedCategory === 'all' || bookCats.includes(selectedCategory);
+      if (!matchCategory) return false;
+
+      // 2. Lọc theo từ khóa tìm kiếm (nếu có)
+      if (queryNorm) {
+        const titleNorm = normalizeVietnamese(book.title);
+        const originalTitleNorm = normalizeVietnamese(book.originalTitle || '');
+        const authorNorm = normalizeVietnamese(book.author);
+        const descNorm = normalizeVietnamese(book.description || '');
+        const matchTag = Array.isArray(book.tags) && book.tags.some(t => normalizeVietnamese(t).includes(queryNorm));
+
+        const matchSearch = 
+          titleNorm.includes(queryNorm) ||
+          originalTitleNorm.includes(queryNorm) ||
+          authorNorm.includes(queryNorm) ||
+          descNorm.includes(queryNorm) ||
+          matchTag;
+
+        if (!matchSearch) return false;
       }
 
-      // Nếu đang gõ tìm kiếm: tìm trên toàn bộ thư viện (hoặc theo danh mục nếu không chọn 'all')
-      const matchCategory = selectedCategory === 'all' || bookCats.includes(selectedCategory);
+      // 3. Lọc theo giá
+      const priceInfo = getBookPrice(book);
+      const bookPrice = priceInfo?.price ?? 0;
 
-      const titleNorm = normalizeVietnamese(book.title);
-      const originalTitleNorm = normalizeVietnamese(book.originalTitle || '');
-      const authorNorm = normalizeVietnamese(book.author);
-      const descNorm = normalizeVietnamese(book.description || '');
-      const matchTag = Array.isArray(book.tags) && book.tags.some(t => normalizeVietnamese(t).includes(queryNorm));
+      // Lọc theo khoảng tùy chỉnh (Từ ... Đến ...) nếu có nhập
+      if (minPriceNum !== null && !isNaN(minPriceNum) && bookPrice < minPriceNum) {
+        return false;
+      }
+      if (maxPriceNum !== null && !isNaN(maxPriceNum) && bookPrice > maxPriceNum) {
+        return false;
+      }
 
-      const matchSearch = 
-        titleNorm.includes(queryNorm) ||
-        originalTitleNorm.includes(queryNorm) ||
-        authorNorm.includes(queryNorm) ||
-        descNorm.includes(queryNorm) ||
-        matchTag;
+      // Lọc theo preset (nếu người dùng chưa nhập khoảng tùy chỉnh)
+      if (minPriceNum === null && maxPriceNum === null) {
+        if (pricePreset === 'free' && bookPrice > 0) return false;
+        if (pricePreset === 'under-100k' && (bookPrice <= 0 || bookPrice >= 100000)) return false;
+        if (pricePreset === '100k-200k' && (bookPrice < 100000 || bookPrice > 200000)) return false;
+        if (pricePreset === 'above-200k' && bookPrice <= 200000) return false;
+      }
 
-      return matchCategory && matchSearch;
+      return true;
     });
-  }, [selectedCategory, searchQuery]);
+
+    // 4. Sắp xếp danh sách
+    if (sortOption === 'price-asc') {
+      result.sort((a, b) => (getBookPrice(a)?.price ?? 0) - (getBookPrice(b)?.price ?? 0));
+    } else if (sortOption === 'price-desc') {
+      result.sort((a, b) => (getBookPrice(b)?.price ?? 0) - (getBookPrice(a)?.price ?? 0));
+    } else if (sortOption === 'chapters-desc') {
+      const getChapCount = (b) => {
+        const m = (b.totalChapters || '').match(/(\d+)\s*chương/);
+        return m ? parseInt(m[1], 10) : (Array.isArray(b.chapters) ? b.chapters.length : 0);
+      };
+      result.sort((a, b) => getChapCount(b) - getChapCount(a));
+    }
+
+    return result;
+  }, [selectedCategory, searchQuery, pricePreset, customMinPrice, customMaxPrice, sortOption]);
 
   return (
     <div className={isDarkMode ? 'dark bg-[#07080B] text-[#E8ECF2] min-h-screen selection:bg-[#E5B54F] selection:text-black font-sans' : 'bg-[#F9FAFB] text-[#1A1F2C] min-h-screen selection:bg-amber-600 selection:text-white font-sans'}>
@@ -218,25 +285,25 @@ export default function App() {
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Telegram */}
             <a 
-              href="https://t.me/Pietaz" 
+              href="https://t.me/pietaz" 
               target="_blank" 
-              rel="noreferrer"
-              className={`px-2.5 sm:px-3 py-1.5 rounded-lg font-semibold text-xs flex items-center gap-1.5 transition-all shadow-sm ${
+              rel="noopener noreferrer"
+              className={`px-2.5 sm:px-3 py-1.5 rounded-lg border text-xs font-mono transition-colors flex items-center gap-1.5 ${
                 isDarkMode 
-                  ? 'bg-[#E5B54F] text-black hover:bg-[#F2C76A] hover:shadow-[0_0_15px_rgba(229,181,79,0.35)]' 
-                  : 'bg-amber-600 text-white hover:bg-amber-700 shadow'
+                  ? 'border-white/15 hover:bg-white/5 text-zinc-200 hover:border-white/30' 
+                  : 'border-black/15 hover:bg-black/5 text-zinc-800 hover:border-black/30'
               }`}
-              title="Kênh Telegram trao đổi: @Pietaz"
+              title="Nhắn tin Telegram cho Admin"
             >
-              <Send className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline font-mono">Telegram</span>
+              <Send className="w-3.5 h-3.5 text-[#E5B54F]" />
+              <span className="hidden sm:inline">Telegram</span>
             </a>
 
             {/* Facebook */}
             <a 
-              href="https://www.facebook.com/heywazzup2024" 
+              href="https://www.facebook.com/ninh.trieu.129/" 
               target="_blank" 
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className={`px-2.5 sm:px-3 py-1.5 rounded-lg border text-xs font-mono transition-colors flex items-center gap-1.5 ${
                 isDarkMode 
                   ? 'border-white/15 hover:bg-white/5 text-zinc-200 hover:border-white/30' 
@@ -282,13 +349,14 @@ export default function App() {
           )}
         </div>
 
-        {/* Dropdown chọn thể loại & nút chuyển chế độ xem trên Mobile */}
-        <div className="flex items-center gap-2">
-          <div className="relative flex-1">
+        {/* Dropdown chọn thể loại, mức giá & sắp xếp trên Mobile */}
+        <div className="grid grid-cols-2 gap-2 mb-2">
+          {/* Thể loại */}
+          <div className="relative">
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className={`w-full px-3 py-2 text-xs rounded-lg border outline-none font-mono appearance-none transition-colors pr-8 ${
+              className={`w-full px-2.5 py-2 text-xs rounded-lg border outline-none font-mono appearance-none transition-colors pr-7 truncate ${
                 isDarkMode 
                   ? 'bg-[#121620] border-white/15 text-zinc-100 focus:border-[#E5B54F]' 
                   : 'bg-white border-black/15 text-zinc-800 focus:border-amber-600'
@@ -305,10 +373,71 @@ export default function App() {
                 );
               })}
             </select>
-            <div className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 opacity-60">
+            <div className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] opacity-60">
               ▼
             </div>
           </div>
+
+          {/* Sắp xếp */}
+          <div className="relative">
+            <select
+              value={sortOption}
+              onChange={(e) => setSortOption(e.target.value)}
+              className={`w-full px-2.5 py-2 text-xs rounded-lg border outline-none font-mono appearance-none transition-colors pr-7 truncate ${
+                isDarkMode 
+                  ? 'bg-[#121620] border-white/15 text-zinc-100 focus:border-[#E5B54F]' 
+                  : 'bg-white border-black/15 text-zinc-800 focus:border-amber-600'
+              }`}
+            >
+              <option value="default">Sắp xếp: Mới nhất</option>
+              <option value="price-asc">Giá: Thấp ➔ Cao</option>
+              <option value="price-desc">Giá: Cao ➔ Thấp</option>
+              <option value="chapters-desc">Quy mô: Nhiều chương nhất</option>
+            </select>
+            <div className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] opacity-60">
+              ▼
+            </div>
+          </div>
+        </div>
+
+        {/* Mức giá nhanh & Toggle View Mobile */}
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1">
+            <select
+              value={pricePreset}
+              onChange={(e) => {
+                setPricePreset(e.target.value);
+                setCustomMinPrice('');
+                setCustomMaxPrice('');
+              }}
+              className={`w-full px-2.5 py-1.5 text-xs rounded-lg border outline-none font-mono appearance-none transition-colors pr-7 truncate ${
+                isDarkMode 
+                  ? 'bg-[#121620] border-white/15 text-zinc-100 focus:border-[#E5B54F]' 
+                  : 'bg-white border-black/15 text-zinc-800 focus:border-amber-600'
+              }`}
+            >
+              {PRICE_PRESETS.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.label}
+                </option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] opacity-60">
+              ▼
+            </div>
+          </div>
+
+          {isFilterActive && (
+            <button
+              onClick={handleResetFilters}
+              className={`p-1.5 rounded-lg border text-xs font-mono transition-colors flex items-center gap-1 ${
+                isDarkMode ? 'border-red-500/30 text-red-400 bg-red-500/10' : 'border-red-400 text-red-600 bg-red-50'
+              }`}
+              title="Đặt lại bộ lọc"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+            </button>
+          )}
 
           {/* Toggle view mode mobile */}
           <div className={`flex items-center rounded-lg border p-0.5 ${isDarkMode ? 'border-white/15 bg-white/[0.02]' : 'border-black/15 bg-black/[0.02]'}`}>
@@ -334,19 +463,22 @@ export default function App() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Desktop Sidebar */}
-          <aside className="hidden lg:block lg:col-span-3 sticky top-24">
-            <div className={`p-4 rounded border ${isDarkMode ? 'bg-[#0C0E14] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
+          {/* Desktop Sidebar (Bộ lọc & Tiện ích) */}
+          <aside className="hidden lg:block lg:col-span-3 sticky top-24 space-y-5">
+            
+            {/* KHỐI 1: THỂ LOẠI */}
+            <div className={`p-4 rounded-xl border ${isDarkMode ? 'bg-[#0C0E14] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
               <div className="flex items-center justify-between pb-3 mb-2 border-b border-current/10 font-mono text-[11px]">
-                <span className="uppercase tracking-widest text-zinc-400 font-semibold">
+                <span className="uppercase tracking-widest text-zinc-400 font-semibold flex items-center gap-1.5">
+                  <Compass className="w-3.5 h-3.5 text-[#E5B54F]" />
                   Thể Loại Truyện
                 </span>
-                <span className="text-[#E5B54F]">
+                <span className="text-[#E5B54F] font-bold">
                   {filteredBooks.length} Tác phẩm
                 </span>
               </div>
 
-              <nav className="space-y-1">
+              <nav className="space-y-1 max-h-[320px] overflow-y-auto pr-1">
                 {availableCategories.map((cat) => {
                   const active = selectedCategory === cat.id;
                   const count = cat.id === 'all' 
@@ -357,7 +489,7 @@ export default function App() {
                     <button
                       key={cat.id}
                       onClick={() => setSelectedCategory(cat.id)}
-                      className={`w-full flex items-center justify-between px-3 py-2 rounded text-xs font-mono transition-all ${
+                      className={`w-full flex items-center justify-between px-3 py-1.5 rounded text-xs font-mono transition-all ${
                         active 
                           ? isDarkMode 
                             ? 'bg-[#E5B54F] text-black font-semibold shadow-sm' 
@@ -367,8 +499,8 @@ export default function App() {
                             : 'text-zinc-600 hover:text-black hover:bg-black/[0.03]'
                       }`}
                     >
-                      <span>{cat.label}</span>
-                      <span className={`text-[10px] px-1.5 py-0.2 rounded font-mono ${active ? 'bg-black/20 text-current' : 'opacity-50'}`}>
+                      <span className="truncate">{cat.label}</span>
+                      <span className={`text-[10px] px-1.5 py-0.2 rounded font-mono shrink-0 ml-2 ${active ? 'bg-black/20 text-current' : 'opacity-50'}`}>
                         {count}
                       </span>
                     </button>
@@ -376,6 +508,118 @@ export default function App() {
                 })}
               </nav>
             </div>
+
+            {/* KHỐI 2: LỌC THEO MỨC GIÁ & KHOẢNG GIÁ TÙY CHỈNH */}
+            <div className={`p-4 rounded-xl border ${isDarkMode ? 'bg-[#0C0E14] border-white/[0.08]' : 'bg-white border-black/[0.08]'}`}>
+              <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-current/10 font-mono text-[11px]">
+                <span className="uppercase tracking-widest text-zinc-400 font-semibold flex items-center gap-1.5">
+                  <DollarSign className="w-3.5 h-3.5 text-[#E5B54F]" />
+                  Mức Giá Tác Phẩm
+                </span>
+                {(pricePreset !== 'all' || customMinPrice || customMaxPrice) && (
+                  <button
+                    onClick={() => {
+                      setPricePreset('all');
+                      setCustomMinPrice('');
+                      setCustomMaxPrice('');
+                    }}
+                    className="text-[10px] text-zinc-400 hover:text-[#E5B54F] flex items-center gap-1"
+                    title="Đặt lại giá"
+                  >
+                    <RotateCcw className="w-3 h-3" />
+                    Reset
+                  </button>
+                )}
+              </div>
+
+              {/* Các nút chọn khoảng giá nhanh */}
+              <div className="space-y-1 mb-3">
+                {PRICE_PRESETS.map((p) => {
+                  const active = pricePreset === p.id && !customMinPrice && !customMaxPrice;
+                  let count = 0;
+                  if (p.id === 'all') count = BOOKS.length;
+                  else if (p.id === 'free') count = BOOKS.filter(b => (getBookPrice(b)?.price ?? 0) === 0).length;
+                  else if (p.id === 'under-100k') count = BOOKS.filter(b => {
+                    const pr = getBookPrice(b)?.price ?? 0;
+                    return pr > 0 && pr < 100000;
+                  }).length;
+                  else if (p.id === '100k-200k') count = BOOKS.filter(b => {
+                    const pr = getBookPrice(b)?.price ?? 0;
+                    return pr >= 100000 && pr <= 200000;
+                  }).length;
+                  else if (p.id === 'above-200k') count = BOOKS.filter(b => (getBookPrice(b)?.price ?? 0) > 200000).length;
+
+                  return (
+                    <button
+                      key={p.id}
+                      onClick={() => {
+                        setPricePreset(p.id);
+                        setCustomMinPrice('');
+                        setCustomMaxPrice('');
+                      }}
+                      className={`w-full flex items-center justify-between px-3 py-1.5 rounded text-xs font-mono transition-all ${
+                        active
+                          ? isDarkMode 
+                            ? 'bg-[#E5B54F] text-black font-semibold' 
+                            : 'bg-amber-600 text-white font-semibold'
+                          : isDarkMode 
+                            ? 'text-zinc-400 hover:text-white hover:bg-white/[0.03]' 
+                            : 'text-zinc-600 hover:text-black hover:bg-black/[0.03]'
+                      }`}
+                    >
+                      <span>{p.label}</span>
+                      <span className={`text-[10px] px-1.5 py-0.2 rounded font-mono ${active ? 'bg-black/20 text-current' : 'opacity-50'}`}>
+                        {count}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Nhập khoảng giá tùy chỉnh: Từ ... Đến ... */}
+              <div className="pt-2.5 border-t border-current/10">
+                <label className="block text-[11px] font-mono text-zinc-400 mb-1.5 uppercase tracking-wider">
+                  Khoảng giá tùy chỉnh (đ)
+                </label>
+                <div className="flex items-center gap-1.5">
+                  <input
+                    type="number"
+                    step="10000"
+                    min="0"
+                    placeholder="Từ (vd: 50000)"
+                    value={customMinPrice}
+                    onChange={(e) => {
+                      setCustomMinPrice(e.target.value);
+                      setPricePreset('custom');
+                    }}
+                    className={`w-1/2 px-2 py-1 text-[11px] rounded border outline-none font-mono ${
+                      isDarkMode ? 'bg-white/[0.04] border-white/10 text-zinc-100 placeholder-zinc-600 focus:border-[#E5B54F]' : 'bg-black/[0.03] border-black/10 text-zinc-800 placeholder-zinc-400 focus:border-amber-600'
+                    }`}
+                  />
+                  <span className="text-xs text-zinc-500 font-mono">-</span>
+                  <input
+                    type="number"
+                    step="10000"
+                    min="0"
+                    placeholder="Đến (vd: 150000)"
+                    value={customMaxPrice}
+                    onChange={(e) => {
+                      setCustomMaxPrice(e.target.value);
+                      setPricePreset('custom');
+                    }}
+                    className={`w-1/2 px-2 py-1 text-[11px] rounded border outline-none font-mono ${
+                      isDarkMode ? 'bg-white/[0.04] border-white/10 text-zinc-100 placeholder-zinc-600 focus:border-[#E5B54F]' : 'bg-black/[0.03] border-black/10 text-zinc-800 placeholder-zinc-400 focus:border-amber-600'
+                    }`}
+                  />
+                </div>
+                {(customMinPrice || customMaxPrice) && (
+                  <p className="text-[10px] text-[#E5B54F] font-mono mt-1.5">
+                    Đang lọc: {customMinPrice ? `${parseInt(customMinPrice, 10).toLocaleString('vi-VN')} đ` : '0 đ'} ➔ {customMaxPrice ? `${parseInt(customMaxPrice, 10).toLocaleString('vi-VN')} đ` : 'Vô cực'}
+                  </p>
+                )}
+              </div>
+            </div>
+
           </aside>
 
           {/* Gallery / Feed of Books */}
@@ -393,63 +637,121 @@ export default function App() {
               />
             )}
             
-            {/* Header thanh công cụ & Chuyển đổi View Mode */}
+            {/* Header thanh công cụ: Tiêu đề + Bộ sắp xếp + Chuyển đổi View Mode */}
             <div className="flex mb-6 items-center justify-between border-b border-current/10 pb-3 flex-wrap gap-3">
-              <h1 className="text-base sm:text-lg font-bold font-mono uppercase tracking-widest flex items-center gap-2">
-                <span>{CATEGORIES.find(c => c.id === selectedCategory)?.label || 'Tất cả tác phẩm'}</span>
-                <Sparkles className="w-4 h-4 text-[#E5B54F]" />
-                <span className="text-xs font-normal opacity-50 font-mono">({filteredBooks.length})</span>
-              </h1>
+              <div className="flex items-center gap-2 flex-wrap">
+                <h1 className="text-base sm:text-lg font-bold font-mono uppercase tracking-widest flex items-center gap-2">
+                  <span>{CATEGORIES.find(c => c.id === selectedCategory)?.label || 'Tất cả tác phẩm'}</span>
+                  <Sparkles className="w-4 h-4 text-[#E5B54F]" />
+                  <span className="text-xs font-normal opacity-50 font-mono">({filteredBooks.length})</span>
+                </h1>
 
-              {/* View Switcher (Desktop & Tablet) */}
-              <div className="flex items-center gap-1.5">
-                <span className="text-[11px] font-mono text-zinc-400 mr-1 hidden sm:inline">Chế độ xem:</span>
-                <div className={`flex items-center rounded-lg border p-0.5 ${isDarkMode ? 'border-white/10 bg-[#0E1118]' : 'border-black/10 bg-zinc-100'}`}>
-                  <button
-                    onClick={() => handleSetViewMode('list')}
-                    className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-mono transition-all ${
-                      viewMode === 'list'
-                        ? isDarkMode
-                          ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
-                          : 'bg-amber-600 text-white font-bold shadow-sm'
-                        : isDarkMode
-                          ? 'text-zinc-400 hover:text-white'
-                          : 'text-zinc-600 hover:text-black'
-                    }`}
-                    title="Chế độ 1 hàng / tác phẩm (Gọn gàng, dễ quét danh sách)"
-                  >
-                    <List className="w-3.5 h-3.5" />
-                    <span className="text-[11px]">1 Hàng (Gọn)</span>
-                  </button>
+                {/* Badge trạng thái lọc giá nếu đang kích hoạt */}
+                {(pricePreset !== 'all' || customMinPrice || customMaxPrice) && (
+                  <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border flex items-center gap-1 ${
+                    isDarkMode ? 'bg-[#E5B54F]/10 border-[#E5B54F]/30 text-[#E5B54F]' : 'bg-amber-50 border-amber-300 text-amber-800'
+                  }`}>
+                    <DollarSign className="w-3 h-3" />
+                    {customMinPrice || customMaxPrice 
+                      ? `${customMinPrice || '0'} - ${customMaxPrice || '∞'} đ`
+                      : PRICE_PRESETS.find(p => p.id === pricePreset)?.label}
+                  </span>
+                )}
 
+                {isFilterActive && (
                   <button
-                    onClick={() => handleSetViewMode('grid')}
-                    className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-mono transition-all ${
-                      viewMode === 'grid'
-                        ? isDarkMode
-                          ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
-                          : 'bg-amber-600 text-white font-bold shadow-sm'
-                        : isDarkMode
-                          ? 'text-zinc-400 hover:text-white'
-                          : 'text-zinc-600 hover:text-black'
+                    onClick={handleResetFilters}
+                    className={`text-[11px] font-mono px-2 py-0.5 rounded border transition-colors flex items-center gap-1 ${
+                      isDarkMode ? 'border-white/10 hover:border-white/30 text-zinc-400 hover:text-white' : 'border-black/10 hover:border-black/30 text-zinc-600 hover:text-black'
                     }`}
-                    title="Chế độ thẻ lớn 3D (2 cột)"
+                    title="Đặt lại toàn bộ bộ lọc"
                   >
-                    <LayoutGrid className="w-3.5 h-3.5" />
-                    <span className="text-[11px]">2 Cột (Thẻ 3D)</span>
+                    <RotateCcw className="w-3 h-3" />
+                    Đặt lại
                   </button>
+                )}
+              </div>
+
+              {/* Các nút công cụ bên phải (Desktop Sắp xếp & Chế độ xem) */}
+              <div className="flex items-center gap-2 sm:gap-3">
+                {/* Desktop Sort Dropdown */}
+                <div className="hidden sm:flex items-center gap-1.5">
+                  <span className="text-[11px] font-mono text-zinc-400 flex items-center gap-1">
+                    <ArrowUpDown className="w-3 h-3" />
+                    Sắp xếp:
+                  </span>
+                  <div className="relative">
+                    <select
+                      value={sortOption}
+                      onChange={(e) => setSortOption(e.target.value)}
+                      className={`px-2.5 py-1 text-xs rounded-lg border outline-none font-mono appearance-none transition-colors pr-7 ${
+                        isDarkMode 
+                          ? 'bg-[#0E1118] border-white/10 text-zinc-200 focus:border-[#E5B54F]' 
+                          : 'bg-zinc-100 border-black/10 text-zinc-800 focus:border-amber-600'
+                      }`}
+                    >
+                      <option value="default">Mới cập nhật</option>
+                      <option value="price-asc">Giá: Thấp ➔ Cao</option>
+                      <option value="price-desc">Giá: Cao ➔ Thấp</option>
+                      <option value="chapters-desc">Quy mô: Nhiều chương nhất</option>
+                    </select>
+                    <div className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-[10px] opacity-60">
+                      ▼
+                    </div>
+                  </div>
+                </div>
+
+                {/* View Switcher (Desktop & Tablet) */}
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[11px] font-mono text-zinc-400 mr-1 hidden md:inline">Chế độ xem:</span>
+                  <div className={`flex items-center rounded-lg border p-0.5 ${isDarkMode ? 'border-white/10 bg-[#0E1118]' : 'border-black/10 bg-zinc-100'}`}>
+                    <button
+                      onClick={() => handleSetViewMode('list')}
+                      className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-mono transition-all ${
+                        viewMode === 'list'
+                          ? isDarkMode
+                            ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
+                            : 'bg-amber-600 text-white font-bold shadow-sm'
+                          : isDarkMode
+                            ? 'text-zinc-400 hover:text-white'
+                            : 'text-zinc-600 hover:text-black'
+                      }`}
+                      title="Chế độ 1 hàng / tác phẩm (Gọn gàng, dễ quét danh sách)"
+                    >
+                      <List className="w-3.5 h-3.5" />
+                      <span className="text-[11px]">1 Hàng (Gọn)</span>
+                    </button>
+
+                    <button
+                      onClick={() => handleSetViewMode('grid')}
+                      className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-mono transition-all ${
+                        viewMode === 'grid'
+                          ? isDarkMode
+                            ? 'bg-[#E5B54F] text-black font-bold shadow-sm'
+                            : 'bg-amber-600 text-white font-bold shadow-sm'
+                          : isDarkMode
+                            ? 'text-zinc-400 hover:text-white'
+                            : 'text-zinc-600 hover:text-black'
+                      }`}
+                      title="Chế độ thẻ lớn 3D (2 cột)"
+                    >
+                      <LayoutGrid className="w-3.5 h-3.5" />
+                      <span className="text-[11px]">2 Cột (Thẻ 3D)</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
 
             {filteredBooks.length === 0 ? (
-              <div className="text-center py-20 border border-dashed rounded border-current/20 font-mono text-xs text-zinc-400">
-                <p>Không có tác phẩm nào thuộc thể loại này.</p>
+              <div className="text-center py-20 border border-dashed rounded-xl border-current/20 font-mono text-xs text-zinc-400">
+                <p className="text-sm mb-1 text-zinc-300">Không tìm thấy tác phẩm nào phù hợp với bộ lọc hiện tại.</p>
+                <p className="text-zinc-500 mb-4">Hãy thử điều chỉnh khoảng giá, thể loại hoặc xóa từ khóa tìm kiếm.</p>
                 <button
-                  onClick={() => { setSelectedCategory('all'); setSearchQuery(''); }}
-                  className="mt-4 px-4 py-2 rounded bg-[#E5B54F] text-black font-semibold"
+                  onClick={handleResetFilters}
+                  className="px-4 py-2 rounded-lg bg-[#E5B54F] text-black font-semibold hover:bg-[#d6a540] transition-colors"
                 >
-                  Xem toàn bộ thư khố
+                  Đặt lại toàn bộ bộ lọc
                 </button>
               </div>
             ) : viewMode === 'list' ? (
@@ -498,57 +800,62 @@ export default function App() {
             <p className="text-[12px] text-zinc-400 font-sans leading-relaxed">
               Nhận convert epub; dịch truyện, tài liệu sang tiếng Việt; bản dịch epub song ngữ.
             </p>
-            <p className="text-[12px] text-zinc-400 font-sans leading-relaxed">
-              Liên hệ telegram/facebook để trao đổi dịch vụ và báo giá bản dịch.
+            <p className="text-[11px] text-zinc-500 font-sans">
+              * Mọi dữ liệu sách và trích đoạn đều nhằm mục đích giới thiệu văn hóa và tham khảo học thuật phi thương mại.
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a 
-              href="https://t.me/Pietaz" 
+              href="https://t.me/pietaz" 
               target="_blank" 
-              rel="noreferrer"
-              className={`px-4 py-2.5 rounded-lg font-semibold text-xs flex items-center gap-2 transition-all shadow-md ${
-                isDarkMode ? 'bg-[#E5B54F] text-black hover:bg-[#F2C76A]' : 'bg-amber-600 text-white hover:bg-amber-700'
+              rel="noopener noreferrer"
+              className={`px-4 py-2 rounded border font-mono text-xs transition-colors flex items-center gap-2 ${
+                isDarkMode 
+                  ? 'border-white/10 hover:border-[#E5B54F] hover:text-[#E5B54F] text-zinc-300' 
+                  : 'border-black/10 hover:border-amber-600 hover:text-amber-800 text-zinc-700'
               }`}
             >
-              <Send className="w-4 h-4" />
-              <span>Telegram (@Pietaz)</span>
+              <Send className="w-3.5 h-3.5" />
+              <span>Liên hệ qua Telegram</span>
             </a>
+            
             <a 
-              href="https://www.facebook.com/heywazzup2024" 
+              href="https://www.facebook.com/ninh.trieu.129/" 
               target="_blank" 
-              rel="noreferrer"
-              className={`px-4 py-2.5 rounded-lg border text-xs transition-colors flex items-center gap-2 ${isDarkMode ? 'border-white/15 hover:bg-white/5 text-zinc-200' : 'border-black/15 hover:bg-black/5 text-zinc-800'}`}
+              rel="noopener noreferrer"
+              className={`px-4 py-2 rounded border font-mono text-xs transition-colors flex items-center gap-2 ${
+                isDarkMode 
+                  ? 'border-white/10 hover:border-blue-400 hover:text-blue-400 text-zinc-300' 
+                  : 'border-black/10 hover:border-blue-600 hover:text-blue-600 text-zinc-700'
+              }`}
             >
-              <MessageCircle className="w-4 h-4 text-blue-400" />
-              <span>Facebook</span>
+              <MessageCircle className="w-3.5 h-3.5 text-blue-400" />
+              <span>Facebook Admin</span>
             </a>
           </div>
         </div>
-
-        <div className={`mt-8 pt-4 border-t text-center text-[10px] ${isDarkMode ? 'border-white/[0.05] text-zinc-500' : 'border-black/[0.05] text-zinc-400'}`}>
-          PIETAZ PRIVATE DEN © 2026 • AI TRANSLATION ARCHIVE & DEMO SHOWCASE
-        </div>
       </footer>
 
-      {/* Modal xem chi tiết tác phẩm (dùng chung cho Compact Row) */}
-      {detailBook && (
-        <BookDetailModal
-          book={detailBook}
-          isOpen={Boolean(detailBook)}
-          onClose={() => setDetailBook(null)}
-          onRead={(book) => handleReadBook(book)}
+      {/* Reader Modal (Đọc sách trực tiếp) */}
+      {readingBook && (
+        <ReaderModal 
+          book={readingBook} 
+          onClose={() => setReadingBook(null)}
           isDarkMode={isDarkMode}
         />
       )}
 
-      {/* In-Browser Reader Modal */}
-      {readingBook && (
-        <ReaderModal 
-          book={readingBook} 
-          onClose={() => setReadingBook(null)} 
-          isDarkMode={isDarkMode} 
+      {/* Book Detail Modal (Chi tiết tác phẩm & Bài review chuyên sâu) */}
+      {detailBook && (
+        <BookDetailModal
+          book={detailBook}
+          onClose={() => setDetailBook(null)}
+          onReadBook={(selected) => {
+            setDetailBook(null);
+            handleReadBook(selected);
+          }}
+          isDarkMode={isDarkMode}
         />
       )}
 
