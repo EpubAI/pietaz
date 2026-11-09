@@ -1,3 +1,4 @@
+import { tamThiNgu } from './novels/tamThiNgu';
 import { theCockroaches } from './novels/theCockroaches';
 import { daiYLangNhien } from './novels/daiYLangNhien';
 import { bachLocNguyen } from './novels/bachLocNguyen';
@@ -54,6 +55,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  tamThiNgu,                       // Huyền bí cản thi Tương Tây & Bách Nghệ Tượng Môn: Tam Thi Ngữ - Lạc Tiểu Dương
   theCockroaches,                  // Trinh thám Nordic Noir kinh điển: Gián (Harry Hole) - Jo Nesbo
   daiYLangNhien,                   // Y đạo hiện thực đỉnh cao: Đại Y Lăng Nhiên - Chí Điểu Thôn
   bachLocNguyen,                   // Sử thi hiện thực đoạt giải Mao Thuẫn: Bạch Lộc Nguyên - Trần Trung Thực

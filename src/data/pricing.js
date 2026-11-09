@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "tam-thi-ngu": {
+    "price": 130000,
+    "priceDisplay": "130.000 đ",
+    "isFree": false,
+    "rawWordCount": 869235,
+    "rawWordCountFormatted": "869.235 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 2F (800k - 900k chữ)"
+  },
   "the-cockroaches": {
     "price": 50000,
     "priceDisplay": "50.000 đ",
