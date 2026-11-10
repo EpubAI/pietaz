@@ -1,3 +1,4 @@
+import { quaHaTot } from './novels/quaHaTot';
 import { dacNhiemChongLuaDao } from './novels/dacNhiemChongLuaDao';
 import { tamThiNgu } from './novels/tamThiNgu';
 import { theCockroaches } from './novels/theCockroaches';
@@ -56,6 +57,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  quaHaTot,                        // Tiên hiệp miếu đường mưu lược đỉnh cao: Quá Hà Tốt - Mạc Vấn Giang Hồ
   dacNhiemChongLuaDao,             // Hình sự phản lừa đảo đỉnh cao: Đặc Nhiệm Chống Lừa Đảo - Thường Thư Hân
   tamThiNgu,                       // Huyền bí cản thi Tương Tây & Bách Nghệ Tượng Môn: Tam Thi Ngữ - Lạc Tiểu Dương
   theCockroaches,                  // Trinh thám Nordic Noir kinh điển: Gián (Harry Hole) - Jo Nesbo

@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "qua-ha-tot": {
+    "price": 470000,
+    "priceDisplay": "470.000 đ",
+    "isFree": false,
+    "rawWordCount": 5959571,
+    "rawWordCountFormatted": "5.959.571 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 3F (5.0M – 6.0M chữ)"
+  },
   "dac-nhiem-chong-lua-dao": {
     "price": 140000,
     "priceDisplay": "140.000 đ",
