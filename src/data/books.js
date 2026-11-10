@@ -1,3 +1,4 @@
+import { dacNhiemChongLuaDao } from './novels/dacNhiemChongLuaDao';
 import { tamThiNgu } from './novels/tamThiNgu';
 import { theCockroaches } from './novels/theCockroaches';
 import { daiYLangNhien } from './novels/daiYLangNhien';
@@ -55,6 +56,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  dacNhiemChongLuaDao,             // Hình sự phản lừa đảo đỉnh cao: Đặc Nhiệm Chống Lừa Đảo - Thường Thư Hân
   tamThiNgu,                       // Huyền bí cản thi Tương Tây & Bách Nghệ Tượng Môn: Tam Thi Ngữ - Lạc Tiểu Dương
   theCockroaches,                  // Trinh thám Nordic Noir kinh điển: Gián (Harry Hole) - Jo Nesbo
   daiYLangNhien,                   // Y đạo hiện thực đỉnh cao: Đại Y Lăng Nhiên - Chí Điểu Thôn

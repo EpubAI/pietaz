@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "dac-nhiem-chong-lua-dao": {
+    "price": 140000,
+    "priceDisplay": "140.000 đ",
+    "isFree": false,
+    "rawWordCount": 924817,
+    "rawWordCountFormatted": "924.817 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 2G (900k - 1.0M chữ)"
+  },
   "tam-thi-ngu": {
     "price": 130000,
     "priceDisplay": "130.000 đ",
