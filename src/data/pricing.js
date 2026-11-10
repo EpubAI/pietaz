@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "tro-choi-co-on": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 60532,
+    "rawWordCountFormatted": "60.532 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
   "qua-ha-tot": {
     "price": 470000,
     "priceDisplay": "470.000 đ",
