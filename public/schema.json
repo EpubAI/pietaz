@@ -7,11 +7,27 @@
   "inLanguage": "vi",
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 58,
+    "numberOfItems": 59,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
+        "item": {
+          "@type": "Book",
+          "name": "Đêm Mai, Ai Sẽ Lưu Lại Trong Thể Xác Này",
+          "alternateName": "明夜，谁将留存于这具身体",
+          "author": {
+            "@type": "Person",
+            "name": "Thất Nguyệt (七月)"
+          },
+          "inLanguage": "vi",
+          "description": "Năm 2069, khi ý thức có thể nháy mắt dịch chuyển vào những vỏ bọc máy móc cơ giới, nữ thám tử Quan Hy Đồng bị cảnh sát ập vào bắt giữ vì vụ giết hại bạn thân — mà nhân chứng báo án chính là người bạn đã chết...",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
         "item": {
           "@type": "Book",
           "name": "Cánh Đồng Hướng Dương Nơi Xa Xăm",
@@ -27,7 +43,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "item": {
           "@type": "Book",
           "name": "Trò chơi cô đơn",
@@ -43,7 +59,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 4,
         "item": {
           "@type": "Book",
           "name": "Quá Hà Tốt",
@@ -59,7 +75,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 5,
         "item": {
           "@type": "Book",
           "name": "Đặc Nhiệm Chống Lừa Đảo",
@@ -75,7 +91,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 6,
         "item": {
           "@type": "Book",
           "name": "Tam Thi Ngữ",
@@ -91,7 +107,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 6,
+        "position": 7,
         "item": {
           "@type": "Book",
           "name": "Gián",
@@ -107,7 +123,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 7,
+        "position": 8,
         "item": {
           "@type": "Book",
           "name": "Đại Y Lăng Nhiên",
@@ -123,7 +139,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 8,
+        "position": 9,
         "item": {
           "@type": "Book",
           "name": "Bạch Lộc Nguyên",
@@ -139,7 +155,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 9,
+        "position": 10,
         "item": {
           "@type": "Book",
           "name": "Phù Du: Ba Ngày Đào Sát",
@@ -155,7 +171,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 10,
+        "position": 11,
         "item": {
           "@type": "Book",
           "name": "Âm Lôi",
@@ -171,7 +187,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 11,
+        "position": 12,
         "item": {
           "@type": "Book",
           "name": "Chiến Dịch Săn Cáo",
@@ -187,7 +203,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 12,
+        "position": 13,
         "item": {
           "@type": "Book",
           "name": "Núi Trong Biển",
@@ -203,7 +219,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 13,
+        "position": 14,
         "item": {
           "@type": "Book",
           "name": "Nguyên Tội",
@@ -219,7 +235,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 14,
+        "position": 15,
         "item": {
           "@type": "Book",
           "name": "Mô Kim Quyết - Quỷ Môn Thiên Sư",
@@ -235,7 +251,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 15,
+        "position": 16,
         "item": {
           "@type": "Book",
           "name": "Cổ Sự Miêu Cương 2",
@@ -251,7 +267,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 16,
+        "position": 17,
         "item": {
           "@type": "Book",
           "name": "Khúc Ca Của Kẻ Mơ Đã Chết & Grimscribe",
@@ -267,7 +283,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 17,
+        "position": 18,
         "item": {
           "@type": "Book",
           "name": "Mùa Thứ Năm",
@@ -283,7 +299,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 18,
+        "position": 19,
         "item": {
           "@type": "Book",
           "name": "Cổng Thạch Trụ",
@@ -299,7 +315,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 19,
+        "position": 20,
         "item": {
           "@type": "Book",
           "name": "Bầu Trời Đá",
@@ -315,7 +331,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 20,
+        "position": 21,
         "item": {
           "@type": "Book",
           "name": "Những Năm Tháng Tôi Làm Thầy Âm Dương",
@@ -331,7 +347,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 21,
+        "position": 22,
         "item": {
           "@type": "Book",
           "name": "Cục Quản Lý Truyền Thuyết",
@@ -347,7 +363,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 23,
         "item": {
           "@type": "Book",
           "name": "Đường Cừu — Tam Bộ Khúc",
@@ -363,7 +379,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 24,
         "item": {
           "@type": "Book",
           "name": "Địa Cầu Lang Thang",
@@ -379,7 +395,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 24,
+        "position": 25,
         "item": {
           "@type": "Book",
           "name": "Phường Chuột Chó",
@@ -395,7 +411,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 25,
+        "position": 26,
         "item": {
           "@type": "Book",
           "name": "Môn Lĩnh Quái Đàm",
@@ -411,7 +427,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 26,
+        "position": 27,
         "item": {
           "@type": "Book",
           "name": "Dưới Côn Phật Gia, Ác Nhân Khó Sống",
@@ -427,7 +443,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 27,
+        "position": 28,
         "item": {
           "@type": "Book",
           "name": "Pháp Y Quốc Dân",
@@ -443,7 +459,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 28,
+        "position": 29,
         "item": {
           "@type": "Book",
           "name": "Vàng Ròng Mê Hoặc",
@@ -459,7 +475,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 30,
         "item": {
           "@type": "Book",
           "name": "Danh Đề: Cuộc Hỏi Cung Tối Thượng",
@@ -475,7 +491,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 30,
+        "position": 31,
         "item": {
           "@type": "Book",
           "name": "Nàng, Nàng và Nàng",
@@ -491,7 +507,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 32,
         "item": {
           "@type": "Book",
           "name": "Đạo Sĩ Không Dễ Chọc",
@@ -507,7 +523,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 33,
         "item": {
           "@type": "Book",
           "name": "Tàng Phong",
@@ -523,7 +539,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 34,
         "item": {
           "@type": "Book",
           "name": "Tam Xoa Kích",
@@ -539,7 +555,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 34,
+        "position": 35,
         "item": {
           "@type": "Book",
           "name": "Chúng Ta Sống Tại Nam Kinh",
@@ -550,22 +566,6 @@
           },
           "inLanguage": "vi",
           "description": "Qua chiếc máy vô tuyến nghiệp dư, nam sinh Bạch Dương năm 2019 tình cờ liên lạc được với Bán Hạ — cô gái duy nhất còn sống sót giữa Nam Kinh đổ nát năm 2040. Một cuộc giải cứu thời không cảm động nhằm đảo ngược ngày tận thế của loài người.",
-          "url": "https://piepub.net"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 35,
-        "item": {
-          "@type": "Book",
-          "name": "Cẩm Nang Đãi Ngộ Tổng Thể WorldatWork",
-          "alternateName": "The WorldatWork Handbook of Total Rewards (2nd Edition)",
-          "author": {
-            "@type": "Person",
-            "name": "Dan Cafaro & WorldatWork"
-          },
-          "inLanguage": "vi",
-          "description": "Cẩm nang chiến lược toàn diện và chuẩn mực nhất thế giới về Lương thưởng, Phúc lợi, Ghi nhận thành tích và Phát triển sự nghiệp, giúp các nhà lãnh đạo và chuyên gia HR tối ưu hóa chiến lược đãi ngộ thu hút nhân tài.",
           "url": "https://piepub.net"
         }
       }

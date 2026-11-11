@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "dem-mai-ai-se-luu-lai-trong-the-xac-nay": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 199757,
+    "rawWordCountFormatted": "199.757 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "canh-dong-huong-duong-noi-xa-xam": {
     "price": 50000,
     "priceDisplay": "50.000 đ",

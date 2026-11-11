@@ -1,3 +1,4 @@
+import { emMaiAiSeLuuLaiTrongTheXacNay } from './novels/emMaiAiSeLuuLaiTrongTheXacNay';
 import { canhOngHuongDuongNoiXaXam } from './novels/canhOngHuongDuongNoiXaXam';
 import { troChoiCoOn } from './novels/troChoiCoOn';
 import { quaHaTot } from './novels/quaHaTot';
@@ -59,6 +60,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  emMaiAiSeLuuLaiTrongTheXacNay,   // Sci-Fi Noir Cyberpunk giật gân: Đêm Mai, Ai Sẽ Lưu Lại Trong Thể Xác Này - Thất Nguyệt
   canhOngHuongDuongNoiXaXam,       // Tản văn phi hư cấu đoạt giải Lỗ Tấn: Cánh Đồng Hướng Dương Nơi Xa Xăm - Lý Quyên
   troChoiCoOn,                     // Tuyển tập truyện ngắn hiện sinh kinh điển: Trò Chơi Cô Đơn - Viên Triết Sinh
   quaHaTot,                        // Tiên hiệp miếu đường mưu lược đỉnh cao: Quá Hà Tốt - Mạc Vấn Giang Hồ
