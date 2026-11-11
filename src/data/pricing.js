@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "tham-tu-dien": {
+    "price": 80000,
+    "priceDisplay": "80.000 đ",
+    "isFree": false,
+    "rawWordCount": 350996,
+    "rawWordCountFormatted": "350.996 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 2A (300k - 400k chữ)"
+  },
   "lam-bach-xa": {
     "price": 250000,
     "priceDisplay": "250.000 đ",
