@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "canh-dong-huong-duong-noi-xa-xam": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 72786,
+    "rawWordCountFormatted": "72.786 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
   "tro-choi-co-on": {
     "price": 50000,
     "priceDisplay": "50.000 đ",
