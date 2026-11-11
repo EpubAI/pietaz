@@ -624,18 +624,6 @@ export default function App() {
 
           {/* Gallery / Feed of Books */}
           <main className="lg:col-span-9">
-
-            {/* KHU VỰC TÁC PHẨM XEM NHIỀU (TRENDING SPOTLIGHT) - Tự ẩn khi người dùng gõ tìm kiếm */}
-            {!searchQuery.trim() && (
-              <TrendingSpotlight
-                trendingItems={trendingBooks}
-                timeframe={trendingTimeframe}
-                onTimeframeChange={setTrendingTimeframe}
-                onSelectBook={handleSelectDetail}
-                onReadBook={handleReadBook}
-                isDarkMode={isDarkMode}
-              />
-            )}
             
             {/* Header thanh công cụ: Tiêu đề + Bộ sắp xếp + Chuyển đổi View Mode */}
             <div className="flex mb-6 items-center justify-between border-b border-current/10 pb-3 flex-wrap gap-3">
