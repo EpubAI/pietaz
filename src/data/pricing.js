@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "lam-bach-xa": {
+    "price": 250000,
+    "priceDisplay": "250.000 đ",
+    "isFree": false,
+    "rawWordCount": 2779270,
+    "rawWordCountFormatted": "2.779.270 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 3B (2.7M - 3.2M chữ)"
+  },
   "dem-mai-ai-se-luu-lai-trong-the-xac-nay": {
     "price": 70000,
     "priceDisplay": "70.000 đ",

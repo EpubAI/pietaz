@@ -1,3 +1,4 @@
+import { lamBachXa } from './novels/lamBachXa';
 import { emMaiAiSeLuuLaiTrongTheXacNay } from './novels/emMaiAiSeLuuLaiTrongTheXacNay';
 import { canhOngHuongDuongNoiXaXam } from './novels/canhOngHuongDuongNoiXaXam';
 import { troChoiCoOn } from './novels/troChoiCoOn';
@@ -60,6 +61,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  lamBachXa,                       // Khoa huyễn não động cực hạn & Thu dung dị thường: Lam Bạch Xã - Ma Tính Thương Nguyệt
   emMaiAiSeLuuLaiTrongTheXacNay,   // Sci-Fi Noir Cyberpunk giật gân: Đêm Mai, Ai Sẽ Lưu Lại Trong Thể Xác Này - Thất Nguyệt
   canhOngHuongDuongNoiXaXam,       // Tản văn phi hư cấu đoạt giải Lỗ Tấn: Cánh Đồng Hướng Dương Nơi Xa Xăm - Lý Quyên
   troChoiCoOn,                     // Tuyển tập truyện ngắn hiện sinh kinh điển: Trò Chơi Cô Đơn - Viên Triết Sinh
