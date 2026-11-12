@@ -1,3 +1,4 @@
+import { oLechNhiet } from './novels/oLechNhiet';
 import { cauChuyenVaoNgayToiChet } from './novels/cauChuyenVaoNgayToiChet';
 import { thamTuIen } from './novels/thamTuIen';
 import { lamBachXa } from './novels/lamBachXa';
@@ -63,6 +64,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  oLechNhiet,                      // Trinh thám hình sự xã hội phái & Tội lỗi của sự nuông chiều: Độ Lệch Nhiệt - Lý Đại Phát
   cauChuyenVaoNgayToiChet,         // Trinh thám hình sự xã hội phái xuất sắc: Câu Chuyện Vào Ngày Tôi Chết - Tang Văn Hạc
   thamTuIen,                       // Trinh thám tâm lý tội phạm Hardboiled Noir: Thám Tử Điên - Không Thành
   lamBachXa,                       // Khoa huyễn não động cực hạn & Thu dung dị thường: Lam Bạch Xã - Ma Tính Thương Nguyệt

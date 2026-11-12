@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "do-lech-nhiet": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 167557,
+    "rawWordCountFormatted": "167.557 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "cau-chuyen-vao-ngay-toi-chet": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
