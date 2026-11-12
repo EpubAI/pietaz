@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "co-opetition": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 150531,
+    "rawWordCountFormatted": "150.531 từ tiếng Anh",
+    "rawUnit": "từ",
+    "priceTier": "Tier 1B (150k - 300k từ)"
+  },
   "do-lech-nhiet": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
