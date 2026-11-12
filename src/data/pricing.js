@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "cau-chuyen-vao-ngay-toi-chet": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 160825,
+    "rawWordCountFormatted": "160.825 chữ gốc",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "tham-tu-dien": {
     "price": 80000,
     "priceDisplay": "80.000 đ",
