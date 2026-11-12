@@ -1,3 +1,4 @@
+import { canPhongKinCuaSchrodinger } from './novels/canPhongKinCuaSchrodinger';
 import { coOpetition } from './novels/coOpetition';
 import { oLechNhiet } from './novels/oLechNhiet';
 import { cauChuyenVaoNgayToiChet } from './novels/cauChuyenVaoNgayToiChet';
@@ -65,6 +66,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  canPhongKinCuaSchrodinger,       // Trinh thám Honkaku phòng kín & Cơ học lượng tử: Căn Phòng Kín Của Schrödinger - Asane Shigetsugu
   coOpetition,                     // Kinh tế học hành vi & Chiến lược kinh doanh đột phá: Co-Opetition - Adam Brandenburger & Barry Nalebuff
   oLechNhiet,                      // Trinh thám hình sự xã hội phái & Tội lỗi của sự nuông chiều: Độ Lệch Nhiệt - Lý Đại Phát
   cauChuyenVaoNgayToiChet,         // Trinh thám hình sự xã hội phái xuất sắc: Câu Chuyện Vào Ngày Tôi Chết - Tang Văn Hạc

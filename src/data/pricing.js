@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "can-phong-kin-cua-schrodinger": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 106699,
+    "rawWordCountFormatted": "106.699 từ (~48.8 vạn ký tự)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "co-opetition": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
