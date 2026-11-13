@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "vuon-dia-dang-dau-tien-cua-phong-tu-ky": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 111037,
+    "rawWordCountFormatted": "111.037 từ (~48.9 vạn ký tự)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "can-phong-kin-cua-schrodinger": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
