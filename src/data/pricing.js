@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "chim-ruoi-ruc-chay": {
+    "price": 280000,
+    "priceDisplay": "280.000 đ",
+    "isFree": false,
+    "rawWordCount": 610088,
+    "rawWordCountFormatted": "273.6 vạn ký tự (610.088 từ - Trọn bộ 3 tập)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 3A (2.0M - 2.8M chữ)"
+  },
   "vuon-dia-dang-dau-tien-cua-phong-tu-ky": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
