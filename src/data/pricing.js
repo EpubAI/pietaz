@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "tam-do-chi": {
+    "price": 380000,
+    "priceDisplay": "380.000 đ",
+    "isFree": false,
+    "rawWordCount": 1659137,
+    "rawWordCountFormatted": "743.4 vạn ký tự (1.659.137 từ - 386 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 3E (5.0M - 7.0M chữ)"
+  },
   "nhung-nam-thang-toi-lam-nguoi-chim": {
     "price": 380000,
     "priceDisplay": "380.000 đ",
