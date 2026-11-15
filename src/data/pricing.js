@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "thuat-gia-kim": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 142027,
+    "rawWordCountFormatted": "142.027 từ (~63.4 vạn ký tự)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "chim-ruoi-ruc-chay": {
     "price": 280000,
     "priceDisplay": "280.000 đ",

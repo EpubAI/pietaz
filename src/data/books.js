@@ -1,3 +1,4 @@
+import { thuatGiaKim } from './novels/thuatGiaKim';
 import { chimRuoiRucChay } from './novels/chimRuoiRucChay';
 import { vuonDiaDangDauTienCuaPhongTuKy } from './novels/vuonDiaDangDauTienCuaPhongTuKy';
 import { canPhongKinCuaSchrodinger } from './novels/canPhongKinCuaSchrodinger';
@@ -68,6 +69,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  thuatGiaKim,                     // Kinh tế học hành vi & Tâm lý tiếp thị đỉnh cao: Thuật Giả Kim - Rory Sutherland (Ogilvy)
   chimRuoiRucChay,                 // Trọn bộ 3 tập đại trường thiên hình sự hoài niệm: Chim Ruồi Rực Cháy - Pháp y Tần Minh
   vuonDiaDangDauTienCuaPhongTuKy,  // Tiểu thuyết hiện thực xuất sắc & Di tác chấn động của Lâm Dịch Hàm: Vườn Địa Đàng Đầu Tiên Của Phòng Tư Kỳ
   canPhongKinCuaSchrodinger,       // Trinh thám Honkaku phòng kín & Cơ học lượng tử: Căn Phòng Kín Của Schrödinger - Asane Shigetsugu
