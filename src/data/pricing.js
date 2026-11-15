@@ -25,6 +25,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "nhung-nam-thang-toi-lam-nguoi-chim": {
+    "price": 380000,
+    "priceDisplay": "380.000 đ",
+    "isFree": false,
+    "rawWordCount": 1370095,
+    "rawWordCountFormatted": "614.0 vạn ký tự (1.370.095 từ - 371 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 3E (5.0M - 7.0M chữ)"
+  },
   "thuat-gia-kim": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
