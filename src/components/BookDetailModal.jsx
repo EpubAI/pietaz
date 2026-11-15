@@ -12,6 +12,7 @@ export function BookDetailModal({ book, isOpen, onClose, onRead, onReadBook, isD
   const handleRead = onRead || onReadBook || (() => {});
   const coverSrc = book.cover || book.coverImage || './covers/ban-tron-chi-mang.jpg';
   const pricing = getBookPrice(book);
+  const chaptersCount = book.chapters?.length || book.demoChapters?.length || 0;
 
   return (
     <>
@@ -75,7 +76,7 @@ export function BookDetailModal({ book, isOpen, onClose, onRead, onReadBook, isD
                 {/* Các thông số */}
                 <div className="text-xs space-y-1 opacity-80 pt-1 font-mono">
                   <div>• Cập nhật: {book.updatedAt || '03/11/2026'}</div>
-                  <div>• Quy mô: {book.totalChapters || `${book.chapters?.length || 0} chương`}</div>
+                  <div>• Quy mô: {book.totalChapters || `${chaptersCount} chương`}</div>
                 </div>
 
                 {/* Nút Đọc Demo */}
@@ -88,7 +89,7 @@ export function BookDetailModal({ book, isOpen, onClose, onRead, onReadBook, isD
                     className="px-4 py-2 rounded-lg bg-[#E5B54F] text-black font-mono text-xs font-bold hover:bg-[#F2C76A] transition-all flex items-center gap-1.5 shadow-md active:scale-95 mx-auto sm:mx-0"
                   >
                     <BookOpen className="w-3.5 h-3.5" />
-                    <span>Bắt đầu đọc demo ({book.chapters?.length || 0} chương)</span>
+                    <span>Bắt đầu đọc demo ({chaptersCount} chương)</span>
                   </button>
                 </div>
               </div>

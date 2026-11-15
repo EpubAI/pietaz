@@ -18,10 +18,12 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
     setReaderTheme(isDarkMode ? 'dark' : 'paper');
   }, [isDarkMode]);
 
+  const chaptersList = book?.chapters || book?.demoChapters || [];
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowRight' && currentChapterIndex < book.chapters.length - 1) {
+      if (e.key === 'ArrowRight' && currentChapterIndex < chaptersList.length - 1) {
         setCurrentChapterIndex(prev => prev + 1);
       }
       if (e.key === 'ArrowLeft' && currentChapterIndex > 0) {
@@ -30,11 +32,11 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [onClose, currentChapterIndex, book.chapters.length]);
+  }, [onClose, currentChapterIndex, chaptersList.length]);
 
   if (!book) return null;
 
-  const currentChapter = book.chapters[currentChapterIndex] || book.chapters[0];
+  const currentChapter = chaptersList[currentChapterIndex] || chaptersList[0];
 
   const themeClasses = {
     dark: 'bg-[#0E1118] text-[#E4E7EB] border-white/10',
@@ -111,7 +113,7 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
             >
               <List className="w-4 h-4 text-[#E5B54F]" />
               <span className="hidden sm:inline">Mục lục</span>
-              <span className="opacity-60 text-[10px]">({book.chapters.length})</span>
+              <span className="opacity-60 text-[10px]">({chaptersList.length})</span>
             </button>
           </div>
 
@@ -301,9 +303,9 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
               </button>
             </div>
             <div className="flex-1 overflow-y-auto p-3 space-y-1 text-xs">
-              {book.chapters.map((chap, idx) => (
+              {chaptersList.map((chap, idx) => (
                 <button
-                  key={chap.id}
+                  key={chap.id || idx}
                   onClick={() => {
                     setCurrentChapterIndex(idx);
                     setShowChapterDrawer(false);
@@ -315,7 +317,7 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
                   }`}
                 >
                   <span className="truncate">{chap.title}</span>
-                  <span className="text-[10px] opacity-70 font-mono">#{chap.id}</span>
+                  <span className="text-[10px] opacity-70 font-mono">#{chap.id || idx + 1}</span>
                 </button>
               ))}
             </div>
@@ -348,7 +350,7 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
                     <span>•</span>
                     <span className="text-[#E5B54F]">Phông: {fontFamily === 'bookerly' ? 'Bookerly' : 'Libron'}</span>
                     <span>•</span>
-                    <span>Chương {currentChapterIndex + 1}/{book.chapters.length}</span>
+                    <span>Chương {currentChapterIndex + 1}/{chaptersList.length}</span>
                   </div>
                 </div>
 
@@ -365,10 +367,10 @@ export default function ReaderModal({ book, onClose, isDarkMode }) {
                     <span>Chương trước</span>
                   </button>
                   <span className="opacity-60 font-mono text-[11px]">
-                    {currentChapterIndex + 1} / {book.chapters.length}
+                    {currentChapterIndex + 1} / {chaptersList.length}
                   </span>
                   <button
-                    disabled={currentChapterIndex === book.chapters.length - 1}
+                    disabled={currentChapterIndex === chaptersList.length - 1}
                     onClick={() => setCurrentChapterIndex(prev => prev + 1)}
                     className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-current/15 disabled:opacity-30 hover:bg-black/5 dark:hover:bg-white/5 transition-colors font-mono"
                   >
