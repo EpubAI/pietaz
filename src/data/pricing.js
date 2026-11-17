@@ -12,7 +12,6 @@ export const FREE_BOOK_IDS = new Set([
   'chet-tren-sao-hoa',
   'chung-ta-song-tai-nam-kinh',
   'bach-vien-khach-san',
-  'hau-da-loi-hinh-trinh',
   'tam-xoa-kich',
   'ngung-uyen-chi-mau',
   'dia-cau-lang-thang',
@@ -499,13 +498,13 @@ export const BOOK_PRICING = {
     "priceTier": "Tier 3A (2.0M - 2.7M chữ)"
   },
   "hau-da-loi-hinh-trinh": {
-    "price": 150000,
-    "priceDisplay": "150.000 đ",
+    "price": 300000,
+    "priceDisplay": "300.000 đ",
     "isFree": false,
-    "rawWordCount": 1014509,
-    "rawWordCountFormatted": "1.014.509 chữ gốc",
-    "rawUnit": "chữ gốc",
-    "priceTier": "Tier 2H (1.0M - 1.25M chữ)"
+    "rawWordCount": 1681758,
+    "rawWordCountFormatted": "760.8 vạn ký tự (1.681.758 từ · 93 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 3G (7.0M+ chữ) · giá ưu đãi up-sell (Tập 1-5 đã miễn phí)"
   },
   "lady-joker-tap-1": {
     "price": 70000,

@@ -123,7 +123,7 @@ export const BOOKS = [
   theBat,                // Trinh thám hình sự Bắc Âu: Dơi (The Bat) - Jo Nesbø
   satThien,              // Võ hiệp thực chiến & Sử thi kỳ hiệp: Sát Thiền - Kiều Tĩnh Phu
   chuCamSonHai,          // Tiên hiệp & Sơn Hải đại hàng hải: Chú Cấm Sơn Hải - Bắc Hải Mục Kình
-  hauDaLoiHinhTrinh,     // Trinh thám hình sự thực tế: Hầu Đại Lợi: Ký Sự Hình Trinh - Tiểu Kiều Lão Thụ
+  hauDaLoiHinhTrinh,     // Trinh thám hình sự thực tế: Hầu Đại Lợi: Ký Sự Hình Trinh (Trọn bộ 9 tập, 760.8 vạn ký tự) - Tiểu Kiều Lão Thụ
   ladyJokerTap1,         // Trinh thám xã hội Nhật Bản: Lady Joker (Tập 1) - Kaoru Takamura
   ladyJokerTap2,         // Trinh thám xã hội Nhật Bản: Lady Joker (Tập 2) - Kaoru Takamura
   benhVienSo444,         // Linh dị kinh dị & Quy tắc y khoa: Bệnh Viện Số 444 - Hắc Sắc Hỏa Chủng
