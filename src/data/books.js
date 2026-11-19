@@ -1,3 +1,4 @@
+import { daPhongMon } from './novels/daPhongMon';
 import { tamDoChi } from './novels/tamDoChi';
 import { nhungNamThangToiLamNguoiChim } from './novels/nhungNamThangToiLamNguoiChim';
 import { thuatGiaKim } from './novels/thuatGiaKim';
@@ -71,6 +72,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  daPhongMon,                      // Huyền bí ma dị & Dân gian quái đàm đỉnh cao: Dạ Phong Môn - Hắc Đào Bát
   tamDoChi,                        // Thiên sử thi tiên hiệp cổ phong khép lại Vận Mệnh Tam Bộ Khúc: Tam Đồ Chí - Thôi Tẩu Triệu
   nhungNamThangToiLamNguoiChim,    // Tiên hiệp đô thị & Bi hài kịch triết lý Vận Mệnh Tam Bộ Khúc: Những Năm Tháng Tôi Làm Người Chim - Thôi Tẩu Triệu
   thuatGiaKim,                     // Kinh tế học hành vi & Tâm lý tiếp thị đỉnh cao: Thuật Giả Kim - Rory Sutherland (Ogilvy)

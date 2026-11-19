@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "da-phong-mon": {
+    "price": 190000,
+    "priceDisplay": "190.000 đ",
+    "isFree": false,
+    "rawWordCount": 1751836,
+    "rawWordCountFormatted": "175.2 vạn chữ (1.751.836 chữ)",
+    "rawUnit": "chữ",
+    "priceTier": "Tier 2K (1.75M - 2.0M chữ)"
+  },
   "tam-do-chi": {
     "price": 380000,
     "priceDisplay": "380.000 đ",
