@@ -24,6 +24,33 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "de-che-ma-ca-rong": {
+    "price": 165000,
+    "priceDisplay": "165.000 đ",
+    "isFree": false,
+    "rawWordCount": 340055,
+    "rawWordCountFormatted": "155.3 vạn ký tự (340.055 từ · 104 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 2I (1.25M - 1.5M chữ)"
+  },
+  "de-che-nguyen-rua": {
+    "price": 165000,
+    "priceDisplay": "165.000 đ",
+    "isFree": false,
+    "rawWordCount": 349881,
+    "rawWordCountFormatted": "159.4 vạn ký tự (349.881 từ · 76 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 2J (1.5M - 1.75M chữ)"
+  },
+  "de-che-binh-minh": {
+    "price": 190000,
+    "priceDisplay": "190.000 đ",
+    "isFree": false,
+    "rawWordCount": 396287,
+    "rawWordCountFormatted": "185.9 vạn ký tự (396.287 từ · 65 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 2K (1.75M - 2.0M chữ)"
+  },
   "da-phong-mon": {
     "price": 190000,
     "priceDisplay": "190.000 đ",
