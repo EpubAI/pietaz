@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "nho-mot-quen-ba-hai": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 65798,
+    "rawWordCountFormatted": "29.1 vạn ký tự (65.798 từ · 38 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "de-che-ma-ca-rong": {
     "price": 165000,
     "priceDisplay": "165.000 đ",
