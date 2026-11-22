@@ -1,3 +1,4 @@
+import { chuaLanhLuongTu } from './novels/chuaLanhLuongTu';
 import { nhoMotQuenBaHai } from './novels/nhoMotQuenBaHai';
 import { deCheMaCaRong } from './novels/deCheMaCaRong';
 import { deCheNguyenRua } from './novels/deCheNguyenRua';
@@ -76,6 +77,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  chuaLanhLuongTu,                 // Khoa học & Y học tâm thể kinh điển: Chữa Lành Lượng Tử - Deepak Chopra, M.D.
   nhoMotQuenBaHai,                 // Tản văn phi hư cấu & Hồi ức đời thường hóm hỉnh: Nhớ Một, Quên Ba Hai - Lý Quyên
   deCheMaCaRong,                   // Dark Fantasy & Sử thi ma cà rồng đẫm máu: Đế Chế Ma Cà Rồng (Tập 1) - Jay Kristoff
   deCheNguyenRua,                  // Dark Fantasy & Cuộc lưu đày đẫm máu: Đế Chế Nguyền Rủa (Tập 2) - Jay Kristoff

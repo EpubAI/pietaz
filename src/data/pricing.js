@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "chua-lanh-luong-tu": {
+    "price": 110000,
+    "priceDisplay": "110.000 đ",
+    "isFree": false,
+    "rawWordCount": 147219,
+    "rawWordCountFormatted": "66.3 vạn ký tự (147.219 từ · 14 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 2D (600k - 700k chữ)"
+  },
   "nho-mot-quen-ba-hai": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
