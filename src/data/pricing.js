@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "dien-tich-cam-mat-cua-dorothy": {
+    "price": 1000000,
+    "priceDisplay": "1.000.000 đ",
+    "isFree": false,
+    "rawWordCount": 2839074,
+    "rawWordCountFormatted": "1310.8 vạn ký tự (2.839.074 từ · 828 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 3M (12.0M - 13.5M chữ)"
+  },
   "chua-lanh-luong-tu": {
     "price": 110000,
     "priceDisplay": "110.000 đ",
