@@ -10,7 +10,7 @@ export const dienTichCamMatCuaDorothy = {
   wordCount: 2839074,
   chaptersCount: 828,
   rating: 5.0,
-  cover: './covers/dien-tich-cam-mat-cua-dorothy.jpg',
+  cover: './covers/dorothy-cam-mat-sach-dien.jpg',
   totalChapters: '828 chương (9 Quyển) · 1310.8 vạn ký tự (2.839.074 từ)',
   awards: 'Đại tác phẩm Tây huyễn Dark Fantasy & Huyền bí học Mật giáo đồ sộ bậc nhất · Điểm số cao trên các bảng xếp hạng văn học mạng',
   tags: ["Dark Fantasy", "Huyền bí học", "Mật giáo", "Tây huyễn", "Dị giới bí ẩn", "Thiên Sử Mạt Nhật"],
