@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "mu-quang": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 230311,
+    "rawWordCountFormatted": "23.0 vạn chữ gốc (77.5 vạn ký tự · 59 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "cuoc-doi-quy-di-cua-toi": {
     "price": 470000,
     "priceDisplay": "470.000 đ",

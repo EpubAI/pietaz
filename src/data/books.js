@@ -1,3 +1,4 @@
+import { muQuang } from './novels/muQuang';
 import { cuocDoiQuyDiCuaToi } from './novels/cuocDoiQuyDiCuaToi';
 import { boBaTrongAn } from './novels/boBaTrongAn';
 import { dienTichCamMatCuaDorothy } from './novels/dienTichCamMatCuaDorothy';
@@ -80,6 +81,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  muQuang,                         // Trinh thám hình sự & Tâm lý tội phạm: Mù Quáng - Mộ Dao Nhi Tầm
   cuocDoiQuyDiCuaToi,              // Huyền bí đô thị & Dân gian quái đàm mô phỏng luân hồi: Cuộc Đời Quỷ Dị Của Tôi - Bạch Nhẫn Trảm Xuân Phong
   boBaTrongAn,                     // Trinh thám hình sự cảnh sát điều tra & Tâm lý tội phạm: Bộ Ba Trọng Án - Không Thành
   dienTichCamMatCuaDorothy,        // Tây huyễn Dark Fantasy & Huyền bí học Mật giáo siêu phẩm: Điển Tịch Cấm Mật Của Dorothy - Thiên Sử Mạt Nhật
