@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "cuoc-doi-quy-di-cua-toi": {
+    "price": 470000,
+    "priceDisplay": "470.000 đ",
+    "isFree": false,
+    "rawWordCount": 5078720,
+    "rawWordCountFormatted": "507.9 vạn chữ gốc (1.796,6 vạn ký tự · 1.550 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 3F (5.0M – 6.0M chữ)"
+  },
   "bo-ba-trong-an": {
     "price": 90000,
     "priceDisplay": "90.000 đ",
