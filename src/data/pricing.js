@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "bo-ba-trong-an": {
+    "price": 90000,
+    "priceDisplay": "90.000 đ",
+    "isFree": false,
+    "rawWordCount": 479787,
+    "rawWordCountFormatted": "48.0 vạn chữ gốc (156.6 vạn ký tự · 118 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 2B (400k - 500k chữ)"
+  },
   "dien-tich-cam-mat-cua-dorothy": {
     "price": 350000,
     "priceDisplay": "350.000 đ",

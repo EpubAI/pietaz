@@ -1,3 +1,4 @@
+import { boBaTrongAn } from './novels/boBaTrongAn';
 import { dienTichCamMatCuaDorothy } from './novels/dienTichCamMatCuaDorothy';
 import { chuaLanhLuongTu } from './novels/chuaLanhLuongTu';
 import { nhoMotQuenBaHai } from './novels/nhoMotQuenBaHai';
@@ -78,6 +79,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  boBaTrongAn,                     // Trinh thám hình sự cảnh sát điều tra & Tâm lý tội phạm: Bộ Ba Trọng Án - Không Thành
   dienTichCamMatCuaDorothy,        // Tây huyễn Dark Fantasy & Huyền bí học Mật giáo siêu phẩm: Điển Tịch Cấm Mật Của Dorothy - Thiên Sử Mạt Nhật
   chuaLanhLuongTu,                 // Khoa học & Y học tâm thể kinh điển: Chữa Lành Lượng Tử - Deepak Chopra, M.D.
   nhoMotQuenBaHai,                 // Tản văn phi hư cấu & Hồi ức đời thường hóm hỉnh: Nhớ Một, Quên Ba Hai - Lý Quyên
