@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "son-quy-lai": {
+    "price": 80000,
+    "priceDisplay": "80.000 đ",
+    "isFree": false,
+    "rawWordCount": 317735,
+    "rawWordCountFormatted": "31.8 vạn chữ gốc (97.8 vạn ký tự · 73 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 2A (300k - 400k chữ)"
+  },
   "mu-quang": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
