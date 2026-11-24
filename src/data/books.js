@@ -1,3 +1,4 @@
+import { doiMatVucTham1AcNhuCau } from './novels/doiMatVucTham1AcNhuCau';
 import { hoSoAnMang2RungThiengNuocDoc } from './novels/hoSoAnMang2RungThiengNuocDoc';
 import { sonQuyLai } from './novels/sonQuyLai';
 import { muQuang } from './novels/muQuang';
@@ -83,6 +84,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  doiMatVucTham1AcNhuCau,          // Trinh thám hình sự hiện thực & Hồi ký án mạng thập niên 90: Đôi Mắt Vực Thẳm 1: Ác Như Câu - Trần Mãnh
   hoSoAnMang2RungThiengNuocDoc,    // Trinh thám hình sự & Pháp y thực chiến chân thực: Hồ Sơ Án Mạng 2: Rừng Thiêng Nước Độc - Pháp y Tần Minh
   sonQuyLai,                       // Trinh thám hình sự & Niên đại群 tượng xuất sắc: Sơn Quy Lai - Lục Xuân Ngô
   muQuang,                         // Trinh thám hình sự & Tâm lý tội phạm: Mù Quáng - Mộ Dao Nhi Tầm

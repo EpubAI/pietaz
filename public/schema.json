@@ -7,11 +7,27 @@
   "inLanguage": "vi",
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 82,
+    "numberOfItems": 83,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
+        "item": {
+          "@type": "Book",
+          "name": "Đôi Mắt Vực Thẳm 1: Ác Như Câu",
+          "alternateName": "凝渊之眸1：恶如钩",
+          "author": {
+            "@type": "Person",
+            "name": "Trần Mãnh"
+          },
+          "inLanguage": "vi",
+          "description": "\\",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
         "item": {
           "@type": "Book",
           "name": "Hồ Sơ Án Mạng 2: Rừng Thiêng Nước Độc",
@@ -27,7 +43,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "item": {
           "@type": "Book",
           "name": "Sơn Quy Lai",
@@ -43,7 +59,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 4,
         "item": {
           "@type": "Book",
           "name": "Mù Quáng",
@@ -59,7 +75,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 5,
         "item": {
           "@type": "Book",
           "name": "Cuộc Đời Quỷ Dị Của Tôi",
@@ -75,7 +91,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 6,
         "item": {
           "@type": "Book",
           "name": "Bộ Ba Trọng Án",
@@ -91,7 +107,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 6,
+        "position": 7,
         "item": {
           "@type": "Book",
           "name": "Điển Tịch Cấm Mật Của Dorothy",
@@ -107,7 +123,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 7,
+        "position": 8,
         "item": {
           "@type": "Book",
           "name": "Chữa Lành Lượng Tử",
@@ -123,7 +139,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 8,
+        "position": 9,
         "item": {
           "@type": "Book",
           "name": "Nhớ Một, Quên Ba Hai",
@@ -139,7 +155,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 9,
+        "position": 10,
         "item": {
           "@type": "Book",
           "name": "Đế Chế Ma Cà Rồng (Tập 1)",
@@ -155,7 +171,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 10,
+        "position": 11,
         "item": {
           "@type": "Book",
           "name": "Đế Chế Nguyền Rủa (Tập 2)",
@@ -171,7 +187,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 11,
+        "position": 12,
         "item": {
           "@type": "Book",
           "name": "Đế Chế Bình Minh (Tập 3)",
@@ -187,7 +203,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 12,
+        "position": 13,
         "item": {
           "@type": "Book",
           "name": "Dạ Phong Môn",
@@ -203,7 +219,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 13,
+        "position": 14,
         "item": {
           "@type": "Book",
           "name": "Tam Đồ Chí",
@@ -219,7 +235,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 14,
+        "position": 15,
         "item": {
           "@type": "Book",
           "name": "Những Năm Tháng Tôi Làm Người Chim",
@@ -235,7 +251,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 15,
+        "position": 16,
         "item": {
           "@type": "Book",
           "name": "Thuật Giả Kim: Sức Mạnh Diệu Kỳ Của Những Ý Tưởng Phi Lý Trí",
@@ -251,7 +267,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 16,
+        "position": 17,
         "item": {
           "@type": "Book",
           "name": "Chim Ruồi Rực Cháy (Trọn bộ 3 tập)",
@@ -267,7 +283,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 17,
+        "position": 18,
         "item": {
           "@type": "Book",
           "name": "Vườn Địa Đàng Đầu Tiên Của Phòng Tư Kỳ",
@@ -283,7 +299,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 18,
+        "position": 19,
         "item": {
           "@type": "Book",
           "name": "Căn Phòng Kín Của Schrödinger",
@@ -299,7 +315,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 19,
+        "position": 20,
         "item": {
           "@type": "Book",
           "name": "Co-Opetition: Hợp Tác Để Cạnh Tranh",
@@ -315,7 +331,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 20,
+        "position": 21,
         "item": {
           "@type": "Book",
           "name": "Độ Lệch Nhiệt",
@@ -331,7 +347,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 21,
+        "position": 22,
         "item": {
           "@type": "Book",
           "name": "Câu Chuyện Vào Ngày Tôi Chết",
@@ -347,7 +363,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 23,
         "item": {
           "@type": "Book",
           "name": "Thám Tử Điên (Phong Thám)",
@@ -363,7 +379,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 24,
         "item": {
           "@type": "Book",
           "name": "Lam Bạch Xã",
@@ -379,7 +395,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 24,
+        "position": 25,
         "item": {
           "@type": "Book",
           "name": "Đêm Mai, Ai Sẽ Lưu Lại Trong Thể Xác Này",
@@ -395,7 +411,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 25,
+        "position": 26,
         "item": {
           "@type": "Book",
           "name": "Cánh Đồng Hướng Dương Nơi Xa Xăm",
@@ -411,7 +427,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 26,
+        "position": 27,
         "item": {
           "@type": "Book",
           "name": "Trò chơi cô đơn",
@@ -427,7 +443,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 27,
+        "position": 28,
         "item": {
           "@type": "Book",
           "name": "Quá Hà Tốt",
@@ -443,7 +459,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 28,
+        "position": 29,
         "item": {
           "@type": "Book",
           "name": "Đặc Nhiệm Chống Lừa Đảo",
@@ -459,7 +475,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 30,
         "item": {
           "@type": "Book",
           "name": "Tam Thi Ngữ",
@@ -475,7 +491,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 30,
+        "position": 31,
         "item": {
           "@type": "Book",
           "name": "Gián",
@@ -491,7 +507,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 32,
         "item": {
           "@type": "Book",
           "name": "Đại Y Lăng Nhiên",
@@ -507,7 +523,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 33,
         "item": {
           "@type": "Book",
           "name": "Bạch Lộc Nguyên",
@@ -523,7 +539,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 34,
         "item": {
           "@type": "Book",
           "name": "Phù Du: Ba Ngày Đào Sát",
@@ -539,7 +555,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 34,
+        "position": 35,
         "item": {
           "@type": "Book",
           "name": "Âm Lôi",
@@ -550,22 +566,6 @@
           },
           "inLanguage": "vi",
           "description": "Đứng đầu bảng trinh thám Douban Read 2021 của Lý Đại Phát. Vụ án con bạc rơi lầu tưởng chừng tự sát mở ra chuỗi án mạng liên hoàn hoàn mỹ, cuộc đấu trí cân não khốc liệt giữa trinh sát bị ruồng bỏ Mã Thước và kẻ sát nhân mang danh 'công lý cực đoan'.",
-          "url": "https://piepub.net"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 35,
-        "item": {
-          "@type": "Book",
-          "name": "Chiến Dịch Săn Cáo",
-          "alternateName": "猎狐行动 (Xi Hu Xing Dong)",
-          "author": {
-            "@type": "Person",
-            "name": "Lữ Tranh"
-          },
-          "inLanguage": "vi",
-          "description": "Ký sự trinh sát chân thực và nghẹt thở bậc nhất của nhà văn cảnh sát Lữ Tranh về chuyên án truy bắt đào phạm kinh tế xuyên quốc tế Săn Cáo 2014. Cuộc đấu trí cân não khốc liệt giữa những trinh sát đặc nhiệm và những bộ óc tội phạm tài chính lọc lõi khắp địa cầu.",
           "url": "https://piepub.net"
         }
       }
