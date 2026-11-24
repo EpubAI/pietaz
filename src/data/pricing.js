@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "phuong-phap-tu-duy-he-thong": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 67657,
+    "rawWordCountFormatted": "67.657 từ tiếng Anh (52.4 vạn ký tự · 21 chương)",
+    "rawUnit": "từ",
+    "priceTier": "Tier 1A (< 150k từ)"
+  },
   "doi-mat-vuc-tham-mua-2-tap-2-lanh-huyet-phi-dang": {
     "price": 50000,
     "priceDisplay": "50.000 đ",
