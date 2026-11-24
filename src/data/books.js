@@ -1,3 +1,4 @@
+import { doiMatVucThamMua2Tap2LanhHuyetPhiDang } from './novels/doiMatVucThamMua2Tap2LanhHuyetPhiDang';
 import { doiMatVucThamMua2Tap1DaThuChiHa } from './novels/doiMatVucThamMua2Tap1DaThuChiHa';
 import { doiMatVucTham3ToiDuTan } from './novels/doiMatVucTham3ToiDuTan';
 import { doiMatVucTham2AmVoThanh } from './novels/doiMatVucTham2AmVoThanh';
@@ -87,6 +88,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  doiMatVucThamMua2Tap2LanhHuyetPhiDang, // Trinh thám hình sự hiện thực Mùa 2 & Bản án nữ sinh rúng động: Đôi Mắt Vực Thẳm (Mùa 2) 2: Lãnh Huyết Phí Đằng - Trần Mãnh
   doiMatVucThamMua2Tap1DaThuChiHa, // Trinh thám hình sự hiện thực Mùa 2 & Chuyên án truy xét nóng: Đôi Mắt Vực Thẳm (Mùa 2) 1: Dã Thú Chi Hà - Trần Mãnh
   doiMatVucTham3ToiDuTan,          // Trinh thám hình sự hiện thực & Tro tàn tội ác gia đình: Đôi Mắt Vực Thẳm 3: Tội Dư Tẫn - Trần Mãnh
   doiMatVucTham2AmVoThanh,         // Trinh thám hình sự hiện thực & Ký ức án mạng câm lặng: Đôi Mắt Vực Thẳm 2: Ám Vô Thanh - Trần Mãnh

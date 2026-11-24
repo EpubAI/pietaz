@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "doi-mat-vuc-tham-mua-2-tap-2-lanh-huyet-phi-dang": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 143819,
+    "rawWordCountFormatted": "14.4 vạn chữ gốc (48.1 vạn ký tự · 57 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
   "doi-mat-vuc-tham-mua-2-tap-1-da-thu-chi-ha": {
     "price": 50000,
     "priceDisplay": "50.000 đ",
