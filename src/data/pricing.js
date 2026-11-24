@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "doi-mat-vuc-tham-2-am-vo-thanh": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 152901,
+    "rawWordCountFormatted": "15.3 vạn chữ gốc (51.2 vạn ký tự · 64 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "doi-mat-vuc-tham-1-ac-nhu-cau": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
