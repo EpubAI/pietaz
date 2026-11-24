@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "doi-mat-vuc-tham-mua-2-tap-1-da-thu-chi-ha": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 145000,
+    "rawWordCountFormatted": "14.5 vạn chữ gốc (49.6 vạn ký tự · 59 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
   "doi-mat-vuc-tham-3-toi-du-tan": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
