@@ -1,3 +1,4 @@
+import { hoSoAnMang2RungThiengNuocDoc } from './novels/hoSoAnMang2RungThiengNuocDoc';
 import { sonQuyLai } from './novels/sonQuyLai';
 import { muQuang } from './novels/muQuang';
 import { cuocDoiQuyDiCuaToi } from './novels/cuocDoiQuyDiCuaToi';
@@ -82,6 +83,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  hoSoAnMang2RungThiengNuocDoc,    // Trinh thám hình sự & Pháp y thực chiến chân thực: Hồ Sơ Án Mạng 2: Rừng Thiêng Nước Độc - Pháp y Tần Minh
   sonQuyLai,                       // Trinh thám hình sự & Niên đại群 tượng xuất sắc: Sơn Quy Lai - Lục Xuân Ngô
   muQuang,                         // Trinh thám hình sự & Tâm lý tội phạm: Mù Quáng - Mộ Dao Nhi Tầm
   cuocDoiQuyDiCuaToi,              // Huyền bí đô thị & Dân gian quái đàm mô phỏng luân hồi: Cuộc Đời Quỷ Dị Của Tôi - Bạch Nhẫn Trảm Xuân Phong

@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "ho-so-an-mang-2-rung-thieng-nuoc-doc": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 152313,
+    "rawWordCountFormatted": "15.2 vạn chữ gốc (50.9 vạn ký tự · 28 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "son-quy-lai": {
     "price": 80000,
     "priceDisplay": "80.000 đ",
