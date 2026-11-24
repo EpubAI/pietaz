@@ -1,3 +1,4 @@
+import { doiMatVucTham3ToiDuTan } from './novels/doiMatVucTham3ToiDuTan';
 import { doiMatVucTham2AmVoThanh } from './novels/doiMatVucTham2AmVoThanh';
 import { doiMatVucTham1AcNhuCau } from './novels/doiMatVucTham1AcNhuCau';
 import { hoSoAnMang2RungThiengNuocDoc } from './novels/hoSoAnMang2RungThiengNuocDoc';
@@ -85,6 +86,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  doiMatVucTham3ToiDuTan,          // Trinh thám hình sự hiện thực & Tro tàn tội ác gia đình: Đôi Mắt Vực Thẳm 3: Tội Dư Tẫn - Trần Mãnh
   doiMatVucTham2AmVoThanh,         // Trinh thám hình sự hiện thực & Ký ức án mạng câm lặng: Đôi Mắt Vực Thẳm 2: Ám Vô Thanh - Trần Mãnh
   doiMatVucTham1AcNhuCau,          // Trinh thám hình sự hiện thực & Hồi ký án mạng thập niên 90: Đôi Mắt Vực Thẳm 1: Ác Như Câu - Trần Mãnh
   hoSoAnMang2RungThiengNuocDoc,    // Trinh thám hình sự & Pháp y thực chiến chân thực: Hồ Sơ Án Mạng 2: Rừng Thiêng Nước Độc - Pháp y Tần Minh
