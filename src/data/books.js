@@ -1,3 +1,4 @@
+import { banLiep } from './novels/banLiep';
 import { phuongPhapTuDuyHeThong } from './novels/phuongPhapTuDuyHeThong';
 import { doiMatVucThamMua2Tap2LanhHuyetPhiDang } from './novels/doiMatVucThamMua2Tap2LanhHuyetPhiDang';
 import { doiMatVucThamMua2Tap1DaThuChiHa } from './novels/doiMatVucThamMua2Tap1DaThuChiHa';
@@ -89,6 +90,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  banLiep,                         // Trinh thám xã hội đen tối & Nữ tính sinh tồn đỉnh cao: Ban Liệp (Linh Cẩu Đốm) - Lục Xuân Ngô
   phuongPhapTuDuyHeThong,          // Quản trị & Tư duy hệ thống thực chiến: Phương Pháp Tư Duy Hệ Thống - Christian Baron
   doiMatVucThamMua2Tap2LanhHuyetPhiDang, // Trinh thám hình sự hiện thực Mùa 2 & Bản án nữ sinh rúng động: Đôi Mắt Vực Thẳm (Mùa 2) 2: Lãnh Huyết Phí Đằng - Trần Mãnh
   doiMatVucThamMua2Tap1DaThuChiHa, // Trinh thám hình sự hiện thực Mùa 2 & Chuyên án truy xét nóng: Đôi Mắt Vực Thẳm (Mùa 2) 1: Dã Thú Chi Hà - Trần Mãnh

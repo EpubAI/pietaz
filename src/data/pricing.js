@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "ban-liep": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 179159,
+    "rawWordCountFormatted": "17.9 vạn chữ gốc (63.7 vạn ký tự · 54 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "phuong-phap-tu-duy-he-thong": {
     "price": 50000,
     "priceDisplay": "50.000 đ",
