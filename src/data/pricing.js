@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "phat-khoi-cuoi-cung": {
+    "price": 80000,
+    "priceDisplay": "80.000 đ",
+    "isFree": false,
+    "rawWordCount": 368762,
+    "rawWordCountFormatted": "36.9 vạn chữ gốc (87.8 vạn ký tự · 29 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 2A (300k - 400k chữ)"
+  },
   "thien-ha-khong-co-bi-kip-vo-dich-bon-dong-ruoi-mot-cuon": {
     "price": 90000,
     "priceDisplay": "90.000 đ",
