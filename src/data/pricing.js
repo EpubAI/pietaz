@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "hien-te-hu-vo": {
+    price: 100000,
+    priceDisplay: "100.000 đ",
+    rawWordCount: 401368,
+    rawWordCountFormatted: "40.1 vạn chữ (108.3 vạn ký tự)",
+    rawUnit: "chữ",
+    priceTier: "Tier 2 (300k - 600k chữ)",
+  },
   "truong-thi-khoa-cu": {
     price: 50000,
     priceDisplay: "50.000 đ",

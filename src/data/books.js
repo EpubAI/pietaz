@@ -1,3 +1,4 @@
+import { hienTeHuVo } from './novels/hienTeHuVo';
 import { truongThiKhoaCu } from './novels/truongThiKhoaCu';
 import { matThatPharaoh } from './novels/matThatPharaoh';
 import { theThirst } from './novels/theThirst';
@@ -103,6 +104,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  hienTeHuVo,                      // Tứ đại kỳ thư trinh thám Nhật Bản: Hiến Tế Hư Vô - Nakai Hideo
   truongThiKhoaCu,                  // Trinh thám cổ đại: Trường Thi Khoa Cử Có Kẻ Sát Nhân - Phong Thanh Quá Xứ
   matThatPharaoh,                  // Trinh thám Nhật Bản: Mật Thất Pharaoh - Shirakawa Naofumi
   theThirst,                       // Trinh thám Bắc Âu: The Thirst (Cơn Khát) - Jo Nesbø
