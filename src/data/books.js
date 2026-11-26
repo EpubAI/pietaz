@@ -1,3 +1,4 @@
+import { nhungDieuQuanTrongKhiLamChaMe } from './novels/nhungDieuQuanTrongKhiLamChaMe';
 import { dongBacVangSuHacDaoPhongVan } from './novels/dongBacVangSuHacDaoPhongVan';
 import { taChinhLaYeuQuai } from './novels/taChinhLaYeuQuai';
 import { banLiep } from './novels/banLiep';
@@ -92,6 +93,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  nhungDieuQuanTrongKhiLamChaMe,   // Giáo dục gia đình & Triết lý nhân sinh: Những Điều Quan Trọng Khi Làm Cha Mẹ - Matsushita Konosuke
   dongBacVangSuHacDaoPhongVan,     // Hiện thực hắc đạo & Niên đại quần tượng kinh điển: Đông Bắc Vãng Sự: Hắc Đạo Phong Vân Hai Mươi Năm - Khổng Nhị Cẩu
   taChinhLaYeuQuai,                // Huyền bí đô thị & Hài hước kỳ ảo: Ta Chính Là Yêu Quái - Trương Tiểu Hoa
   banLiep,                         // Trinh thám xã hội đen tối & Nữ tính sinh tồn đỉnh cao: Ban Liệp (Linh Cẩu Đốm) - Lục Xuân Ngô

@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "nhung-dieu-quan-trong-khi-lam-cha-me": {
+    "price": 50000,
+    "priceDisplay": "50.000 đ",
+    "isFree": false,
+    "rawWordCount": 23904,
+    "rawWordCountFormatted": "2.4 vạn chữ gốc (9.6 vạn ký tự · 33 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 1A (< 150k chữ)"
+  },
   "dong-bac-vang-su-hac-dao-phong-van": {
     "price": 130000,
     "priceDisplay": "130.000 đ",

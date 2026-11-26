@@ -1,0 +1,53 @@
+// Dữ liệu tác phẩm: Những Điều Quan Trọng Khi Làm Cha Mẹ (Matsushita Konosuke)
+export const nhungDieuQuanTrongKhiLamChaMe = {
+  "id": "nhung-dieu-quan-trong-khi-lam-cha-me",
+  "title": "Những Điều Quan Trọng Khi Làm Cha Mẹ",
+  "originalTitle": "为人父母重要的事",
+  "author": "Matsushita Konosuke (松下幸之助)",
+  "authorBio": "Nhà sáng lập tập đoàn Panasonic, được mệnh danh là \"Thần kinh doanh\" Nhật Bản, tác giả nhiều cuốn sách kinh điển về triết lý sống, quản trị và giáo dục con người.",
+  "translator": "PiePub AI",
+  "cover": "./covers/nhung-dieu-quan-trong-khi-lam-cha-me.jpg",
+  "categories": [
+    "tam-ly"
+  ],
+  "category": "tam-ly",
+  "tags": [
+    "Giáo Dục",
+    "Gia Đình",
+    "Nuôi Dạy Con",
+    "Triết Lý Sống",
+    "Matsushita Konosuke"
+  ],
+  "status": "Hoàn thành",
+  "wordCount": 95548,
+  "chapterCount": 33,
+  "chaptersCount": 33,
+  "totalChapters": "33 chương (Hoàn tất) · 2.4 vạn chữ gốc (9.6 vạn ký tự)",
+  "awards": "Tác phẩm kinh điển về giáo dục gia đình và triết lý nhân sinh của Matsushita Konosuke",
+  "rating": 4.9,
+  "views": "64.2K",
+  "description": "Những chiêm nghiệm giản dị, sâu sắc và đầy tính nhân văn của \"Thần kinh doanh\" Nhật Bản Matsushita Konosuke về nghệ thuật làm cha mẹ, tôn trọng cá tính và nuôi dưỡng tâm hồn con trẻ.",
+  "extendedReview": "Tác phẩm: Những Điều Quan Trọng Khi Làm Cha Mẹ (为人父母重要的事)\nTác giả: Matsushita Konosuke (松下幸之助)\nThể loại: Giáo dục gia đình / Nuôi dạy con cái / Triết lý nhân sinh\nQuy mô: 33 chương (Hoàn tất) | 2.4 vạn chữ gốc (9.6 vạn ký tự) | 4 chương đọc thử toàn văn\n\n=== TIỂU SỬ TÁC GIẢ & THÀNH TỰU VĂN HỌC ===\nMatsushita Konosuke (松下幸之助, 1894–1989) là nhà sáng lập tập đoàn điện tử Panasonic, được người Nhật Bản tôn vinh là \"Thần kinh doanh\" và là một trong những nhà tư tưởng quản trị – giáo dục có ảnh hưởng sâu rộng nhất thế kỷ 20. Những tác phẩm của ông luôn nổi tiếng bởi sự giản dị, thấu suốt bản chất con người và giàu tính thực tiễn.\n\n=== BÌNH LUẬN & ĐÁNH GIÁ CHUYÊN SÂU ===\nTrong \"Những Điều Quan Trọng Khi Làm Cha Mẹ\", Matsushita Konosuke không đưa ra những lý thuyết sư phạm hàn lâm khô cứng hay những công thức ép buộc con trẻ thành tài. Thay vào đó, ông chắt lọc từ chính trải nghiệm cuộc đời đầy thăng trầm của mình những nguyên lý giản dị, ấm áp và bền vững nhất về thiên chức làm cha mẹ:\n1. Tôn trọng cá tính độc bản của trẻ: Mỗi đứa trẻ sinh ra đều mang một tố chất riêng; cha mẹ là người làm vườn kiên nhẫn chứ không phải thợ nặn tượng theo khuôn mẫu của chính mình.\n2. Giáo dục bằng tấm gương sống: Thái độ sống trung thực, cần cù, biết ơn và không ngừng học hỏi của cha mẹ trong đời thường chính là bài học sâu sắc nhất dành cho con cái.\n3. Nuôi dưỡng tâm hồn trước khi nhồi nhét kiến thức: Giá trị của một con người được đo bằng sự lương thiện, lòng tự trọng và bản lĩnh đứng dậy sau vấp ngã.\n\nMột cuốn sách nhỏ gọn nhưng chứa đựng trí tuệ lớn, giúp các bậc phụ huynh tìm thấy sự bình tĩnh, bao dung và niềm vui đích thực trên hành trình cùng con trưởng thành.",
+  "chapters": [
+    {
+      "id": "c0001",
+      "title": "c0001",
+      "content": "Tiểu sử tác giả\n\nMatsushita Konosuke (Nhật Bản)\n\nNgười sáng lập Công ty Điện khí Matsushita (nay là Tập đoàn Matsushita). Ông sinh năm 1894 tại tỉnh Wakayama, Nhật Bản. Năm 9 tuổi, ông một mình lên Osaka làm người học việc. Năm 23 tuổi, ông bắt đầu khởi nghiệp và từng bước dẫn dắt doanh nghiệp phát triển thành tập đoàn toàn cầu. Năm 1932, ông hình thành triết lý riêng — triết lý Matsushita. Năm 1946, ông sáng lập Viện Nghiên cứu PHP. Năm 1987, nhận lời mời của Chính phủ Trung Quốc, ông xây dựng nhà máy liên doanh tại đây. Ông qua đời năm 1989, hưởng thọ 94 tuổi. Năm 2018, ông được Chính phủ Trung Quốc trao tặng Huy chương Hữu nghị Cải cách Trung Quốc, được tôn vinh là \"người tiên phong trong các doanh nghiệp danh tiếng quốc tế tham gia công cuộc cải cách mở cửa của Trung Quốc\". Các tác phẩm tiêu biểu gồm: Đạo: Triết lý nhân sinh của Matsushita Konosuke, Thiên tâm: Triết lý của Matsushita Konosuke, Con đường vô tận, Khai phá nhân sinh."
+    },
+    {
+      "id": "c0002",
+      "title": "Danh mục xuất xứ",
+      "content": "· Mở đầu các mục: Mở lối (Michi wo Hiraku), Viện Nghiên cứu PHP\n\nNuôi dạy con thành người ưu tú trong cách làm người — Phát huy khả năng của con, Matsushita Electric Industrial (ấn phẩm không bán)\n\nTrẻ trải qua mài giũa nhất định sẽ tỏa sáng — Phát huy thiên phú, Viện Nghiên cứu PHP\n\nNhìn nhận điểm mạnh và điểm yếu như thế nào — Phát huy thiên phú, Viện Nghiên cứu PHP\n\nĐừng để học vấn chi phối — Phát huy thiên phú, Viện Nghiên cứu PHP\n\nGiáo dục cần nâng cao năng lực tự thân của con người — Tuyển tập phát biểu của Matsushita Konosuke, Tập 11, Viện Nghiên cứu PHP\n\nCha mẹ cần có nhân sinh quan đúng đắn — Phát huy thiên phú, Viện Nghiên cứu PHP\n\nNuôi dưỡng tinh thần tự lập — Tuyển tập phát biểu của Matsushita Konosuke, Tập 7, Viện Nghiên cứu PHP\n\nNắm vững nguyên tắc dạy con — Tuyển tập phát biểu của Matsushita Konosuke, Tập 7, Viện Nghiên cứu PHP\n\nBiết ơn và biết kính sợ — Gửi tuổi trẻ, Tủ sách PHP\n\nHọc cách chịu đựng gian khổ — Cẩm nang nhân viên, Viện Nghiên cứu PHP\n\nDẫn dắt con cái tự lập mở đường đời — Lời của PHP, Viện Nghiên cứu PHP\n\nLễ nghi là dầu bôi trơn — Cách làm việc, Tủ sách PHP\n\nSự giáo dục tốt đẹp — Tuyển tập phát biểu của Matsushita Konosuke, Tập 13, Viện Nghiên cứu PHP\n\nKhoan nghiêm đúng mực — Cẩm nang người lãnh đạo, Viện Nghiên cứu PHP\n\nChớ xem nhẹ việc nhỏ — Cẩm nang người lãnh đạo, Viện Nghiên cứu PHP\n\nNuôi dưỡng tâm thuần khiết — Tuyển tập phát biểu của Matsushita Konosuke, Tập 36, Viện Nghiên cứu PHP\n\nLàm thế nào để khai phá thiên phú — Làm người thế nào là thành công, Tủ sách PHP\n\nCoi trọng giáo dục thực hành — Tuyển tập phát biểu của Matsushita Konosuke, Tập 39, Viện Nghiên cứu PHP\n\nĐại khí vãn thành — Làm người thế nào là thành công, Tủ sách PHP\n\nNhiệt huyết chân thành chính là sức mạnh to lớn — Nhân duyên kỳ diệu, Tủ sách PHP\n\nDạy con biết sự thật — Tuyển tập phát biểu của Matsushita Konosuke, Tập 42, Viện Nghiên cứu PHP\n\nCoi trọng lịch sử và truyền thống — Tuyển tập phát biểu của Matsushita Konosuke, Tập 4, Viện Nghiên cứu PHP\n\nNuôi dưỡng lòng yêu nước cho con — Giá trị của kinh doanh, hương vị của cuộc đời, Tủ sách PHP\n\nNghĩa vụ đi trước quyền lợi — Tuyển tập phát biểu của Matsushita Konosuke, Tập 4, Viện Nghiên cứu PHP\n\nĐiều quan trọng của một con người — Lời thỉnh cầu với tư cách một người Nhật, Tủ sách PHP"
+    },
+    {
+      "id": "c0003",
+      "title": "Lời nói đầu của bản gốc",
+      "content": "Khi cầm cuốn sách này trên tay, hẳn có độc giả sẽ thoáng chút thắc mắc: \"Matsushita Konosuke viết sách nuôi dạy con ư?\" Nghĩ như vậy cũng rất tự nhiên, bởi lẽ với tư cách người sáng lập Công ty Điện khí Matsushita (nay là Panasonic), ông từng xuất bản nhiều sách về triết lý kinh doanh và phương pháp làm việc, nhưng đến nay chưa từng cho ra mắt tác phẩm nào chuyên về nuôi dạy con cái.\n\nĐồng thời, chắc chắn cũng sẽ có những độc giả đón nhận cuốn sách này bằng cả tấm lòng và tìm thấy sự đồng điệu sâu sắc. Trên cương vị một doanh nhân, Matsushita Konosuke đã đào tạo nên biết bao nhân viên xuất sắc và nhà quản lý tài năng, thậm chí được mệnh danh là \"bậc thầy nuôi dưỡng con người\". Tư tưởng bồi dưỡng con người của ông chắc chắn cũng mang lại nhiều giá trị tham khảo và gợi mở thiết thực cho việc nuôi dạy con trong gia đình.\n\nBên cạnh vai trò doanh nhân, Matsushita Konosuke còn là một nhà tư tưởng, nhà khai sáng. Để hướng tới sự phồn vinh, hòa bình và hạnh phúc cho xã hội và nhân loại, năm 1946 ông sáng lập Viện Nghiên cứu PHP, quy tụ trí tuệ của nhiều người để miệt mài nghiên cứu và đưa ra nhiều kiến nghị tích cực, trong đó có không ít quan điểm về giáo dục.\n\nHơn nữa, ngay từ thời trẻ, thông qua việc đào tạo nhân viên và giao tiếp với khách hàng, Matsushita Konosuke đã luôn trăn trở câu hỏi \"nên nhìn nhận con người như thế nào\". Sau khi thành lập Viện Nghiên cứu PHP, ông càng đi sâu suy ngẫm về \"bản chất thực sự của con người\". Năm 1972, ông xuất bản tác phẩm kết tinh hành trình chiêm nghiệm cuộc đời — Suy tư về con người — Đề xướng quan điểm mới về nhân sinh, cuốn sách mà chính ông cũng xem là tác phẩm tiêu biểu nhất cho quan điểm về con người của mình.\n\nCuốn sách này đặt quan điểm về con người do Matsushita Konosuke đề xướng lên hàng đầu, đồng thời tuyển chọn và biên tập những bài nói chuyện, trước tác của ông xoay quanh việc nuôi dạy con cái, giáo dục, bồi dưỡng nhân tài và lẽ sống ở đời. Nội dung sách trải rộng từ những bí quyết nuôi dạy con cụ thể cho đến những luận điểm triết lý sâu xa.\n\nTrong quá trình biên soạn, chúng tôi tóm lược quan điểm của Matsushita Konosuke ở phần mở đầu mỗi chương, tin rằng qua những khái quát ấy, bạn đọc sẽ nắm bắt được tinh hoa tư tưởng giáo dục của ông. Ngoài ra, ở cuối mỗi mục đều có thêm phần chú giải ngắn gọn nhằm giúp độc giả hiểu sâu hơn nội dung cuốn sách.\n\nChúng tôi chân thành hy vọng cuốn sách này sẽ trở thành kim chỉ nam hữu ích cho các bậc cha mẹ cũng như những người đang làm công tác giáo dục học đường. Đồng thời, chúng tôi cũng tha thiết mong mỏi sẽ ngày càng có thêm nhiều đứa trẻ hạnh phúc và tự lập được nuôi dưỡng nên người, đúng như tâm nguyện của Matsushita Konosuke.\n\nBan Nghiên cứu Triết lý Kinh doanh, Viện Nghiên cứu Tổng hợp PHP"
+    },
+    {
+      "id": "c0004",
+      "title": "Chương 1: Trẻ được mài giũa nhất định sẽ tỏa sáng",
+      "content": "Đông qua xuân tới, trăm hoa đua nở; đầu hạ sang, chồi non xanh biếc, núi rừng khoác lên mình tấm áo rực rỡ.\n\nMuôn loài hoa khoe sắc, muôn loài cây đâm chồi, muôn loài chim tung cánh. Chính sự đa dạng ấy mới dệt nên bức tranh thiên nhiên rực rỡ. Đó là dáng vẻ tự nhiên của đất trời.\n\nNhiều người Nhật cho rằng loài hoa đẹp nhất để thưởng ngoạn là hoa anh đào, loài cây quý nhất là cây tuyết tùng, loài chim hót hay nhất là chim oanh. Quả thực mỗi loài đều có nét riêng độc đáo, nhưng nếu khắp núi rừng Nhật Bản chỉ có bấy nhiêu thôi, thiên nhiên hẳn sẽ đơn điệu biết bao.\n\nChính vì có muôn loài hoa, thế giới mới rực rỡ sắc màu;\n\nChính vì có muôn loài cây, thế giới mới xanh tươi bát ngát;\n\nChính vì có muôn loài chim, thế giới mới rộn ràng tiếng hót.\n\nĐó cũng là chân lý bất biến của tự nhiên. Con người cũng muôn hình muôn vẻ, mỗi người một khác. Chỉ khi có đủ mọi kiểu người khác nhau, từng cá nhân mới phát huy hết được vai trò của mình. Diện mạo và tính cách mỗi người không giống nhau, sở thích cũng chẳng ai giống ai.\n\nThay vì than phiền về những khác biệt ấy, hãy cảm nhận niềm vui và sự phong phú vô tận ẩn chứa bên trong. Mỗi người góp một phần sức lực, nỗ lực giúp đỡ lẫn nhau.\n\nThế giới có muôn kiểu người, đó là một điều may mắn. Con người mỗi người một khác, đó cũng là một điều may mắn."
+    }
+  ]
+};
