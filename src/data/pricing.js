@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "cuong-ron": {
+    price: 70000,
+    priceDisplay: "70.000 đ",
+    rawWordCount: 188203,
+    rawWordCountFormatted: "18.8 vạn chữ (69.4 vạn ký tự · 60 chương)",
+    rawUnit: "chữ",
+    priceTier: "Tier 1B (150k - 300k chữ)",
+  },
   "hien-te-hu-vo": {
     price: 100000,
     priceDisplay: "100.000 đ",
