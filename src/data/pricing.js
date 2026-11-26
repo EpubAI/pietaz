@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "police": {
+    price: 70000,
+    priceDisplay: "70.000 đ",
+    rawWordCount: 162842,
+    rawWordCountFormatted: "162.842 từ tiếng Anh (96.1 vạn ký tự · 51 chương)",
+    rawUnit: "từ",
+    priceTier: "Tier 1B (150k - 300k từ)",
+  },
   "phantom": {
     price: 50000,
     priceDisplay: "50.000 đ",

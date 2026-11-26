@@ -7,11 +7,26 @@
   "inLanguage": "vi",
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 97,
+    "numberOfItems": 98,
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
+        "item": {
+          "@type": "Book",
+          "name": "Police (Cảnh Sát)",
+          "alternateName": "Police (Politi)",
+          "author": {
+            "@type": "Person",
+            "name": "Jo Nesbø"
+          },
+          "inLanguage": "vi",
+          "url": "https://piepub.net"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
         "item": {
           "@type": "Book",
           "name": "Phantom (Bóng Ma)",
@@ -26,7 +41,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 2,
+        "position": 3,
         "item": {
           "@type": "Book",
           "name": "The Leopard (Báo Hoa Mai)",
@@ -42,7 +57,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 3,
+        "position": 4,
         "item": {
           "@type": "Book",
           "name": "Phật Khôi Cuối Cùng",
@@ -58,7 +73,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 4,
+        "position": 5,
         "item": {
           "@type": "Book",
           "name": "Thiên Hạ Không Có Bí Kíp Vô Địch Bốn Đồng Rưỡi Một Cuốn",
@@ -74,7 +89,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 5,
+        "position": 6,
         "item": {
           "@type": "Book",
           "name": "Tuyết Mù",
@@ -90,7 +105,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 6,
+        "position": 7,
         "item": {
           "@type": "Book",
           "name": "Những Điều Quan Trọng Khi Làm Cha Mẹ",
@@ -106,7 +121,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 7,
+        "position": 8,
         "item": {
           "@type": "Book",
           "name": "Đông Bắc Vãng Sự: Hắc Đạo Phong Vân Hai Mươi Năm",
@@ -122,7 +137,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 8,
+        "position": 9,
         "item": {
           "@type": "Book",
           "name": "Ta Chính Là Yêu Quái",
@@ -138,7 +153,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 9,
+        "position": 10,
         "item": {
           "@type": "Book",
           "name": "Ban Liệp (Linh Cẩu Đốm)",
@@ -154,7 +169,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 10,
+        "position": 11,
         "item": {
           "@type": "Book",
           "name": "Phương Pháp Tư Duy Hệ Thống",
@@ -170,7 +185,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 11,
+        "position": 12,
         "item": {
           "@type": "Book",
           "name": "Đôi Mắt Vực Thẳm (Mùa 2) 2: Lãnh Huyết Phí Đằng",
@@ -186,7 +201,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 12,
+        "position": 13,
         "item": {
           "@type": "Book",
           "name": "Đôi Mắt Vực Thẳm (Mùa 2) 1: Dã Thú Chi Hà",
@@ -202,7 +217,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 13,
+        "position": 14,
         "item": {
           "@type": "Book",
           "name": "Đôi Mắt Vực Thẳm 3: Tội Dư Tẫn",
@@ -218,7 +233,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 14,
+        "position": 15,
         "item": {
           "@type": "Book",
           "name": "Đôi Mắt Vực Thẳm 2: Ám Vô Thanh",
@@ -234,7 +249,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 15,
+        "position": 16,
         "item": {
           "@type": "Book",
           "name": "Đôi Mắt Vực Thẳm 1: Ác Như Câu",
@@ -250,7 +265,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 16,
+        "position": 17,
         "item": {
           "@type": "Book",
           "name": "Hồ Sơ Án Mạng 2: Rừng Thiêng Nước Độc",
@@ -266,7 +281,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 17,
+        "position": 18,
         "item": {
           "@type": "Book",
           "name": "Sơn Quy Lai",
@@ -282,7 +297,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 18,
+        "position": 19,
         "item": {
           "@type": "Book",
           "name": "Mù Quáng",
@@ -298,7 +313,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 19,
+        "position": 20,
         "item": {
           "@type": "Book",
           "name": "Cuộc Đời Quỷ Dị Của Tôi",
@@ -314,7 +329,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 20,
+        "position": 21,
         "item": {
           "@type": "Book",
           "name": "Bộ Ba Trọng Án",
@@ -330,7 +345,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 21,
+        "position": 22,
         "item": {
           "@type": "Book",
           "name": "Điển Tịch Cấm Mật Của Dorothy",
@@ -346,7 +361,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 22,
+        "position": 23,
         "item": {
           "@type": "Book",
           "name": "Chữa Lành Lượng Tử",
@@ -362,7 +377,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 23,
+        "position": 24,
         "item": {
           "@type": "Book",
           "name": "Nhớ Một, Quên Ba Hai",
@@ -378,7 +393,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 24,
+        "position": 25,
         "item": {
           "@type": "Book",
           "name": "Đế Chế Ma Cà Rồng (Tập 1)",
@@ -394,7 +409,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 25,
+        "position": 26,
         "item": {
           "@type": "Book",
           "name": "Đế Chế Nguyền Rủa (Tập 2)",
@@ -410,7 +425,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 26,
+        "position": 27,
         "item": {
           "@type": "Book",
           "name": "Đế Chế Bình Minh (Tập 3)",
@@ -426,7 +441,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 27,
+        "position": 28,
         "item": {
           "@type": "Book",
           "name": "Dạ Phong Môn",
@@ -442,7 +457,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 28,
+        "position": 29,
         "item": {
           "@type": "Book",
           "name": "Tam Đồ Chí",
@@ -458,7 +473,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 30,
         "item": {
           "@type": "Book",
           "name": "Những Năm Tháng Tôi Làm Người Chim",
@@ -474,7 +489,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 30,
+        "position": 31,
         "item": {
           "@type": "Book",
           "name": "Thuật Giả Kim: Sức Mạnh Diệu Kỳ Của Những Ý Tưởng Phi Lý Trí",
@@ -490,7 +505,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 31,
+        "position": 32,
         "item": {
           "@type": "Book",
           "name": "Chim Ruồi Rực Cháy (Trọn bộ 3 tập)",
@@ -506,7 +521,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 32,
+        "position": 33,
         "item": {
           "@type": "Book",
           "name": "Vườn Địa Đàng Đầu Tiên Của Phòng Tư Kỳ",
@@ -522,7 +537,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 33,
+        "position": 34,
         "item": {
           "@type": "Book",
           "name": "Căn Phòng Kín Của Schrödinger",
@@ -538,7 +553,7 @@
       },
       {
         "@type": "ListItem",
-        "position": 34,
+        "position": 35,
         "item": {
           "@type": "Book",
           "name": "Co-Opetition: Hợp Tác Để Cạnh Tranh",
@@ -549,22 +564,6 @@
           },
           "inLanguage": "vi",
           "description": "Kiệt tác kinh điển về tư duy chiến lược kinh doanh và lý thuyết trò chơi từ hai giáo sư lừng danh của Harvard và Yale, mở ra cuộc cách mạng hợp tác cạnh tranh phá vỡ lối mòn thương trường.",
-          "url": "https://piepub.net"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 35,
-        "item": {
-          "@type": "Book",
-          "name": "Độ Lệch Nhiệt",
-          "alternateName": "温度差 (Wen Du Cha)",
-          "author": {
-            "@type": "Person",
-            "name": "Lý Đại Phát (李大发)"
-          },
-          "inLanguage": "vi",
-          "description": "Không một người mẹ nào chịu tin con trai mình là kẻ hiếp dâm. Một bài phóng sự chưa kịp phát hành, những án mạng liên hoàn và bi kịch từ sự nuông chiều mù quáng...",
           "url": "https://piepub.net"
         }
       }
