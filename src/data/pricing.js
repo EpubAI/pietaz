@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "the-thirst": {
+    price: 70000,
+    priceDisplay: "70.000 đ",
+    rawWordCount: 170935,
+    rawWordCountFormatted: "170.935 từ tiếng Anh (98.3 vạn ký tự · 41 chương)",
+    rawUnit: "từ",
+    priceTier: "Tier 1B (150k - 300k từ)",
+  },
   "knife": {
     price: 70000,
     priceDisplay: "70.000 đ",

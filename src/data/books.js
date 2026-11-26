@@ -1,3 +1,4 @@
+import { theThirst } from './novels/theThirst';
 import { knife } from './novels/knife';
 import { police } from './novels/police';
 import { phantom } from './novels/phantom';
@@ -100,6 +101,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  theThirst,                       // Trinh thám Bắc Âu: The Thirst (Cơn Khát) - Jo Nesbø
   knife,                           // Trinh thám Bắc Âu: Knife (Lưỡi Dao) - Jo Nesbø
   police,                          // Trinh thám Bắc Âu: Police (Cảnh Sát) - Jo Nesbø
   phantom,                         // Trinh thám Bắc Âu: Phantom (Bóng Ma) - Jo Nesbø
