@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "hoang-hon-phan-gioi": {
+    price: 300000,
+    priceDisplay: "300.000 đ",
+    rawWordCount: 10231682,
+    rawWordCountFormatted: "1023.2 vạn ký tự tiếng Việt (885 chương)",
+    rawUnit: "ký tự",
+    priceTier: "Tier 5 (> 3M chữ)",
+  },
   "quy-vi-nhan-gian-2": {
     price: 70000,
     priceDisplay: "70.000 đ",
