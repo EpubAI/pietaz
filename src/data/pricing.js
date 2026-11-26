@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "ta-chinh-la-yeu-quai": {
+    "price": 130000,
+    "priceDisplay": "130.000 đ",
+    "isFree": false,
+    "rawWordCount": 876880,
+    "rawWordCountFormatted": "87.7 vạn chữ gốc (211.9 vạn ký tự · 209 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 2F (800k - 900k chữ)"
+  },
   "ban-liep": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
