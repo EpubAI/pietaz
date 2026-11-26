@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "mat-that-pharaoh": {
+    price: 50000,
+    priceDisplay: "50.000 đ",
+    rawWordCount: 112383,
+    rawWordCountFormatted: "11.2 vạn chữ (38.6 vạn ký tự · 49 chương)",
+    rawUnit: "chữ",
+    priceTier: "Tier 1A (50k - 150k chữ)",
+  },
   "the-thirst": {
     price: 70000,
     priceDisplay: "70.000 đ",
