@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "truong-thi-khoa-cu": {
+    price: 50000,
+    priceDisplay: "50.000 đ",
+    rawWordCount: 79529,
+    rawWordCountFormatted: "8.0 vạn chữ (31.1 vạn ký tự · 49 chương)",
+    rawUnit: "chữ",
+    priceTier: "Tier 1A (50k - 150k chữ)",
+  },
   "mat-that-pharaoh": {
     price: 50000,
     priceDisplay: "50.000 đ",
