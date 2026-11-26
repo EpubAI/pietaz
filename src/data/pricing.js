@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "thien-ha-khong-co-bi-kip-vo-dich-bon-dong-ruoi-mot-cuon": {
+    "price": 90000,
+    "priceDisplay": "90.000 đ",
+    "isFree": false,
+    "rawWordCount": 401421,
+    "rawWordCountFormatted": "40.1 vạn chữ gốc (154.1 vạn ký tự · 76 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 2B (400k - 500k chữ)"
+  },
   "tuyet-mu": {
     "price": 70000,
     "priceDisplay": "70.000 đ",
