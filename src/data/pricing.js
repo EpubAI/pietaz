@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "dong-bac-vang-su-hac-dao-phong-van": {
+    "price": 130000,
+    "priceDisplay": "130.000 đ",
+    "isFree": false,
+    "rawWordCount": 850842,
+    "rawWordCountFormatted": "85.1 vạn chữ gốc (349.9 vạn ký tự · 334 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 2F (800k - 900k chữ)"
+  },
   "ta-chinh-la-yeu-quai": {
     "price": 130000,
     "priceDisplay": "130.000 đ",
