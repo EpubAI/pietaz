@@ -1,3 +1,4 @@
+import { thamHaiDuTan } from './novels/thamHaiDuTan';
 import { hoangHonPhanGioi } from './novels/hoangHonPhanGioi';
 import { quyViNhanGian2 } from './novels/quyViNhanGian2';
 import { aiFirstLeader } from './novels/aiFirstLeader';
@@ -111,6 +112,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  thamHaiDuTan,                    // Cthulhu kỳ ảo & Hàng hải: Thâm Hải Dư Tẫn - Viễn Đồng
   hoangHonPhanGioi,                // Tiên hiệp quỷ dị & Huyền bí dân gian: Hoàng Hôn Phân Giới - Hắc Sơn Lão Quỷ
   quyViNhanGian2,                  // Huyền bí dân gian & Kỳ môn: Quỷ Vị Nhân Gian 2 - Trần Mãnh
   aiFirstLeader,                   // Quản trị & Công nghệ: AI-First Leader - Bhavesh Mehta
