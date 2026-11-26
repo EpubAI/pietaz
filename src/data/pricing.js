@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "dai-duong-bat-luong-nhan": {
+    price: 300000,
+    priceDisplay: "300.000 đ",
+    rawWordCount: 3856656,
+    rawWordCountFormatted: "385.7 vạn chữ (1437.7 vạn ký tự · 1.107 chương)",
+    rawUnit: "chữ",
+    priceTier: "Tier 5 (> 3M chữ)",
+  },
   "cuong-ron": {
     price: 70000,
     priceDisplay: "70.000 đ",
