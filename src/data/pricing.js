@@ -24,6 +24,15 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "tuyet-mu": {
+    "price": 70000,
+    "priceDisplay": "70.000 đ",
+    "isFree": false,
+    "rawWordCount": 278409,
+    "rawWordCountFormatted": "27.8 vạn chữ gốc (104.8 vạn ký tự · 69 chương)",
+    "rawUnit": "chữ gốc",
+    "priceTier": "Tier 1B (150k - 300k chữ)"
+  },
   "nhung-dieu-quan-trong-khi-lam-cha-me": {
     "price": 50000,
     "priceDisplay": "50.000 đ",
