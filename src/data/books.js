@@ -1,3 +1,4 @@
+import { quyViNhanGian2 } from './novels/quyViNhanGian2';
 import { aiFirstLeader } from './novels/aiFirstLeader';
 import { laoTuHeisenberg } from './novels/laoTuHeisenberg';
 import { matMaLuanNgu } from './novels/matMaLuanNgu';
@@ -109,6 +110,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  quyViNhanGian2,                  // Huyền bí dân gian & Kỳ môn: Quỷ Vị Nhân Gian 2 - Trần Mãnh
   aiFirstLeader,                   // Quản trị & Công nghệ: AI-First Leader - Bhavesh Mehta
   laoTuHeisenberg,                 // Triết học & Quản trị: Lão Tử và Khổng Tử gặp Heisenberg - Danah Zohar
   matMaLuanNgu,                    // Trinh thám lịch sử: Mật Mã Luận Ngữ - Dã Văn Bưu

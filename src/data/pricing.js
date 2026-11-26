@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "quy-vi-nhan-gian-2": {
+    price: 70000,
+    priceDisplay: "70.000 đ",
+    rawWordCount: 611559,
+    rawWordCountFormatted: "61.2 vạn ký tự tiếng Việt (22 chương)",
+    rawUnit: "ký tự",
+    priceTier: "Tier 1B (150k - 300k từ)",
+  },
   "ai-first-leader": {
     price: 50000,
     priceDisplay: "50.000 đ",
