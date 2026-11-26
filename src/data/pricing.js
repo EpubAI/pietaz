@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "mat-ma-luan-ngu": {
+    price: 70000,
+    priceDisplay: "70.000 đ",
+    rawWordCount: 265352,
+    rawWordCountFormatted: "26.5 vạn chữ (103.6 vạn ký tự · 49 chương)",
+    rawUnit: "chữ",
+    priceTier: "Tier 1B (150k - 300k chữ)",
+  },
   "dai-duong-bat-luong-nhan": {
     price: 300000,
     priceDisplay: "300.000 đ",

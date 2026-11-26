@@ -1,3 +1,4 @@
+import { matMaLuanNgu } from './novels/matMaLuanNgu';
 import { daiDuongBatLuongNhan } from './novels/daiDuongBatLuongNhan';
 import { cuongRon } from './novels/cuongRon';
 import { hienTeHuVo } from './novels/hienTeHuVo';
@@ -106,6 +107,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  matMaLuanNgu,                    // Trinh thám lịch sử: Mật Mã Luận Ngữ - Dã Văn Bưu
   daiDuongBatLuongNhan,            // Lịch sử quân sự & Trinh thám: Đại Đường Bất Lương Nhân - Canh Tân
   cuongRon,                        // Trinh thám tâm lý: Cuống Rốn - Quan Nhĩ
   hienTeHuVo,                      // Tứ đại kỳ thư trinh thám Nhật Bản: Hiến Tế Hư Vô - Nakai Hideo
