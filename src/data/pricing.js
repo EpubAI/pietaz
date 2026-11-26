@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "lao-tu-va-khong-tu-gap-heisenberg": {
+    price: 50000,
+    priceDisplay: "50.000 đ",
+    rawWordCount: 366677,
+    rawWordCountFormatted: "36.7 vạn ký tự tiếng Việt (11 chương chính)",
+    rawUnit: "ký tự",
+    priceTier: "Tier 1A (50k - 150k từ)",
+  },
   "mat-ma-luan-ngu": {
     price: 70000,
     priceDisplay: "70.000 đ",

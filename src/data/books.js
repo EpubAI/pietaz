@@ -1,3 +1,4 @@
+import { laoTuHeisenberg } from './novels/laoTuHeisenberg';
 import { matMaLuanNgu } from './novels/matMaLuanNgu';
 import { daiDuongBatLuongNhan } from './novels/daiDuongBatLuongNhan';
 import { cuongRon } from './novels/cuongRon';
@@ -107,6 +108,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  laoTuHeisenberg,                 // Triết học & Quản trị: Lão Tử và Khổng Tử gặp Heisenberg - Danah Zohar
   matMaLuanNgu,                    // Trinh thám lịch sử: Mật Mã Luận Ngữ - Dã Văn Bưu
   daiDuongBatLuongNhan,            // Lịch sử quân sự & Trinh thám: Đại Đường Bất Lương Nhân - Canh Tân
   cuongRon,                        // Trinh thám tâm lý: Cuống Rốn - Quan Nhĩ
