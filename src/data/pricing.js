@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "phantom": {
+    price: 50000,
+    priceDisplay: "50.000 đ",
+    rawWordCount: 138994,
+    rawWordCountFormatted: "138.994 từ tiếng Anh (80.8 vạn ký tự · 44 chương)",
+    rawUnit: "từ",
+    priceTier: "Tier 1A (50k - 150k từ)",
+  },
   "the-leopard": {
     price: 70000,
     priceDisplay: "70.000 đ",

@@ -1,3 +1,4 @@
+import { phantom } from './novels/phantom';
 import { theLeopard } from './novels/theLeopard';
 import { phatKhoiCuoiCung } from './novels/phatKhoiCuoiCung';
 import { thienHaKhongCoBiKipVoDichBonDongRuoiMotCuon } from './novels/thienHaKhongCoBiKipVoDichBonDongRuoiMotCuon';
@@ -97,6 +98,7 @@ import { daiKichDoi } from './novels/daiKichDoi';
 
 // Danh sách tổng hợp tác phẩm hiển thị trên website (Xếp theo thứ tự mới nhất lên đầu)
 export const BOOKS = [
+  phantom,                         // Trinh thám Bắc Âu: Phantom (Bóng Ma) - Jo Nesbø
   theLeopard,                      // Trinh thám Bắc Âu: The Leopard (Báo Hoa) - Jo Nesbø
   phatKhoiCuoiCung,                // Huyền bí dân gian & Kỳ môn quỷ thuật: Phật Khôi Cuối Cùng - Liệp Y Dương
   thienHaKhongCoBiKipVoDichBonDongRuoiMotCuon, // Võ hiệp hài hước phá cách: Thiên Hạ Không Có Bí Kíp Vô Địch Bốn Đồng Rưỡi Một Cuốn - Phong Hòa Nhất Thanh
