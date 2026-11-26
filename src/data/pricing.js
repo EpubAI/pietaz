@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "ai-first-leader": {
+    price: 50000,
+    priceDisplay: "50.000 đ",
+    rawWordCount: 507502,
+    rawWordCountFormatted: "50.7 vạn ký tự tiếng Việt (26 chương)",
+    rawUnit: "ký tự",
+    priceTier: "Tier 1A (50k - 150k từ)",
+  },
   "lao-tu-va-khong-tu-gap-heisenberg": {
     price: 50000,
     priceDisplay: "50.000 đ",
