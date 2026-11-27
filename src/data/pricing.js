@@ -24,6 +24,14 @@ export const FREE_BOOK_IDS = new Set([
 ]);
 
 export const BOOK_PRICING = {
+  "ho-so-dieu-tra-su-kien-sieu-nhien": {
+    price: 300000,
+    priceDisplay: "300.000 đ",
+    rawWordCount: 1551324,
+    rawWordCountFormatted: "155.1 vạn chữ gốc (550.0 vạn ký tự · 421 chương)",
+    rawUnit: "chữ",
+    priceTier: "Tier 5 (> 3M chữ)",
+  },
   "tham-hai-du-tan": {
     price: 300000,
     priceDisplay: "300.000 đ",
