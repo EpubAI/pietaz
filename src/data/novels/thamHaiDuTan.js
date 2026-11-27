@@ -7,7 +7,7 @@ export const thamHaiDuTan = {
   "authorBio": "Viễn Đồng là đại thần văn học mạng hàng đầu Trung Quốc, nổi tiếng với thế giới quan đồ sộ, kết hợp tài tình giữa khoa huyễn, Cthulhu kỳ ảo và văn phong ấm áp, nhân văn.",
   "cover": "/covers/tham-hai-du-tan.jpg",
   "categories": [
-    "khoa-huyen",
+    "khoa-hoc",
     "huyen-bi"
   ],
   "tags": [

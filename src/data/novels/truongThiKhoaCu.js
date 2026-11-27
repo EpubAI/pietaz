@@ -7,7 +7,8 @@ export const truongThiKhoaCu = {
   "authorBio": "Phong Thanh Quá Xứ là tác giả trinh thám cổ đại được yêu thích với lối viết súc tích, kết cấu phá án chặt chẽ và khả năng dựng bối cảnh lịch sử sống động.",
   "cover": "/covers/truong-thi-khoa-cu.jpg",
   "categories": [
-    "trinh-tham"
+    "trinh-tham",
+    "lich-su"
   ],
   "tags": [
     "Trinh thám cổ đại",

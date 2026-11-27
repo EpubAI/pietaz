@@ -8,7 +8,8 @@ export const phatKhoiCuoiCung = {
   "translator": "PiePub AI",
   "cover": "./covers/phat-khoi-cuoi-cung.jpg",
   "categories": [
-    "huyen-bi"
+    "huyen-bi",
+    "trinh-tham"
   ],
   "category": "huyen-bi",
   "tags": [

@@ -7,6 +7,7 @@ export const banLiep = {
   "translator": "PiePub AI",
   "cover": "/covers/ban-liep.jpg",
   "category": "trinh-tham",
+  "categories": ["trinh-tham", "hien-thuc"],
   "tags": [
     "Trinh Thám",
     "Xã Hội Phái",

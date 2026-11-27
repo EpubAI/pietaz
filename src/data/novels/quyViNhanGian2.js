@@ -7,8 +7,7 @@ export const quyViNhanGian2 = {
   "authorBio": "Trần Mãnh là tác giả nổi tiếng của dòng văn học linh dị – huyền bí dân gian Trung Quốc, am hiểu sâu sắc về phong tục tang ma, kỳ môn dị thuật và thuật số cổ truyền.",
   "cover": "/covers/quy-vi-nhan-gian-2.jpg",
   "categories": [
-    "huyen-bi",
-    "kinh-di"
+    "huyen-bi"
   ],
   "tags": [
     "Huyền bí",

@@ -7,7 +7,8 @@ export const hienTeHuVo = {
   "authorBio": "Nakai Hideo (1922–1993) là nhà văn, nhà thơ và biên tập viên lừng danh của Nhật Bản. Tác phẩm 'Hiến Tế Hư Vô' của ông được tôn vinh là một trong Tứ Đại Kỳ Thư của văn học trinh thám Nhật Bản.",
   "cover": "/covers/hien-te-hu-vo.jpg",
   "categories": [
-    "trinh-tham"
+    "trinh-tham",
+    "huyen-bi"
   ],
   "tags": [
     "Tứ đại kỳ thư",

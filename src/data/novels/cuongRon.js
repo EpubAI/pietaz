@@ -7,7 +7,9 @@ export const cuongRon = {
   "authorBio": "Quan Nhĩ là tác giả tiểu thuyết trinh thám – tâm lý xã hội nổi bật với lối viết sắc sảo, khai thác sâu sắc những góc khuất trong tâm lý gia đình và nhân tính.",
   "cover": "/covers/cuong-ron.jpg",
   "categories": [
-    "trinh-tham"
+    "trinh-tham",
+    "tam-ly",
+    "hien-thuc"
   ],
   "tags": [
     "Trinh thám tâm lý",

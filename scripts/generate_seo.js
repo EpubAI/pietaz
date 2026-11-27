@@ -131,7 +131,7 @@ function generateSitemapXml(books) {
   ];
 
   // Thể loại chính
-  const categories = ['tien-hiep', 'huyen-bi', 'trinh-tham', 'khoa-hoc', 'lich-su', 'hien-thuc', 'tan-van', 'kinh-te', 'ngon-tinh', 'free'];
+  const categories = ['tien-hiep', 'huyen-bi', 'trinh-tham', 'khoa-hoc', 'lich-su', 'hien-thuc', 'tam-ly', 'triet-hoc', 'tan-van', 'kinh-te', 'ngon-tinh', 'free'];
   for (const cat of categories) {
     lines.push(
       '  <url>',

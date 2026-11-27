@@ -5,7 +5,7 @@ export const hoSoAnMang2RungThiengNuocDoc = {
   author: 'Pháp y Tần Minh (法医秦明)',
   authorBio: 'Phó chủ nhiệm giám định pháp y công an tỉnh An Huy, đại thần văn học trinh thám hình sự và khoa học pháp y hàng đầu Trung Quốc, tác giả series Pháp Y Tần Minh kinh điển.',
   updatedAt: '24/11/2026',
-  categories: ['trinh-tham'],
+  categories: ['trinh-tham', 'tan-van'],
   category: 'trinh-tham',
   wordCount: 113709,
   chaptersCount: 28,

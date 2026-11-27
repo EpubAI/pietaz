@@ -8,7 +8,7 @@
 
 ### 1. Thâm Hải Dư Tẫn (Tro Tàn Biển Sâu) (深海余烬)
 - **Tác giả:** Viễn Đồng
-- **Thể loại:** khoa-huyen, huyen-bi
+- **Thể loại:** khoa-hoc, huyen-bi
 - **Tóm tắt:** Thuyền trưởng Duncan thức tỉnh trên con tàu ma u linh bốc cháy ngọn lửa bất tử, dong buồm khám phá bí mật biển sâu và giải cứu nền văn minh đảo quốc.
 - **Đọc thử trực tuyến:** https://piepub.net
 
@@ -20,7 +20,7 @@
 
 ### 3. Quỷ Vị Nhân Gian 2 (鬼味人间 2 (Quỷ Vị Nhân Gian 2))
 - **Tác giả:** Trần Mãnh
-- **Thể loại:** huyen-bi, kinh-di
+- **Thể loại:** huyen-bi
 - **Tóm tắt:** Tiếp nối phần 1, mở ra những điều cấm kỵ rùng rợn nơi cõi trần qua lăng kính phong thủy, kỳ môn độn giáp và sự đối đầu nghẹt thở giữa người sống và tà thuật.
 - **Đọc thử trực tuyến:** https://piepub.net
 
@@ -50,31 +50,31 @@
 
 ### 8. Cuống Rốn (脐带)
 - **Tác giả:** Quan Nhĩ
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, tam-ly, hien-thuc
 - **Tóm tắt:** Một vụ án mạng kéo theo hàng loạt bí mật gia đình bị chôn vùi suốt nhiều năm, bóc tách những ràng buộc nghẹt thở và vết thương tâm lý không thể cắt đứt.
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 9. Hiến Tế Hư Vô (虚無への供物 (Kyomu e no Kumotsu))
 - **Tác giả:** Nakai Hideo (Trung Tỉnh Anh Phu)
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, huyen-bi
 - **Tóm tắt:** Một trong Tứ Đại Kỳ Thư trinh thám Nhật Bản: chuỗi án mạng mật thất bí ẩn tại Băng Lưu Quán và trò chơi suy luận đa tầng thách thức mọi quy chuẩn phá án.
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 10. Trường Thi Khoa Cử Có Kẻ Sát Nhân (科举考场有杀人犯)
 - **Tác giả:** Phong Thanh Quá Xứ
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, lich-su
 - **Tóm tắt:** Án mạng kinh hoàng xảy ra ngay giữa kỳ thi khoa cử được niêm phong nghiêm ngặt, nơi kẻ sát nhân chắc chắn đang ẩn mình trong số các sĩ tử hoặc quan giám khảo.
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 11. Mật Thất Pharaoh (法老的密室 (Pharaoh's Locked Room))
 - **Tác giả:** Shirakawa Naofumi (Bạch Xuyên Thượng Sử)
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, lich-su
 - **Tóm tắt:** Một thư lại Ai Cập cổ đại tỉnh dậy dưới hình hài xác ướp với đúng ba ngày để tự mình phá giải vụ án mật thất giết chết chính bản thân mình.
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 12. The Thirst (Cơn Khát) (The Thirst (Tørst))
 - **Tác giả:** Jo Nesbø
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, huyen-bi
 - **Tóm tắt:** Hàng loạt phụ nữ sử dụng Tinder tại Oslo bị sát hại dã man với dấu vết của kẻ hút máu, buộc Harry Hole phải rời bỏ cuộc sống bình yên để quay lại cuộc săn đuổi.
 - **Đọc thử trực tuyến:** https://piepub.net
 
@@ -107,7 +107,7 @@
 ### 17. Phật Khôi Cuối Cùng (最后的佛傀)
 - **Tác giả:** Liệp Y Dương
 - **Quy mô:** 4 Quyển · 32 chương (Hoàn tất) · 36.9 vạn chữ gốc (87.8 vạn ký tự)
-- **Thể loại:** huyen-bi
+- **Thể loại:** huyen-bi, trinh-tham
 - **Thành tựu & Giải thưởng:** Tác phẩm huyền bí kỳ môn quỷ thuật đặc sắc của Liệp Y Dương
 - **Tóm tắt:** Những pho tượng Phật khôi cổ xưa ẩn chứa bí thuật kỳ môn thất truyền và lời nguyền hàng thế kỷ, kéo nhân vật chính vào hành trình giải mã sinh tử nơi cổ mộ và miếu hoang.
 - **Đọc thử trực tuyến:** https://piepub.net
@@ -123,7 +123,7 @@
 ### 19. Tuyết Mù (雪盲)
 - **Tác giả:** Lý Đại Phát (李大发)
 - **Quy mô:** 69 chương (Hoàn tất) · 27.8 vạn chữ gốc (104.8 vạn ký tự)
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, hien-thuc
 - **Thành tựu & Giải thưởng:** Tác phẩm trinh thám xã hội phái xuất sắc của Lý Đại Phát (tác giả Độ Lệch Nhiệt)
 - **Tóm tắt:** Giữa vùng băng tuyết trắng xóa làm lóa mắt người đi đường, những vụ án mạng tưởng chừng rời rạc dần hé lộ một mạng lưới bí mật chôn giấu nhiều năm và bi kịch tâm lý rợn người.
 - **Đọc thử trực tuyến:** https://piepub.net
@@ -139,7 +139,7 @@
 ### 21. Đông Bắc Vãng Sự: Hắc Đạo Phong Vân Hai Mươi Năm (东北往事：黑道风云20年)
 - **Tác giả:** Khổng Nhị Cẩu (孔二狗)
 - **Quy mô:** 334 chương trọn bộ 5 phần (Hoàn tất) · 85.1 vạn chữ gốc (349.9 vạn ký tự)
-- **Thể loại:** hinh-su
+- **Thể loại:** hien-thuc, trinh-tham
 - **Thành tựu & Giải thưởng:** Siêu phẩm hiện thực hắc đạo kinh điển · Hàng triệu bản in · Chuyển thể phim truyền hình nổi tiếng cùng tên
 - **Tóm tắt:** Pho sử biên niên trần trụi và tàn khốc suốt hai thập kỷ (1986–2006) về sự trỗi dậy, thanh trừng và sụp đổ của các thế lực giang hồ miền Đông Bắc Trung Quốc qua số phận nhóm Triệu Hồng Binh.
 - **Đọc thử trực tuyến:** https://piepub.net
@@ -154,50 +154,50 @@
 
 ### 23. Ban Liệp (Linh Cẩu Đốm) (斑鬣（番外全）)
 - **Tác giả:** Lục Xuân Ngô
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, hien-thuc
 - **Tóm tắt:** Kiệt tác trinh thám xã hội đen tối (Social Noir) và tâm lý gia đình nghẹt thở của Lục Xuân Ngô — tác giả của hiện tượng \
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 24. Phương Pháp Tư Duy Hệ Thống (Methods for Systems Thinking: 65+ Practical Approaches)
 - **Tác giả:** Christian Baron
-- **Thể loại:** kinh-te
+- **Thể loại:** kinh-te, tam-ly
 - **Tóm tắt:** Kiệt tác chuyên khảo thực hành về Tư duy Hệ thống (Systems Thinking) mang tầm vóc quốc tế của Christian Baron. Cuốn sách phá vỡ rào cản lý thuyết hàn lâm trừu tượng, trao vào tay các nhà lãnh đạo, chuyên gia điều phối và người quản trị một hộp công cụ thực chiến đỉnh cao để làm chủ tính phức tạp trong thế kỷ 21.\n\nTrung tâm của cuốn sách là Khung kiến trúc Ma trận 5M (Motivate - Meet - Map - Make - Manage): một bản đồ điều hướng hoàn hảo kết nối hơn 65 phương pháp tiếp cận thực tiễn theo chuẩn mực mô-đun 3 trang trực quan (Bản chất, Sơ đồ minh họa và Các bước điều phối hành động).\n\nTừ giải quyết xung đột đa phương, lập bản đồ vòng lặp phản hồi, đến thiết kế điểm đòn bẩy can thiệp và xây dựng tổ chức thích ứng, tác phẩm mở ra tầm nhìn toàn diện, giúp bạn tái cấu trúc thế giới quan và chuyển hóa thách thức phức tạp thành cơ hội phát triển bền vững.
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 25. Đôi Mắt Vực Thẳm (Mùa 2) 2: Lãnh Huyết Phí Đằng (凝渊之眸（第二季）2-冷血沸腾)
 - **Tác giả:** Trần Mãnh
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, hien-thuc
 - **Tóm tắt:** Khúc cao trào xuất sắc của Mùa 2 series trinh thám hình sự hiện thực \
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 26. Đôi Mắt Vực Thẳm (Mùa 2) 1: Dã Thú Chi Hà (凝渊之眸（第二季）1-野兽之河)
 - **Tác giả:** Trần Mãnh
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, hien-thuc
 - **Tóm tắt:** Sự trở lại ngoạn mục của series trinh thám hình sự hiện thực đỉnh cao \
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 27. Đôi Mắt Vực Thẳm 3: Tội Dư Tẫn (凝渊之眸 3：罪余烬)
 - **Tác giả:** Trần Mãnh
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, hien-thuc
 - **Tóm tắt:** Phần 3 khép lại trọn vẹn bộ ba tác phẩm đỉnh cao \
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 28. Đôi Mắt Vực Thẳm 2: Ám Vô Thanh (凝渊之眸 2：暗无声)
 - **Tác giả:** Trần Mãnh
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, hien-thuc
 - **Tóm tắt:** Tiếp nối phần 1 \
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 29. Đôi Mắt Vực Thẳm 1: Ác Như Câu (凝渊之眸1：恶如钩)
 - **Tác giả:** Trần Mãnh
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, hien-thuc
 - **Tóm tắt:** \
 - **Đọc thử trực tuyến:** https://piepub.net
 
 ### 30. Hồ Sơ Án Mạng 2: Rừng Thiêng Nước Độc (超正经凶案调查：山海篇 (Serious Murder Investigation: Mountains and Seas))
 - **Tác giả:** Pháp y Tần Minh (法医秦明)
 - **Quy mô:** 9 đại trọng án + Cẩm nang giải mã chuyện ma quỷ (Hoàn tất) · 15.2 vạn chữ gốc (50.9 vạn ký tự · 113.709 từ)
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, tan-van
 - **Thành tựu & Giải thưởng:** Tác phẩm đạt 7.2 điểm Douban · Top sách khoa học pháp y thực chiến & trinh thám phi hư cấu xuất sắc nhất
 - **Tóm tắt:** Dời ống kính điều tra sang những vùng rừng thiêng nước độc hiểm trở, Pháp y Tần Minh bóc tách 9 đại kỳ án dựa trên sự thật cùng cẩm nang giải mã chuyện ma quỷ bằng lăng kính khoa học.
 - **Đọc thử trực tuyến:** https://piepub.net
@@ -205,7 +205,7 @@
 ### 31. Sơn Quy Lai (山归来 (Return from the Mountain))
 - **Tác giả:** Lục Xuân Ngô (陆春吾)
 - **Quy mô:** 73 chương chính văn + Ngoại truyện toàn tập (Hoàn tất) · 31.8 vạn chữ gốc (97.8 vạn ký tự · 208.514 từ)
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, hien-thuc
 - **Thành tựu & Giải thưởng:** Tác phẩm đạt 7.2 điểm Douban · Top tiểu thuyết trinh thám xã hội phái & niên đại群 tượng xuất sắc nhất Douban Reading
 - **Tóm tắt:** Thảm án diệt môn năm 1999 tại làng Lão Miếu xé toạc số phận ba đứa trẻ, để rồi 12 năm sau giữa khu phố cũ Cầm Đảo, vụ án mạng mới kéo họ vào vòng xoáy trùng phùng định mệnh và sự thật chôn vùi.
 - **Đọc thử trực tuyến:** https://piepub.net
@@ -213,7 +213,7 @@
 ### 32. Mù Quáng (盲目 (Blind / City of Shadows))
 - **Tác giả:** Mộ Dao Nhi Tầm (慕遥而寻)
 - **Quy mô:** 59 chương chính văn (Hoàn tất) · 23.0 vạn chữ gốc (77.5 vạn ký tự · 173.738 từ)
-- **Thể loại:** trinh-tham
+- **Thể loại:** trinh-tham, tam-ly
 - **Thành tựu & Giải thưởng:** Tác phẩm trinh thám tâm lý tội phạm xuất sắc · Top suy lý phá án giàu tính nhân văn và bất ngờ
 - **Tóm tắt:** Vụ án mạng bí ẩn tại căn hộ 302 phố Hòa Thịnh kéo viên cảnh sát Ngô Đông vào cuộc đối đầu cân não với hai nghi phạm khiếm thị mang trí tuệ phi thường cùng kế hoạch Kim Thiền Thoát Xác hoàn hảo.
 - **Đọc thử trực tuyến:** https://piepub.net

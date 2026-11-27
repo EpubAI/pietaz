@@ -7,6 +7,7 @@ export const doiMatVucTham1AcNhuCau = {
   "translator": "PiePub AI",
   "cover": "/covers/doi-mat-vuc-tham-1-ac-nhu-cau.jpg",
   "category": "trinh-tham",
+  "categories": ["trinh-tham", "hien-thuc"],
   "tags": [
     "Trinh Thám",
     "Hình Sự",

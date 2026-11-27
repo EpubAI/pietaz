@@ -7,7 +7,8 @@ export const theThirst = {
   "authorBio": "Jo Nesbø là nhà văn trinh thám hàng đầu Na Uy, nổi tiếng toàn cầu với series thanh tra Harry Hole. Các tác phẩm của ông đã được dịch ra hơn 50 ngôn ngữ và bán được hàng chục triệu bản trên toàn thế giới.",
   "cover": "/covers/the-thirst.jpg",
   "categories": [
-    "trinh-tham"
+    "trinh-tham",
+    "huyen-bi"
   ],
   "tags": [
     "Nordic Noir",

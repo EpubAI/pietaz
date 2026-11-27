@@ -7,6 +7,7 @@ export const phuongPhapTuDuyHeThong = {
   "translator": "PiePub AI",
   "cover": "/covers/phuong-phap-tu-duy-he-thong.jpg",
   "category": "kinh-te",
+  "categories": ["kinh-te", "tam-ly"],
   "tags": [
     "Kinh Tế",
     "Tư Duy Hệ Thống",

@@ -8,7 +8,8 @@ export const tuyetMu = {
   "translator": "PiePub AI",
   "cover": "./covers/tuyet-mu.jpg",
   "categories": [
-    "trinh-tham"
+    "trinh-tham",
+    "hien-thuc"
   ],
   "category": "trinh-tham",
   "tags": [

@@ -7,7 +7,8 @@ export const matThatPharaoh = {
   "authorBio": "Shirakawa Naofumi là nhà văn trinh thám Nhật Bản nổi tiếng với phong cách kết hợp giữa trinh thám cổ điển (Honkaku) và bối cảnh lịch sử – thần thoại độc đáo.",
   "cover": "/covers/mat-that-pharaoh.jpg",
   "categories": [
-    "trinh-tham"
+    "trinh-tham",
+    "lich-su"
   ],
   "tags": [
     "Honkaku Mystery",

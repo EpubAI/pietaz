@@ -8,7 +8,8 @@ export const dongBacVangSuHacDaoPhongVan = {
   "translator": "PiePub AI",
   "cover": "./covers/dong-bac-vang-su-hac-dao-phong-van.jpg",
   "categories": [
-    "hinh-su"
+    "hien-thuc",
+    "trinh-tham"
   ],
   "category": "hinh-su",
   "tags": [
